@@ -1,0 +1,465 @@
+
+@font-face {
+    font-family: 'Brandon Grotesque Medium';
+    src: url('brandon_med-webfont.eot');
+    src: url('brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('brandon_med-webfont.woff') format('woff'),
+         url('brandon_med-webfont.ttf') format('truetype'),
+         url('brandon_med-webfont.svg#brandon_grotesque_mediumRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+    color: #222;
+}
+
+a {
+    color: #222;
+}
+
+.read_more {
+    font-weight: bold;
+}
+
+img {
+    height: auto !important; 
+}
+
+#container {
+    width: 960px;
+/*    border: 1px solid black;
+*/    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+#header {
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    background-position: center;
+    background-image: url('header4.png');
+    background-repeat: no-repeat;
+/*    padding-top: 20px;
+    padding-bottom: 20px;
+*/}
+
+#content {
+    padding: 0px;
+    min-height: 600px;
+    width: 630px;
+    margin-right: 10px;
+    float: left;
+/*    border: 1px solid blue;
+*/}
+
+#encapsulator {
+    margin-top: 28px;
+}
+
+ul#navig {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 28px;
+}
+
+    ul#navig > li {
+        padding-top: 4px;
+        padding-bottom: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 1.0em;
+        text-transform: uppercase;
+        font-family: "Brandon Grotesque Medium";
+        background-color: black;
+        color: white;
+        width: 80px;
+        height: 24px;
+        text-align: center;
+        float: left;
+    }
+    
+        ul#navig > li:hover {
+            background-color:  #007dab;
+        }
+    
+        ul#navig > li a {
+            text-decoration: none;
+            color: white;
+        }
+    
+        ul#navig > li#last {
+            width: 140px;
+        }
+        
+        ul#navig > li#last:hover {
+            background-color: black;
+        }
+
+#menu-search {
+    margin-left: 0;
+    margin-bottom: 4px;
+    margin-right: 0;
+    margin-top: 1px;
+    display: inline-block;
+    width: 140px;
+    height: 18px;
+    padding: 0;
+    border-color: #999;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+    
+    #menu-search input {
+        background-color: black;
+        color: white;
+        border: 0px;
+        background-repeat: no-repeat;
+        padding-left: 2px;
+        padding-bottom: 2px;
+        padding-right: 2px;
+        padding-top: 2px;
+        line-height: 14px;
+        font-style: normal;
+        font-weight: normal;
+        height: 14px;
+        margin: 0;
+        border: 0;
+        width: 120px;
+        font-family: Georgia, Times, serif;
+        font-size: 12px;
+        float: left;
+        background-color: transparent;
+        display: block;
+        margin-top: 2px;
+    }
+    
+    #menu-search .submit {
+        margin-left: 2px;
+        margin-top: -1px;
+        background-repeat: no-repeat;
+        background-position: -4px -6px;
+        width: 18px;
+        height: 18px;
+        background-image: url(search-white.png);
+        background-color: transparent;
+        float: left;
+    }
+    
+    #menu-search input.search {
+        width: 114px;
+    }
+    
+    #menu-search input:focus {
+        outline-width: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+.bordi {
+}
+
+.bordi .each {
+    margin-top: 28px;
+    width: 300px;
+    float: left;
+}
+
+    .bordi .each img {
+        width: 300px;
+    }
+    .bordi .headline, .bordi .meta, .bordi .main {
+        text-align: center;
+    }
+    .bordi .meta {
+        font-size: 0.9em;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+    .bordi .meta a {
+        font-size: 0.7em;
+        font-style: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #666;
+    }
+    .bordi .main {
+        text-align: justify;
+    }
+    
+    .bordi .headline {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    h3 {
+        text-transform: uppercase;
+        font-family: "Brandon Grotesque Medium";
+        font-size: 1.2em;
+        letter-spacing: -2px;
+        text-decoration: none;
+    }
+    
+    h2 a {
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    .bordi02 .each {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+
+.sidebar {
+    width: 290px;
+    padding: 0;
+    padding-left: 0px;
+    float: right;
+/*    border: 1px solid green;
+*/}
+
+.sidebar h3 {
+}
+
+.attachment-myndin {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.list .post .post-category {
+    font-size: 11px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+@media all and (max-width: 960px) {
+    
+    #container {
+      width: 640px;
+    }
+    
+    #content {
+        width: 640px;
+        margin-right: 0px;
+    }
+  
+    .bordi01 .each {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+
+   .bordi02 .each {
+      margin-left: 20px;
+      margin-right: 0px;
+    }
+
+    .bordi03 {
+      display: none;
+    }
+
+    ul#navig li {
+      display: none;
+    }
+
+    ul#navig li.sticky {
+      display: block;
+    }
+    
+    ul#navig li#last {
+        width: 120px;
+    }
+    
+    #menu-search {
+        width: 120px;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    
+}
+
+@media all and (max-width: 640px) {
+    
+    .bordi .each {
+    }
+    
+    #container {
+          width: 320px;
+      }
+    
+    #content {
+        padding-top: 0px;
+    }
+
+    #header {
+        background-image: url('header-small.png');
+        height: 100px;
+        margin-bottom: 0px;
+    }
+    
+    #navig {
+        display: none;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    #content {
+        width: 320px;
+    }
+    
+}
+
+
+#social-media-buttons {
+    border: 1px solid red;
+    width: 200px;
+    height: 60px;
+    float: right;
+    display: none;
+}
+
+
+.list .post .post-category a {
+    text-decoration: none;
+}
+
+.list .post .post-meta {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #AAA9A9;
+    margin-bottom: 15px;
+}
+
+.list .post .post-meta span, .list .post .post-meta a {
+    color: #222;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.list .post .post-meta .post-author {
+    text-transform: uppercase;
+}
+
+.widget {
+    margin-top: 20px;
+}
+
+.sidebar .widget:first-child {
+    margin-top: 0px;
+}
+
+.widget a {
+    color: #222;
+    font-size: 13px;
+}
+
+.widget .img h2 span {
+    background: white;
+    border: 3px solid white;
+}
+
+/*.widget .img h2 {
+    position: relative;
+    left: 5px;
+    bottom: 45px;
+    color: #222;
+    font-family: "Brandon Grotesque Medium", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+*/
+
+.widget .img h2 {
+position: absolute;
+left: 5px;
+bottom: 25px;
+color: #222;
+font-family: Helvetica,Arial,sans-serif;
+font-size: 18px;
+font-weight: bold;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.widget .img h2 a {
+    color: #222;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.img > a {
+    vertical-align: baseline;
+    text-align: left;
+}
+
+.widget li > a.wpp-post-title {
+    font-size: 15px;
+    padding-top: 4px;
+    text-decoration: none;
+}
+
+.widget li {
+    margin-bottom: 10px;
+    min-height: 60px;
+}
+
+.wpp-post-title {
+    font-size: 15px;
+    margin-top: 5px;
+    display: block;
+    font-weight: normal;
+}
+
+.widget li img.wpp-thumbnail {
+    float: left;
+    margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
