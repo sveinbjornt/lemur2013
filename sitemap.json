@@ -1,0 +1,26 @@
+{
+	"site": {
+		"name": "Skapalón Base",
+		"layout": "layout.html"
+	},
+	"auth": {
+		"enabled": false,
+		"username": "user",
+		"password": "123"
+	},
+	"routes": [
+		{
+			"rule": "/elements",
+			"name": "Elements",
+			"view": "elements.html",
+			"data": {
+				"hello": "world"
+			}
+		},
+		{
+			"rule": "/lemur",
+			"name": "lemur",
+			"view": "lemur.html"
+		}
+	]
+}

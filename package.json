@@ -1,0 +1,15 @@
+{
+	"name" : "SkapalonStaticBase",
+	"version": "1.0.0",
+	"description" : "Skapalon Base",
+	"author": "Finnur Sigurðsson <finnur@skapalon.is>",
+	"contributors": [
+		"Finnur Sigurðsson"
+	],
+	"dependencies": {
+		"mu2": "*",
+		"less": "*",
+		"express": "*",
+		"mootools": "*"
+	}
+}

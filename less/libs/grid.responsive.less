@@ -1,0 +1,69 @@
+// grid.responsive.less
+
+.grid-collapsehalf (@width) {
+	@media only screen and (max-width: ~"@{width}px") {
+		(~".grid.collapsehalf@{width}") {
+			> .col {
+				width: 50%;
+			}
+		}
+	}
+}
+.grid-collapse (@width) {
+	@media only screen and (max-width: ~"@{width}px") {
+		(~".grid.collapse@{width}") {
+			> .col {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+}
+.grid-expand (@width) {
+	@media only screen and (min-width: ~"@{width}px") {
+		(~".grid.expand@{width}") {
+			> .col {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	.lt-ie9 {
+		(~".grid.expand@{width}") {
+			> .col {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+}
+.grid-media-query (@width,@type) when (@type = "collapsehalf") {
+	.grid-collapsehalf (@width);
+}
+.grid-media-query (@width,@type) when (@type = "collapse") {
+	.grid-collapse (@width);
+}
+.grid-media-query (@width,@type) when (@type = "expand") {
+	.grid-expand (@width);
+}
+// if no type, output all
+.grid-media-query (@width) {
+	.grid-collapsehalf (@width);
+	.grid-collapse (@width);
+	.grid-expand (@width);
+}
+
+.grid-query-loop (@index:@grid-max-break,@break:@grid-break-interval) when (@index >= @grid-min-break) {
+	.grid-media-query (@index);
+
+	.grid-query-loop (@index - @break);
+}
+
+// stop loop on min-break
+.grid-query-loop (@grid-min-break) {}
+
+// run loop with default values
+.grid-query-loop ();
+
+// run loop with custom values
+// .grid-query-loop ({max-break},{break-interval});

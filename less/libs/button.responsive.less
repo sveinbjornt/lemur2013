@@ -1,0 +1,62 @@
+// button.responsive.less
+
+.button-fill (@width) {
+	@media only screen and (max-width: ~"@{width}px") {
+		(~".button.fill@{width}") {
+			width: 100%;
+			min-width: auto;
+			text-align: center;
+		}
+		(~".button.fill@{width}:not([class*='icon-'])") {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+.button-unfill (@width) {
+	@media only screen and (min-width: ~"@{width}px") {
+		(~".button.unfill@{width}") {
+			width: 100%;
+			min-width: auto;
+			text-align: center;
+		}
+		(~".button.unfill@{width}:not([class*='icon-'])") {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.lt-ie9 {
+		(~".button.unfill@{width}") {
+			width: 100%;
+			min-width: auto;
+			text-align: center;
+		}
+	}
+}
+.button-media-query (@width,@type) when (@type = "fill") {
+	.button-fill (@width);
+}
+.button-media-query (@width,@type) when (@type = "unfill") {
+	.button-unfill (@width);
+}
+// // if no type, output all
+.button-media-query (@width) {
+	.button-fill (@width);
+	.button-unfill (@width);
+}
+
+.button-query-loop (@index:@button-max-break,@break:@button-break-interval) when (@index >= @button-min-break) {
+	.button-media-query (@index);
+
+	.button-query-loop (@index - @break);
+}
+
+// // stop loop on min-break
+// .button-query-loop (@button-min-break) {}
+.button-query-loop (0) {}
+
+// // run loop with default values
+.button-query-loop ();
+
+// run loop with custom values
+// .button-query-loop ({max-break},{break-interval});

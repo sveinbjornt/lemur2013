@@ -1,0 +1,49 @@
+img.image {
+	max-width: 100%;
+}
+
+.aspect {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	margin: 0 0 @spacing;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%!important;
+		height: 100%!important;
+	}
+}
+
+.figure { 
+	display: table;
+	max-width: 50%;
+
+	&.float-right {
+		margin: 0 0 @spacing @spacing;
+	}
+
+	&.float-left {
+		margin: 0 @spacing @spacing 0;
+	}
+
+	.figcaption { 
+		display: table-caption;
+		caption-side: bottom;
+
+		font-size: 0.85714285714286em;
+		color: @font-color + 40;
+	}
+
+	@media only screen and (max-width: 480px) {
+		max-width: 100%;
+
+		&.float-right,
+		&.float-left {
+			float: none;
+			margin: 0 auto @spacing;
+		}
+	}
+}

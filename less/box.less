@@ -1,0 +1,34 @@
+// box.less
+
+.box {
+	.border-box;
+
+	padding: @spacing @spacing 0;
+	margin: 0 0 @spacing;
+
+	border: 1px solid @color-border;
+	border-radius: @radius;
+
+
+	> .content {
+		margin: 0 -@spacing @spacing -@spacing;
+		padding: 0 @spacing 0;
+
+		&.title {
+			border-bottom: 1px solid @color-border;
+		}
+	}
+
+	&.no-padding {
+		padding: 0;
+	}
+
+	&.no-border {
+		border: none;
+	}
+
+	&.bottom-shadow {
+		.box-shadow (0 8px 8px -8px @color-border);
+	}
+
+}

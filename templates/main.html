@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1020">
+
+		<title>{{ site.name }}</title>
+
+		<link type="text/css" rel="stylesheet" href="/css/main.less">
+	</head>
+
+	<body>
+
+		<div class="skapalon-wrap">
+
+			<header class="skapalon-header">
+				
+				<a class="logo" href="/">{{ site.name }}</a>
+
+			</header>
+
+			<div class="skapalon-content">
+
+				<div class="box">
+						
+					<div class="content title">
+						<h2>Templates</h2>
+					</div>
+
+					<div class="content">
+						<ul class="box-content">
+							{{#sitemap.routes}}
+								<li>
+									{{#view}}
+									<a href="{{rule}}">{{name}}</a>
+									{{/view}}
+
+									{{^view}}
+										{{name}}
+									{{/view}}
+								</li>
+							{{/sitemap.routes}}
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<footer class="skapalon-footer">Skapalón &copy; 2013</footer>
+
+		</div>
+
+	</body>
+
+</html>
