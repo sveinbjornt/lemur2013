@@ -1,0 +1,396 @@
+html {
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	background: #fff;
+}
+body {
+	margin: 0;
+	
+	font-family: @font-family;
+	font-size: @font-size;
+	color: @font-color;
+	
+	line-height: @line-height;
+}
+
+p {
+	margin: 0 0 @spacing;
+}
+
+a {
+	cursor: pointer;
+	color: @color-primary;
+	text-decoration: none;
+}
+a, a:link, a:visited {
+	cursor: pointer;
+	
+	color: @color-primary;
+
+	// .transition (border 150ms, color 150ms);
+	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: @color-secondary;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 @spacing;
+	padding: 0;
+
+	font-family: @font-family;
+	font-weight: 700;
+}
+h1 {
+	font-size: 50px;
+	line-height: 50px;
+}
+h2 {
+	font-size: 25px;
+	line-height: 33px;
+}
+h3 {
+	font-size: 25px;
+	line-height: 25px;
+}
+h4 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 18px;
+}
+h5 {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 16px;
+}
+h6 {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 16px;
+}
+
+hgroup {
+	*:first-child {
+		margin-bottom: @spacing / 2;
+	}
+}
+
+.hide{
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.block {
+	display: block;
+	margin: 0 0 @spacing;
+}
+
+.spacing-top {
+	margin-top: @spacing;
+}
+
+.spacing-bottom {
+	margin-bottom: @spacing;
+}
+
+.spacing-left {
+	margin-left: @spacing;
+}
+
+.spacing-right {
+	margin-right: @spacing;
+}
+
+.gutter-top {
+	margin-top: @gutter;
+}
+
+.gutter-bottom {
+	margin-bottom: @gutter;
+}
+
+.gutter-left {
+	margin-left: @gutter;
+}
+
+.gutter-right {
+	margin-right: @gutter;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: right;
+}
+
+.text-right {
+	text-align: right;
+}
+
+hr {
+	background: 0;
+	border: 0;
+	outline: 0;
+
+	.clearfix;
+	margin: @spacing 0;
+	height: 1px;
+	border-top: 1px solid @color-border;
+
+	&.dotline {
+		border-top-style: dashed;
+	}
+}
+
+dl {
+	dt {
+		font-weight: bold;
+	}
+	dd {
+	}
+}
+
+.columns {
+	.columns();
+	text-align: justify;
+
+	&:before {
+	}
+
+	&.rule {
+		.columns(@rule-width:1px);
+	}
+}
+
+blockquote {
+	@line-height: 30px;
+	@font-size: 20px;
+	@mark-size: @line-height + (@spacing/2);
+
+	line-height: @line-height;
+	font-family: @font-family-special;
+	font-weight: 400;
+	font-size: @font-size;
+
+	margin: 0 0 @spacing;
+
+	&.mark,
+	&[class*="icon-"] {
+		position: relative;
+		padding-left: @mark-size + (@spacing);
+		min-height: @mark-size;
+
+		&:before {
+			display: block;
+			width: @mark-size + (@spacing/2);
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			font-size: @mark-size;
+			line-height: @line-height * 2;
+		}
+
+		@media only screen and (max-width: 480px) {
+			padding-left: 0;
+			font-size: @font-size*0.8;
+			line-height: @line-height*0.8;
+
+			&:after,
+			&:before {
+				line-height: @line-height * 1.6;
+			}
+
+			&:before {
+				float: left;
+				position: relative;
+			}
+		}
+	}
+	&.mark {
+
+		&:before,
+		&:after {
+			font-family: @font-family;
+			font-size: @mark-size*4;
+			top: 40px;
+		}
+
+		&:before {
+			content: '\201C';
+			left: -5px;
+		}
+
+		&.double {
+			padding-right: @mark-size + (@spacing);
+
+			&:after {
+				content: '\201D';
+				display: block;
+				width: @mark-size + (@spacing/2);
+				position: absolute;
+				right: 0;
+
+				line-height: @line-height * 2;
+			}
+		}
+	}
+}
+
+ul, ol {
+	margin: 0 0 @spacing 0;
+	padding: 0 0 0 @spacing;
+}
+
+.article-list {
+	padding: 0;
+	list-style: none;
+
+	li {
+		position: relative;
+		padding-left: 130px;
+		min-height: 80px;
+		margin-bottom: @spacing;
+		
+		a {
+		    display: block;
+		    font-weight: bold;
+		}
+
+		.figure, .wpp-thumbnail {
+		    display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 110px;
+		}
+		.text {
+
+		}
+	}
+}
+
+body.category-svartabloggid, body.category-svortu, body.svortu, body.svartabloggid {
+    
+	background: @svortu-color-background;
+    color: @svortu-color-primary;
+    
+    .section-box div a.sidebar-box-headline {
+        background-color: fade(@svortu-color-background,80%);
+        color: @svortu-color-secondary;
+        font-weight: bold;
+    }
+    
+    .content, .wrap, .nav {
+        background: @svortu-color-background;
+        color: @svortu-color-primary;
+    }
+    
+    .cat-title {
+        color: @svortu-color-secondary;
+    }
+    
+    a {
+        color: @svortu-color-primary;
+        
+        &:hover {
+            color: @svortu-color-secondary;
+        }
+    }
+    
+    .nav ul li a:hover {
+    	background: @svortu-color-secondary;
+    }
+    
+    .header .logo {
+        background-image: url('/images/header-svortu.jpg')
+    }
+}
+
+body.myndaalbum, body.category-myndaalbum {
+    
+    .header .logo {
+        background-image: url('/images/header-myndaalbum.jpg')
+    }
+}
+
+body.sudrid, body.category-sudrid {
+    
+    .header .logo {
+        background-image: url('/images/header-sudrid.jpg')
+    }
+}
+
+body.langtiburtistan, body.category-langtiburtistan {
+    
+    .header .logo {
+        background-image: url('/images/header-langtiburtistan.jpg')
+    }
+}
+
+body.lanztidindi, body.category-lanztidindi {
+    
+    a {
+        &:hover {
+            color: @lanztidindi-color-primary + 20;
+        }
+    }
+    
+    .nav {
+        background: @lanztidindi-color-primary;
+        
+        ul li a {
+            color: @color-white;
+            
+            &:hover {
+                color: @color-primary;
+    	        background: @lanztidindi-color-secondary;
+    	    }
+    	}
+    }
+    
+    .header .logo {
+        background-image: url('/images/header-lanztidindi.jpg')
+    }
+}
+
+body.bio, body.category-bio {
+    
+    a {
+        &:hover {
+            color: @bio-color-primary - 40;
+        }
+    }
+    
+    .nav {
+        background: @bio-color-primary;
+        
+        ul li a {
+            color: @color-primary;
+            
+            &:hover {
+                color: @color-primary;
+    	        background: @bio-color-secondary;
+    	    }
+    	}
+    }
+    
+    .header .logo {
+        background-image: url('/images/header-bio.jpg')
+    }
+}
