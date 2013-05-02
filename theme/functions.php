@@ -34,81 +34,8 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow == 'themes.php' ) {
 
 /*** Navigation ***/
 
-if ( !is_nav_menu('Navigation') || !is_nav_menu('Top menu') ) {
-    $menu_id1 = wp_create_nav_menu('Navigation');
-    $menu_id2 = wp_create_nav_menu('Top menu');
-    wp_update_nav_menu_item($menu_id1, 1);
-    wp_update_nav_menu_item($menu_id2, 1);
-}
-
-class extended_walker extends Walker_Nav_Menu{
-	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-
-		if ( !$element )
-			return;
-
-		$id_field = $this->db_fields['id'];
-
-		//display this element
-		if ( is_array( $args[0] ) )
-			$args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
-
-		//Adds the 'parent' class to the current item if it has children
-		if( ! empty( $children_elements[$element->$id_field] ) )
-			array_push($element->classes,'parent');
-
-		$cb_args = array_merge( array(&$output, $element, $depth), $args);
-
-		call_user_func_array(array(&$this, 'start_el'), $cb_args);
-
-		$id = $element->$id_field;
-
-		// descend only when the depth is right and there are childrens for this element
-		if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
-
-			foreach( $children_elements[ $id ] as $child ){
-
-				if ( !isset($newlevel) ) {
-					$newlevel = true;
-					//start the child delimiter
-					$cb_args = array_merge( array(&$output, $depth), $args);
-					call_user_func_array(array(&$this, 'start_lvl'), $cb_args);
-				}
-				$this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
-			}
-			unset( $children_elements[ $id ] );
-		}
-
-		if ( isset($newlevel) && $newlevel ){
-			//end the child delimiter
-			$cb_args = array_merge( array(&$output, $depth), $args);
-			call_user_func_array(array(&$this, 'end_lvl'), $cb_args);
-		}
-
-		//end this element
-		$cb_args = array_merge( array(&$output, $element, $depth), $args);
-		call_user_func_array(array(&$this, 'end_el'), $cb_args);
-	}
-}
-
 /*** Slideshow ***/
 
-$prefix = 'sgt_';
-
-$meta_box = array(
-    'id' => 'slide',
-    'title' => 'Slideshow Options',
-    'page' => 'post',
-    'context' => 'side',
-    'priority' => 'low',
-    'fields' => array(
-        array(
-            'name' => 'Show in slideshow',
-            'id' => $prefix . 'slide',
-            'type' => 'checkbox'
-        )
-    )
-);
 add_action('admin_menu', 'sight_add_box');
 
 // Add meta box

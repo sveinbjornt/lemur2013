@@ -3,20 +3,16 @@
     <!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="en" class="lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--><html lang="<?php bloginfo('language'); ?>" class="" ><!--<![endif]-->
+    <!--[if gt IE 8]><!--><html lang="<?php bloginfo('language'); ?>" class=""><!--<![endif]-->
 
     <head>
-        
-        <!-- LOAD POSTS -->
-        <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
-        
         <!-- META TAGS -->
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
         <meta charset="utf-8">
         <meta name="viewport" content="width=1020">
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
         <meta http-equiv="Content-language" content="<?php bloginfo('language'); ?>" />
-        <!-- if page is a single page use special meta tags -->  
+
         <?php if (is_single()) { ?>  
         <meta property="og:url" content="<?php the_permalink() ?>">  
         <meta property="og:title" content="<?php single_post_title(''); ?> | Lemúrinn" />  
@@ -28,31 +24,21 @@
         <meta property="og:site_name" content="Lemúrinn">  
         <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira.">  
         <meta property="og:type" content="website">  
-        <meta property="og:image" content="http://lemurinn.is/images/FIXME!!!!!!"> 
+        <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg"> 
         <?php } ?>  
         
         <!-- STYLES -->
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="shortcut icon" href="/images/favico.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">        
-        <!-- <link type="text/css" rel="stylesheet" href="/css/main.less"> -->
+        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
+        <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico" type="image/x-icon">
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <!--[if lte IE 7]>
-            <script src="/js/lte-ie7.js"></script>
+            <script src="<?php echo get_template_directory_uri() ?>/assets/js/lte-ie7.js"></script>
         <![endif]-->
         
         <title><?php wp_title ( '|', true, 'right' ); ?></title>
         
-        
-        <?php
-			wp_enqueue_script('jquery');
-			wp_enqueue_script('cycle', get_template_directory_uri() . '/js/jquery.cycle.all.min.js', 'jquery', false);
-			wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', 'jquery', false);
-            if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
-            wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
-		?>
         <?php wp_head(); ?>
 
     </head>
@@ -77,6 +63,8 @@
             
             <header class="header">
                 
+                <?php $base = get_bloginfo('wpurl'); ?>
+                
                 <a href="<?php echo $base ?>" class="logo" title="Aftur á forsíðu Lemúrsins">
                     
                     <div class="fb-like">
@@ -87,15 +75,14 @@
                 
                 <nav class="nav">
                     <ul>
-                        <?php $base = get_bloginfo('wpurl'); ?>
-                        <li><a href="<?php echo $base ?>/greinar">Greinasafn</a></li>
-                        <li><a href="<?php echo $base ?>/myndaalbum">Myndaalbúmið</a></li>
-                        <li><a href="<?php echo $base ?>/svartabloggid">Svörtu</a></li>
-                        <li><a href="<?php echo $base ?>/langtiburtistan">Langtíburtistan</a></li>
-                        <li><a href="<?php echo $base ?>/sudrid">Suðrið</a></li>
-                        <li><a href="<?php echo $base ?>/lanztidindi">Lanztíðindi</a></li>
-                        <li><a href="<?php echo $base ?>/bio">Bíó</a></li>
-                        <li><a href="<?php echo $base ?>/um">Um</a></li>
+                        <li><a href="<?php echo $base ?>/greinar" title="Greinasafn Lemúrsins">Greinasafn</a></li>
+                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Myndaalbúmið</a></li>
+                        <li><a href="<?php echo $base ?>/svartabloggid" title="Svörtu síðurnar">Svörtu</a></li>
+                        <li><a href="<?php echo $base ?>/langtiburtistan" title="Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>
+                        <li><a href="<?php echo $base ?>/sudrid" title="Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
+                        <li><a href="<?php echo $base ?>/lanztidindi" title="Úrklippusafn Lemúrsins">Lanztíðindi</a></li>
+                        <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr, hreyfimyndablogg Lemúrsins">Bíó</a></li>
+                        <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
                     </ul>
                 </nav>
 

@@ -1,1 +1,7589 @@
-/Users/sveinbjorn/Desktop/lemur2013/dev/less/main.css
+@font-face {
+  font-family: 'Brandon Grotesque Medium';
+  src: url('assets/fonts/brandon_med-webfont.eot');
+  src: url('assets/fonts/brandon_med-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/brandon_med-webfont.woff') format('woff'), url('assets/fonts/brandon_med-webfont.ttf') format('truetype'), url('assets/fonts/brandon_med-webfont.svg#brandon_grotesque_mediumRg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* 3 */
+
+}
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+
+  cursor: pointer;
+  /* 3 */
+
+  *overflow: visible;
+  /* 4 */
+
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  *width: 13px;
+  /* 3 */
+
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.grid {
+  *zoom: 1;
+}
+.grid:before,
+.grid:after {
+  content: " ";
+  display: table;
+}
+.grid:after {
+  clear: both;
+}
+.grid:before,
+.grid:after {
+  content: " ";
+  display: table;
+}
+.grid:after {
+  clear: both;
+}
+.grid > .col {
+  display: block;
+  float: left;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("boxsizing.htc");
+}
+.grid .col.s10of10 {
+  width: 100%;
+}
+.grid .col.s9of10 {
+  width: 90%;
+}
+.grid .col.s8of10 {
+  width: 80%;
+}
+.grid .col.s7of10 {
+  width: 70%;
+}
+.grid .col.s6of10 {
+  width: 60%;
+}
+.grid .col.s5of10 {
+  width: 50%;
+}
+.grid .col.s4of10 {
+  width: 40%;
+}
+.grid .col.s3of10 {
+  width: 30%;
+}
+.grid .col.s2of10 {
+  width: 20%;
+}
+.grid .col.s1of10 {
+  width: 10%;
+}
+.grid .col.s9of9 {
+  width: 100%;
+}
+.grid .col.s8of9 {
+  width: 88.88888888888889%;
+}
+.grid .col.s7of9 {
+  width: 77.77777777777777%;
+}
+.grid .col.s6of9 {
+  width: 66.66666666666666%;
+}
+.grid .col.s5of9 {
+  width: 55.55555555555556%;
+}
+.grid .col.s4of9 {
+  width: 44.44444444444444%;
+}
+.grid .col.s3of9 {
+  width: 33.33333333333333%;
+}
+.grid .col.s2of9 {
+  width: 22.22222222222222%;
+}
+.grid .col.s1of9 {
+  width: 11.11111111111111%;
+}
+.grid .col.s8of8 {
+  width: 100%;
+}
+.grid .col.s7of8 {
+  width: 87.5%;
+}
+.grid .col.s6of8 {
+  width: 75%;
+}
+.grid .col.s5of8 {
+  width: 62.5%;
+}
+.grid .col.s4of8 {
+  width: 50%;
+}
+.grid .col.s3of8 {
+  width: 37.5%;
+}
+.grid .col.s2of8 {
+  width: 25%;
+}
+.grid .col.s1of8 {
+  width: 12.5%;
+}
+.grid .col.s7of7 {
+  width: 100%;
+}
+.grid .col.s6of7 {
+  width: 85.71428571428572%;
+}
+.grid .col.s5of7 {
+  width: 71.42857142857143%;
+}
+.grid .col.s4of7 {
+  width: 57.142857142857146%;
+}
+.grid .col.s3of7 {
+  width: 42.85714285714286%;
+}
+.grid .col.s2of7 {
+  width: 28.571428571428573%;
+}
+.grid .col.s1of7 {
+  width: 14.285714285714286%;
+}
+.grid .col.s6of6 {
+  width: 100%;
+}
+.grid .col.s5of6 {
+  width: 83.33333333333334%;
+}
+.grid .col.s4of6 {
+  width: 66.66666666666667%;
+}
+.grid .col.s3of6 {
+  width: 50%;
+}
+.grid .col.s2of6 {
+  width: 33.333333333333336%;
+}
+.grid .col.s1of6 {
+  width: 16.666666666666668%;
+}
+.grid .col.s5of5 {
+  width: 100%;
+}
+.grid .col.s4of5 {
+  width: 80%;
+}
+.grid .col.s3of5 {
+  width: 60%;
+}
+.grid .col.s2of5 {
+  width: 40%;
+}
+.grid .col.s1of5 {
+  width: 20%;
+}
+.grid .col.s4of4 {
+  width: 100%;
+}
+.grid .col.s3of4 {
+  width: 75%;
+}
+.grid .col.s2of4 {
+  width: 50%;
+}
+.grid .col.s1of4 {
+  width: 25%;
+}
+.grid .col.s3of3 {
+  width: 100%;
+}
+.grid .col.s2of3 {
+  width: 66.66666666666667%;
+}
+.grid .col.s1of3 {
+  width: 33.333333333333336%;
+}
+.grid .col.s2of2 {
+  width: 100%;
+}
+.grid .col.s1of2 {
+  width: 50%;
+}
+.grid .col.s1of1 {
+  width: 100%;
+}
+.grid.reverse > .col {
+  float: right;
+}
+.grid.gutter {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.grid.gutter > .col {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.grid.tight {
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+}
+.grid.tight > .col {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+/*.grid-query-loop (@grid-min-break) {}
+*/
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+/*.grid-query-loop (@grid-min-break) {}
+*/
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .grid.collapse960 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .grid.collapse840 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid.collapse720 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid.collapse600 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid.collapse480 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .grid.collapse360 > .col {
+    float: none;
+    width: 100%;
+  }
+}
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #fff;
+}
+body {
+  margin: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 16px;
+  color: #282828;
+  line-height: 20px;
+}
+p {
+  margin: 0 0 20px;
+}
+a {
+  cursor: pointer;
+  color: #282828;
+  text-decoration: none;
+}
+a,
+a:link,
+a:visited {
+  cursor: pointer;
+  color: #282828;
+}
+a:hover,
+a:link:hover,
+a:visited:hover,
+a:focus,
+a:link:focus,
+a:visited:focus {
+  text-decoration: none;
+  color: #007dab;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px;
+  padding: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 50px;
+  line-height: 50px;
+}
+h2 {
+  font-size: 25px;
+  line-height: 33px;
+}
+h3 {
+  font-size: 25px;
+  line-height: 25px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+}
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+hgroup *:first-child {
+  margin-bottom: 10px;
+}
+.hide {
+  display: none;
+}
+.clear {
+  clear: both;
+}
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.block {
+  display: block;
+  margin: 0 0 20px;
+}
+.spacing-top {
+  margin-top: 20px;
+}
+.spacing-bottom {
+  margin-bottom: 20px;
+}
+.spacing-left {
+  margin-left: 20px;
+}
+.spacing-right {
+  margin-right: 20px;
+}
+.gutter-top {
+  margin-top: 30px;
+}
+.gutter-bottom {
+  margin-bottom: 30px;
+}
+.gutter-left {
+  margin-left: 30px;
+}
+.gutter-right {
+  margin-right: 30px;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: right;
+}
+.text-right {
+  text-align: right;
+}
+hr {
+  background: 0;
+  border: 0;
+  outline: 0;
+  *zoom: 1;
+  margin: 20px 0;
+  height: 1px;
+  border-top: 1px solid #cccccc;
+}
+hr:before,
+hr:after {
+  content: " ";
+  display: table;
+}
+hr:after {
+  clear: both;
+}
+hr:before,
+hr:after {
+  content: " ";
+  display: table;
+}
+hr:after {
+  clear: both;
+}
+hr.dotline {
+  border-top-style: dashed;
+}
+dl dt {
+  font-weight: bold;
+}
+.columns {
+  -moz-column-width: 250px;
+  -moz-column-count: 0;
+  -moz-column-gap: 30px;
+  -moz-column-rule-color: #cccccc;
+  -moz-column-rule-style: solid;
+  -moz-column-rule-width: 0px;
+  -webkit-column-width: 250px;
+  -webkit-column-count: 0;
+  -webkit-column-gap: 30px;
+  -webkit-column-rule-color: #cccccc;
+  -webkit-column-rule-style: solid;
+  -webkit-column-rule-width: 0px;
+  column-width: 250px;
+  column-count: 0;
+  column-gap: 30px;
+  column-rule-color: #cccccc;
+  column-rule-style: solid;
+  column-rule-width: 0px;
+  text-align: justify;
+}
+.columns.rule {
+  -moz-column-width: 250px;
+  -moz-column-count: 0;
+  -moz-column-gap: 30px;
+  -moz-column-rule-color: #cccccc;
+  -moz-column-rule-style: solid;
+  -moz-column-rule-width: 1px;
+  -webkit-column-width: 250px;
+  -webkit-column-count: 0;
+  -webkit-column-gap: 30px;
+  -webkit-column-rule-color: #cccccc;
+  -webkit-column-rule-style: solid;
+  -webkit-column-rule-width: 1px;
+  column-width: 250px;
+  column-count: 0;
+  column-gap: 30px;
+  column-rule-color: #cccccc;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+}
+blockquote {
+  line-height: 30px;
+  font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+blockquote.mark,
+blockquote[class*="icon-"] {
+  position: relative;
+  padding-left: 60px;
+  min-height: 40px;
+}
+blockquote.mark:before,
+blockquote[class*="icon-"]:before {
+  display: block;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+  line-height: 60px;
+}
+@media only screen and (max-width: 480px) {
+  blockquote.mark,
+  blockquote[class*="icon-"] {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  blockquote.mark:after,
+  blockquote[class*="icon-"]:after,
+  blockquote.mark:before,
+  blockquote[class*="icon-"]:before {
+    line-height: 48px;
+  }
+  blockquote.mark:before,
+  blockquote[class*="icon-"]:before {
+    float: left;
+    position: relative;
+  }
+}
+blockquote.mark:before,
+blockquote.mark:after {
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 160px;
+  top: 40px;
+}
+blockquote.mark:before {
+  content: '\201C';
+  left: -5px;
+}
+blockquote.mark.double {
+  padding-right: 60px;
+}
+blockquote.mark.double:after {
+  content: '\201D';
+  display: block;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  line-height: 60px;
+}
+ul,
+ol {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+}
+.wrap {
+  padding: 0;
+  max-width: 1020px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+.header {
+  position: relative;
+  padding: 0;
+}
+.header .logo {
+  position: relative;
+  display: block;
+  height: 0;
+  padding-bottom: 15%;
+  background: url('assets/images/header-large.png') no-repeat center center;
+  background-size: cover;
+}
+.header .fb-like {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+@media screen and (max-width: 800px) {
+  .header .fb-like {
+    display: none;
+  }
+}
+.content {
+  padding: 0;
+}
+.content .cat-title {
+  font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.content .content-title {
+  line-height: 40px;
+  font-weight: bold;
+}
+.content .pagination {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.content .pagination .nextpostslink {
+  float: right;
+}
+.content .greinasafn .grein {
+  height: 240px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.content .greinasafn img {
+  height: auto !important;
+}
+.content .greinasafn h2 {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 75px;
+}
+.content .photos img {
+  opacity: 0.7;
+}
+.content .photos img:hover {
+  opacity: 1.0;
+}
+.content .photos div.col > div {
+  /*          background-color: black;
+*/
+}
+.content .myndaalbum-top {
+  margin-bottom: 15px;
+}
+.content .bordi .bordi-item {
+  margin-bottom: 30px;
+}
+.content .bordi .bordi-item h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.content .bordi .bordi-item img {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1020px) {
+  .content {
+    padding: 0 30px;
+  }
+}
+.footer {
+  padding: 30px;
+  min-height: 50px;
+  margin-top: 30px;
+  font-size: 0.875em;
+  color: #ffffff;
+  background: #282828;
+}
+.footer a {
+  color: #ffffff;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .social {
+  font-size: 32px;
+}
+.footer .social a {
+  color: #eeeeee;
+}
+.footer .social a:hover {
+  color: #1e9bc9;
+  text-decoration: none;
+}
+.nav {
+  *zoom: 1;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  text-align: center;
+  background: #282828;
+}
+.nav:before,
+.nav:after {
+  content: " ";
+  display: table;
+}
+.nav:after {
+  clear: both;
+}
+.nav:before,
+.nav:after {
+  content: " ";
+  display: table;
+}
+.nav:after {
+  clear: both;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav ul li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.nav ul li a {
+  display: block;
+  padding: 0 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 30px;
+}
+.nav ul li a:hover {
+  background: #007dab;
+  color: #ffffff;
+}
+.sidebar img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+.sidebar .album img {
+  height: auto !important;
+}
+.sidebar .photos img {
+  margin-bottom: 30px;
+}
+.sidebar .sidebar-box {
+  margin: 0 0 30px;
+}
+.sidebar .widget_execphp > h3 {
+  display: none;
+}
+.sidebar div.search-form {
+  margin: 15px 0;
+}
+.sidebar ul.archives-monthly li {
+  margin-left: 15px;
+}
+.sidebar ul.article-list {
+  padding: 0;
+  list-style: none;
+}
+.sidebar ul.article-list li {
+  position: relative;
+  padding-left: 130px;
+  min-height: 80px;
+  margin-bottom: 20px;
+}
+.sidebar ul.article-list li a {
+  display: block;
+  font-weight: bold;
+}
+.sidebar ul.article-list li .figure,
+.sidebar ul.article-list li .wpp-thumbnail {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+}
+.sidebar div.section-box h2 {
+  font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sidebar div.section-box img {
+  display: block;
+  min-width: 100% !important;
+  height: auto;
+}
+.sidebar div.section-box div {
+  position: relative;
+}
+.sidebar div.section-box div a.sidebar-box-headline {
+  font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 18px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 5px;
+  margin-right: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  color: #282828;
+}
+.sidebar div.section-box h2.sidebar-box-header {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #eeeeee;
+}
+.sidebar div.section-box h2.sidebar-box-header a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.sidebar div.svarta-box h2.sidebar-box-header {
+  background-color: black;
+}
+.sidebar div.svarta-box h2.sidebar-box-header a {
+  color: #7b0800;
+}
+.sidebar div.svarta-box h2.sidebar-box-header a:hover {
+  color: #eeeeee;
+}
+.sidebar div.svarta-box div a.sidebar-box-headline {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #7b0800;
+  font-weight: bold;
+}
+body.category-svartabloggid,
+body.category-svortu,
+body.svortu,
+body.svartabloggid {
+  background: #000000;
+  color: #eeeeee;
+}
+body.category-svartabloggid .section-box div a.sidebar-box-headline,
+body.category-svortu .section-box div a.sidebar-box-headline,
+body.svortu .section-box div a.sidebar-box-headline,
+body.svartabloggid .section-box div a.sidebar-box-headline {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #7b0800;
+  font-weight: bold;
+}
+body.category-svartabloggid .content,
+body.category-svortu .content,
+body.svortu .content,
+body.svartabloggid .content,
+body.category-svartabloggid .wrap,
+body.category-svortu .wrap,
+body.svortu .wrap,
+body.svartabloggid .wrap,
+body.category-svartabloggid .nav,
+body.category-svortu .nav,
+body.svortu .nav,
+body.svartabloggid .nav {
+  background: #000000;
+  color: #eeeeee;
+}
+body.category-svartabloggid .cat-title,
+body.category-svortu .cat-title,
+body.svortu .cat-title,
+body.svartabloggid .cat-title {
+  color: #7b0800;
+}
+body.category-svartabloggid a,
+body.category-svortu a,
+body.svortu a,
+body.svartabloggid a {
+  color: #eeeeee;
+}
+body.category-svartabloggid a:hover,
+body.category-svortu a:hover,
+body.svortu a:hover,
+body.svartabloggid a:hover {
+  color: #7b0800;
+}
+body.category-svartabloggid .nav ul li a:hover,
+body.category-svortu .nav ul li a:hover,
+body.svortu .nav ul li a:hover,
+body.svartabloggid .nav ul li a:hover {
+  background: #7b0800;
+}
+body.category-svartabloggid .header .logo,
+body.category-svortu .header .logo,
+body.svortu .header .logo,
+body.svartabloggid .header .logo {
+  background-image: url('assets/images/header-svortu-large.jpg');
+}
+body.category-svartabloggid .wp-caption,
+body.category-svortu .wp-caption,
+body.svortu .wp-caption,
+body.svartabloggid .wp-caption {
+  background-color: #282828;
+  color: #eeeeee;
+}
+body.myndaalbum .header .logo,
+body.category-myndaalbum .header .logo {
+  background-image: url('assets/images/header-myndaalbum.jpg');
+}
+body.sudrid a:hover,
+body.category-sudrid a:hover {
+  color: #849361 -20;
+}
+body.sudrid .nav ul li a:hover,
+body.category-sudrid .nav ul li a:hover {
+  background: #849361 -20;
+}
+body.sudrid .header .logo,
+body.category-sudrid .header .logo {
+  background-image: url('assets/images/header-sudrid.jpg');
+}
+body.langtiburtistan .header .logo,
+body.category-langtiburtistan .header .logo {
+  background-image: url('assets/images/header-langtiburtistan.jpg');
+}
+body.lanztidindi a:hover,
+body.category-lanztidindi a:hover {
+  color: #483835;
+}
+body.lanztidindi .nav,
+body.category-lanztidindi .nav {
+  background: #342421;
+}
+body.lanztidindi .nav ul li a,
+body.category-lanztidindi .nav ul li a {
+  color: #ffffff;
+}
+body.lanztidindi .nav ul li a:hover,
+body.category-lanztidindi .nav ul li a:hover {
+  color: #282828;
+  background: #f1e9da;
+}
+body.lanztidindi .header .logo,
+body.category-lanztidindi .header .logo {
+  background-image: url('assets/images/header-lanztidindi.jpg');
+}
+body.bio a:hover,
+body.category-bio a:hover {
+  color: #5c6a78;
+}
+body.bio .nav ul li a:hover,
+body.category-bio .nav ul li a:hover {
+  background: #667482;
+}
+body.bio .header .logo,
+body.category-bio .header .logo {
+  background-image: url('assets/images/header-bio.jpg');
+}
+body.category-greinar .header .logo,
+body.author .header .logo,
+body.date .header .logo {
+  background-image: url('assets/images/header-greinasafn.jpg');
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('assets/fonts/icomoon.eot');
+  src: url('assets/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('assets/fonts/icomoon.woff') format('woff'), url('assets/fonts/icomoon.ttf') format('truetype'), url('assets/fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-facebook,
+.icon-twitter,
+.icon-feed {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-facebook:before {
+  content: "\e000";
+}
+.icon-twitter:before {
+  content: "\e001";
+}
+.icon-feed:before {
+  content: "\e002";
+}
+img.image {
+  max-width: 100%;
+}
+/*iframe.youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%!important;
+    height: 100%!important;
+}*/
+.youtube-player {
+  max-width: 100%;
+}
+.aspect,
+.youtube {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 0 0 20px;
+}
+.aspect iframe,
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%!important;
+  height: 100%!important;
+}
+.aspect.album,
+.youtube.album {
+  padding-bottom: 71.851851851851851851851851851852%;
+}
+.aspect.a16-9,
+.youtube.a16-9 {
+  padding-bottom: 177.77777777777777%;
+}
+.aspect.a4-3,
+.youtube.a4-3 {
+  padding-bottom: 75%;
+}
+.post,
+.page {
+  margin: 0 0 60px;
+}
+.post blockquote,
+.page blockquote {
+  margin-left: 45px;
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.post .post-meta,
+.page .post-meta {
+  margin-top: -15px;
+  font-size: 0.85em;
+  margin-bottom: 15px;
+}
+.post .post-meta a.author:hover,
+.page .post-meta a.author:hover {
+  text-decoration: underline;
+}
+.post .post-meta .post-date,
+.page .post-meta .post-date {
+  opacity: 0.2;
+  font-size: 0.9em;
+}
+.post .post-meta .fb-like,
+.page .post-meta .fb-like {
+  float: right;
+}
+.post .featured-image,
+.page .featured-image,
+.post .youtube-player,
+.page .youtube-player {
+  margin-bottom: 10px;
+}
+.post .featured-image img,
+.page .featured-image img,
+.post .youtube-player img,
+.page .youtube-player img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+.post .post-content a,
+.page .post-content a {
+  text-decoration: underline;
+}
+.post .post-content img,
+.page .post-content img,
+.post .post-content div,
+.page .post-content div,
+.post .post-content a,
+.page .post-content a {
+  max-width: 100% !important;
+  height: auto !important;
+}
+.post .post-content iframe,
+.page .post-content iframe {
+  max-width: 100%;
+}
+.post .post-content p,
+.page .post-content p {
+  line-height: 25px;
+  margin: 0px 0;
+}
+.post .post-footer .flokkar,
+.page .post-footer .flokkar {
+  font-size: 14px;
+  margin: 30px 0;
+}
+.post .wp-caption,
+.page .wp-caption {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100% !important;
+  background-color: #eeeeee;
+  padding: 10px 10px;
+  margin-bottom: 15px !important;
+  /*      margin-top: @gutter/2;
+*/
+  text-align: center;
+}
+.post .wp-caption p.wp-caption-text,
+.page .wp-caption p.wp-caption-text {
+  font-size: 14px;
+  line-height: 18px;
+}
+.post .alignright,
+.page .alignright {
+  float: right;
+  margin-left: 15px;
+}
+.post .alignleft,
+.page .alignleft {
+  float: left;
+  margin-right: 15px;
+}
+.post .aligncenter,
+.page .aligncenter {
+  display: block;
+  margin: auto;
+}
+#loop .wp-caption,
+#loop .wp-caption-text {
+  display: none;
+}

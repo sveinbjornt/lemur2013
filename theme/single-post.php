@@ -25,14 +25,13 @@
         	</div>
         	<div class="featured-image">
         	    <?php if ( !in_category('139') and has_post_thumbnail() ) { ?>
-        	        
-                        <a href="<?php the_permalink() ?>" title="">
-                            <?php the_post_thumbnail('myndin', array(
-                                'alt'	=> trim(strip_tags( $post->post_title )),
-                                'title'	=> trim(strip_tags( $post->post_title )),
-                                'class' => 'image'
-                            )); ?>
-                        </a>
+                    <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>">
+                        <?php the_post_thumbnail('myndin', array(
+                            'alt'	=> trim(strip_tags( $post->post_title )),
+                            'title'	=> trim(strip_tags( $post->post_title )),
+                            'class' => 'image'
+                        )); ?>
+                    </a>
                 <?php }; ?>
         	</div>
     	

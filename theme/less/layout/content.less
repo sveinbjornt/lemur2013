@@ -1,0 +1,90 @@
+.content {
+	padding: 0;
+    // .transition(~"padding 200ms");
+    
+	.cat-title {
+	    font-family: @font-family-special;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	}
+	
+    .content-title {
+        line-height: 40px;
+        font-weight: bold;        
+    }
+    
+    .pagination {
+        font-size: 24px;
+        font-weight: bold;
+        margin: @gutter 0;
+        
+        .nextpostslink {
+            float: right;
+        }
+    }
+
+    .greinasafn {
+        
+        .grein {
+            height: 240px;
+            overflow: hidden;
+            margin-bottom: @gutter/2;
+        }
+        img {
+            height: auto !important;
+        }
+        
+        h2 {
+            margin-top: 5px;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 75px;
+        }
+    }
+
+	.photos {
+	    
+	    img {
+	        opacity: 0.7;
+	    }
+	    img:hover {
+	        opacity: 1.0;
+	    }
+	    
+	    div.col > div {
+/*          background-color: black;
+*/	    }	    
+	}
+	
+	.myndaalbum-top {
+	    margin-bottom: @gutter/2;
+	}
+	
+	.bordi {
+    	.bordi-item {
+    	    margin-bottom: @gutter;
+	    
+    	    h2 {
+    	        margin-bottom: @gutter/3;
+    	        margin-top: @gutter/3;
+    	    }
+	    
+    	    img {
+    	        min-width: 100% !important;
+    	        max-width: 100% !important;
+    	        height: auto;
+    	        overflow: hidden;
+    	    }
+    	}
+    	
+    	div.main {
+    	}
+    }
+}
+
+@media only screen and (max-width: @page-width) {
+
+    .content {
+        padding: 0 30px;
+    }
+}

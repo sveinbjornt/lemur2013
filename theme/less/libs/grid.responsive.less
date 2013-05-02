@@ -1,0 +1,34 @@
+// grid.responsive.less
+
+.grid-collapse (@width) {
+    @media only screen and (max-width: ~"@{width}px") {
+        (~".grid.collapse@{width}") {
+            > .col {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}
+.grid-media-query (@width,@type) when (@type = "collapse") {
+    .grid-collapse (@width);
+}
+// if no type, output all
+.grid-media-query (@width) {
+    .grid-collapse (@width);
+}
+
+.grid-query-loop (@index:@grid-max-break,@break:@grid-break-interval) when (@index >= @grid-min-break) {
+    .grid-media-query (@index);
+
+    .grid-query-loop (@index - @break);
+}
+
+// stop loop on min-break
+/*.grid-query-loop (@grid-min-break) {}
+*/
+// run loop with default values
+.grid-query-loop ();
+
+// run loop with custom values
+// .grid-query-loop ({max-break},{break-interval});

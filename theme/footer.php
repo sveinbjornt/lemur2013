@@ -11,7 +11,7 @@
 				
 				<div class="grid gutter collapse720">
 					<div class="col s2of3">
-						<img src="/images/minilem.png" style="float: left; margin-top: -45px; margin-right: 25px;">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/images/minilem.png" style="float: left; margin-top: -45px; margin-right: 25px;">
 						<p><strong>Lemúrinn</strong> er veftímarit um allt, stofnað í október 2011. <a href="/um" title="Nánar um Lemúrinn">Nánar...</a>
 						    <br>
 						    Ábendingar sendist á netfangið <a href="mailto:lemurinn@lemurinn.is">lemurinn [hjá] lemurinn.is</a>.</p>
@@ -22,7 +22,7 @@
 						<div class="social text-right">
 							<a href="https://www.facebook.com/lemurinn" title="Lemúrinn á Feisbúkk"><i class="icon-facebook"></i></a>
 							<a href="https://twitter.com/Lemurinn" title="Lemúrinn á Twitter"><i class="icon-twitter"></i></a>
-							<a href="/feed/" title="RSS"><i class="icon-feed"></i></a>
+							<a href="<?php echo get_bloginfo('wpurl'); ?>/feed/" title="RSS"><i class="icon-feed"></i></a>
 						</div>
 						
 					</div>

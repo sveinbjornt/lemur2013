@@ -1,0 +1,36 @@
+.nav {
+	.clearfix();
+	padding: 0 @gutter / 2;
+	margin-bottom: @gutter;
+	font-family: @font-family-special;
+
+	text-align: center;
+
+	background: @color-primary;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			.inline-block();
+
+			a {
+				display: block;
+				padding: 0 15px;
+
+				text-transform: uppercase;
+				text-decoration: none;
+				color: @color-white;
+
+				line-height: 30px;
+
+				&:hover {
+					background: @color-secondary;
+					color: @color-white;
+				}
+			}
+		}
+	}
+}
