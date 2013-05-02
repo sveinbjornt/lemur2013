@@ -7,7 +7,7 @@
 	}
 	
 	.meta {
-	    font-size: 0.9em;
+	    font-size: 14px;
 	}
 	
 	.cat-title {
@@ -21,6 +21,34 @@
         font-weight: bold;
     }
 */	
+    .pagination {
+        font-size: 24px;
+        font-weight: bold;
+        margin: @gutter 0;
+        .nextpostslink {
+            float: right;
+        }
+    }
+
+    .greinasafn {
+        
+        .grein {
+            height: 240px;
+            overflow: hidden;
+            margin-bottom: @gutter/2;
+        }
+        img {
+            height: auto !important;
+        }
+        
+        h2 {
+            margin-top: 5px;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 75px;
+        }
+    }
+
 	.photos {
 	    
 	    img {
@@ -127,7 +155,7 @@
 }
 
 @media only screen and (max-width: @page-width) {
-    
+
     .content {
         padding: 0 30px;
     }

@@ -23,8 +23,12 @@
 
 </div> 
 
-<?php get_template_part('loop2'); ?>
+
+
+<?php get_template_part('loop-greinasafn'); ?>
+
 
 <?php get_template_part('pagination'); ?>
+
 
 <?php get_footer(); ?>

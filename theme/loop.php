@@ -19,20 +19,26 @@
             	        ✦ <?php the_time(__('j. F, Y')) ?>
             	    </span>
             	</div>
-            	<div>
-            	    <?php if ( has_post_thumbnail() ) :?>
-                        <a href="<?php the_permalink() ?>" title="">
-                            <?php the_post_thumbnail('myndin', array(
-                                'alt'	=> trim(strip_tags( $post->post_title )),
-                                'title'	=> trim(strip_tags( $post->post_title )),
-                                'class' => 'image'
-                            )); ?>
-                        </a>
-                    <?php endif; ?>            	    
+            	<div class="featured-image">
+            	        <?php if (has_post_thumbnail() and !in_category('139')): ?>
+                            <a href="<?php the_permalink() ?>" title="">
+                                <?php the_post_thumbnail('myndin', array(
+                                    'alt'	=> trim(strip_tags( $post->post_title )),
+                                    'title'	=> trim(strip_tags( $post->post_title )),
+                                    'class' => 'image'
+                                )); ?>
+                            </a>
+                        <?php endif; ?>            	          	    
             	</div>
             	
             	<div class="post-content">
-            	    <?php the_excerpt(); ?>
+            	    <?php if ( in_category('139') ) { ?>
+                    	<?php echo improved_trim_excerpt(''); ?>
+                    <?php } else { ?>
+                        	<?php echo improved_trim_excerpt(''); ?>
+                        <!-- <?php the_excerpt(); ?> -->
+                    <?php } ?>
+            	    
             	</div>
             </div>
             

@@ -19,17 +19,22 @@
         	    <span class="post-date">
         	        ✦ <?php the_time(__('j. F, Y')) ?>
         	    </span>
+        	    
+        	    <span class="fb-like">
+        	        <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
+        	    </span>
         	</div>
-        	<div>
-        	    <?php if ( has_post_thumbnail() ) :?>
-                    <a href="<?php the_permalink() ?>" title="">
-                        <?php the_post_thumbnail('myndin', array(
-                            'alt'	=> trim(strip_tags( $post->post_title )),
-                            'title'	=> trim(strip_tags( $post->post_title )),
-                            'class' => 'image'
-                        )); ?>
-                    </a>
-                <?php endif; ?>            	    
+        	<div class="featured-image">
+        	    <?php if ( !in_category('139') and has_post_thumbnail() ) { ?>
+        	        
+                        <a href="<?php the_permalink() ?>" title="">
+                            <?php the_post_thumbnail('myndin', array(
+                                'alt'	=> trim(strip_tags( $post->post_title )),
+                                'title'	=> trim(strip_tags( $post->post_title )),
+                                'class' => 'image'
+                            )); ?>
+                        </a>
+                <?php }; ?>
         	</div>
     	
         	<div class="post-content">
@@ -41,7 +46,7 @@
         	        <?php the_tags(__('<strong>Flokkar: </strong>'), ', '); ?>
         	    </div>
 
-                <fb:like href="<?php the_permalink() ?>" layout="standard" show_faces="false" width="450" action="like" colorscheme="light"></fb:like>                  
+                <fb:like href="<?php the_permalink() ?>" layout="standard" show_faces="false" width="450" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>                  
                             
                 <?php comments_template(); ?>
             </div>

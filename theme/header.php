@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html xmlns:fb="http://ogp.me/ns/fb#" lang="<?php bloginfo('language'); ?>">
 
     <!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="en" class="lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--><html lang="<?php bloginfo('language'); ?>" class=""><!--<![endif]-->
+    <!--[if gt IE 8]><!--><html lang="<?php bloginfo('language'); ?>" class="" ><!--<![endif]-->
 
     <head>
         
+        <!-- LOAD POSTS -->
         <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
-        
         
         <!-- META TAGS -->
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
@@ -18,17 +18,17 @@
         <meta http-equiv="Content-language" content="<?php bloginfo('language'); ?>" />
         <!-- if page is a single page use special meta tags -->  
         <?php if (is_single()) { ?>  
-            <meta property="og:url" content="<?php the_permalink() ?>">  
-            <meta property="og:title" content="<?php single_post_title(''); ?> | Lemúrinn" />  
-            <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>">  
-            <meta property="og:site_name" content="Lemúrinn">  
-            <meta property="og:type" content="article">  
-            <meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); } ?>">  
+        <meta property="og:url" content="<?php the_permalink() ?>">  
+        <meta property="og:title" content="<?php single_post_title(''); ?> | Lemúrinn" />  
+        <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>">  
+        <meta property="og:site_name" content="Lemúrinn">  
+        <meta property="og:type" content="article">  
+        <meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); } ?>">  
         <?php } else { ?>  
-            <meta property="og:site_name" content="Lemúrinn">  
-            <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira.">  
-            <meta property="og:type" content="website">  
-            <meta property="og:image" content="http://lemurinn.is/images/FIXME!!!!!!"> 
+        <meta property="og:site_name" content="Lemúrinn">  
+        <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira.">  
+        <meta property="og:type" content="website">  
+        <meta property="og:image" content="http://lemurinn.is/images/FIXME!!!!!!"> 
         <?php } ?>  
         
         <!-- STYLES -->
@@ -71,11 +71,19 @@
 
     <body <?php body_class($cat_strings)?>>
         
+        <div id="fb-root"></div>
+        
         <div class="wrap">
             
             <header class="header">
                 
-                <a href="/" class="logo" title="Aftur á forsíðu Lemúrsins"></a>
+                <a href="/" class="logo" title="Aftur á forsíðu Lemúrsins">
+                    
+                    <div class="fb-like">
+                        <fb:like href="http://www.facebook.com/lemurinn" send="false" layout="button_count" width="120" show_faces="false" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>
+                    </div>
+                    
+                </a>
                 
                 <nav class="nav">
                     <ul>

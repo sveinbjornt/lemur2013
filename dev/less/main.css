@@ -22212,11 +22212,26 @@ body.category-svartabloggid .header .logo,
 body.category-svortu .header .logo,
 body.svortu .header .logo,
 body.svartabloggid .header .logo {
-  background-image: url('/images/header-svortu.jpg');
+  background-image: url('/images/header-svortu-large.jpg');
+}
+body.category-svartabloggid .wp-caption,
+body.category-svortu .wp-caption,
+body.svortu .wp-caption,
+body.svartabloggid .wp-caption {
+  background-color: #282828;
+  color: #eeeeee;
 }
 body.myndaalbum .header .logo,
 body.category-myndaalbum .header .logo {
   background-image: url('/images/header-myndaalbum.jpg');
+}
+body.sudrid a:hover,
+body.category-sudrid a:hover {
+  color: #849361 -20;
+}
+body.sudrid .nav ul li a:hover,
+body.category-sudrid .nav ul li a:hover {
+  background: #849361 -20;
 }
 body.sudrid .header .logo,
 body.category-sudrid .header .logo {
@@ -22249,24 +22264,19 @@ body.category-lanztidindi .header .logo {
 }
 body.bio a:hover,
 body.category-bio a:hover {
-  color: #d64900;
-}
-body.bio .nav,
-body.category-bio .nav {
-  background: #fe711d;
-}
-body.bio .nav ul li a,
-body.category-bio .nav ul li a {
-  color: #282828;
+  color: #5c6a78;
 }
 body.bio .nav ul li a:hover,
 body.category-bio .nav ul li a:hover {
-  color: #282828;
-  background: #ffd843;
+  background: #667482;
 }
 body.bio .header .logo,
 body.category-bio .header .logo {
   background-image: url('/images/header-bio.jpg');
+}
+body.greinar .header .logo,
+body.category-greinar .header .logo {
+  background-image: url('/images/header-greinasafn.jpg');
 }
 .wrap {
   padding: 0;
@@ -22283,16 +22293,27 @@ body.category-bio .header .logo {
   padding: 0;
 }
 .header .logo {
+  position: relative;
   display: block;
   height: 0;
   padding-bottom: 15%;
   background: url('/images/header-large.png') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
 }
 .header .sidenav-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+.header .fb-like {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+@media screen and (max-width: 800px) {
+  .fb-like {
+    display: none;
+  }
 }
 .content {
   padding: 0;
@@ -22306,12 +22327,34 @@ body.category-bio .header .logo {
   margin-bottom: 15px;
 }
 .content .meta {
-  font-size: 0.9em;
+  font-size: 14px;
 }
 .content .cat-title {
   font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
   text-transform: uppercase;
   font-weight: bold;
+}
+.content .pagination {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.content .pagination .nextpostslink {
+  float: right;
+}
+.content .greinasafn .grein {
+  height: 240px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.content .greinasafn img {
+  height: auto !important;
+}
+.content .greinasafn h2 {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 75px;
 }
 .content .photos img {
   opacity: 0.7;
@@ -22502,7 +22545,19 @@ you can use the generic selector below, but it's slower:
 img.image {
   max-width: 100%;
 }
-.aspect {
+/*iframe.youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%!important;
+    height: 100%!important;
+}*/
+.youtube-player {
+  max-width: 100%;
+}
+.aspect,
+.youtube,
+.post-content:first-child {
   overflow: hidden;
   display: block;
   position: relative;
@@ -22510,42 +22565,68 @@ img.image {
   padding-bottom: 56.25%;
   margin: 0 0 20px;
 }
-.aspect iframe {
+.aspect iframe,
+.youtube iframe,
+.post-content:first-child iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%!important;
   height: 100%!important;
 }
-.aspect.album {
+.aspect.album,
+.youtube.album,
+.post-content:first-child.album {
   padding-bottom: 71.851851851851851851851851851852%;
 }
-.aspect.a16-9 {
+.aspect.a16-9,
+.youtube.a16-9,
+.post-content:first-child.a16-9 {
   padding-bottom: 177.77777777777777%;
 }
-.aspect.a4-3 {
+.aspect.a4-3,
+.youtube.a4-3,
+.post-content:first-child.a4-3 {
   padding-bottom: 75%;
 }
 .post,
 .page {
   margin: 0 0 60px;
 }
-.post div.post-meta,
-.page div.post-meta {
+.post blockquote,
+.page blockquote {
+  margin-left: 450px;
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.post .post-meta,
+.page .post-meta {
   margin-top: -15px;
   font-size: 0.85em;
   margin-bottom: 15px;
 }
-.post div.post-meta a.author:hover,
-.page div.post-meta a.author:hover {
+.post .post-meta a.author:hover,
+.page .post-meta a.author:hover {
   text-decoration: underline;
 }
-.post div.post-meta .post-date,
-.page div.post-meta .post-date {
-  /*            float: right;
-*/
+.post .post-meta .post-date,
+.page .post-meta .post-date {
   opacity: 0.2;
   font-size: 0.9em;
+}
+.post .post-meta .fb-like,
+.page .post-meta .fb-like {
+  float: right;
+}
+.post .featured-image,
+.page .featured-image {
+  margin-bottom: 8px;
+}
+.post .featured-image img,
+.page .featured-image img {
+  max-width: 100% !important;
+  height: auto !important;
 }
 .post .post-content a,
 .page .post-content a {
@@ -22558,7 +22639,11 @@ img.image {
 .post .post-content a,
 .page .post-content a {
   max-width: 100% !important;
-  height: auto;
+  height: auto !important;
+}
+.post .post-content iframe,
+.page .post-content iframe {
+  max-width: 100%;
 }
 .post .post-content p,
 .page .post-content p {
@@ -22567,7 +22652,44 @@ img.image {
 }
 .post .post-footer .flokkar,
 .page .post-footer .flokkar {
+  font-size: 14px;
   margin: 30px 0;
+}
+.post .wp-caption,
+.page .wp-caption {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100% !important;
+  background-color: #eeeeee;
+  padding: 10px 10px;
+  margin-bottom: 15px !important;
+  /*      margin-top: @gutter/2;
+*/
+  text-align: center;
+}
+.post .wp-caption p.wp-caption-text,
+.page .wp-caption p.wp-caption-text {
+  font-size: 14px;
+  line-height: 18px;
+}
+.post .alignright,
+.page .alignright {
+  float: right;
+  margin-left: 15px;
+}
+.post .alignleft,
+.page .alignleft {
+  float: left;
+  margin-right: 15px;
+}
+.post .aligncenter,
+.page .aligncenter {
+  display: block;
+  margin: auto;
+}
+#loop .wp-caption {
+  display: none;
 }
 .sidebar-box {
   margin: 0 0 30px;
