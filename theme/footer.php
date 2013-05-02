@@ -1,6 +1,6 @@
                 </div>
 
-                <div class="col s1of3 side">
+                <div class="col s1of3 sidebar">
                     <?php get_sidebar(); ?>
 			    </div>
 			
@@ -9,7 +9,7 @@
 
 			<footer class="footer">
 				
-				<div class="grid gutter collapse600">
+				<div class="grid gutter collapse720">
 					<div class="col s2of3">
 						<img src="/images/minilem.png" style="float: left; margin-top: -45px; margin-right: 25px;">
 						<p><strong>Lemúrinn</strong> er veftímarit um allt, stofnað í október 2011. <a href="/um" title="Nánar um Lemúrinn">Nánar...</a>

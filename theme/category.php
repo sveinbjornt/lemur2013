@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<?php if (!is_category() or is_category('greinar')): ?>
-    <div class="content-title">
+<div class="content-title">
 
-        <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
-
+    <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+        <!-- ?php /* If this is a category archive */ if (is_category()) { ?>
+        </* ?php printf(__('%s'), single_cat_title('', false)); ? --> 
+        
+        
         <?php /* If this is a tag archive */ if ( is_tag() ) { ?>
         <?php printf(__('&raquo; Greinar í flokknum &bdquo;%s&ldquo;'), single_tag_title('', false) ); ?>
         <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
@@ -19,13 +21,16 @@
         <?php _e('Arkífur'); ?>
         <?php } ?>
 
-    </div> 
-<?php endif; ?>
+</div> 
 
 
-
-<?php get_template_part('loop-greinasafn'); ?>
-
+<?php 
+    if ( !is_category('greinar') ) { 
+        get_template_part('loop'); 
+    } else { 
+        get_template_part('loop-greinasafn'); 
+    } 
+?>
 
 <?php get_template_part('pagination'); ?>
 

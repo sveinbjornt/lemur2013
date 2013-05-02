@@ -19,7 +19,6 @@
         	    <span class="post-date">
         	        ✦ <?php the_time(__('j. F, Y')) ?>
         	    </span>
-        	    
         	    <span class="fb-like">
         	        <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
         	    </span>

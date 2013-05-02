@@ -77,7 +77,7 @@
             
             <header class="header">
                 
-                <a href="/" class="logo" title="Aftur á forsíðu Lemúrsins">
+                <a href="<?php echo $base ?>" class="logo" title="Aftur á forsíðu Lemúrsins">
                     
                     <div class="fb-like">
                         <fb:like href="http://www.facebook.com/lemurinn" send="false" layout="button_count" width="120" show_faces="false" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>
@@ -87,14 +87,15 @@
                 
                 <nav class="nav">
                     <ul>
-                        <li><a href="/wordpress/greinar">Greinasafn</a></li>
-                        <li><a href="/wordpress/myndaalbum">Myndaalbúmið</a></li>
-                        <li><a href="/wordpress/svartabloggid">Svörtu</a></li>
-                        <li><a href="/wordpress/langtiburtistan">Langtíburtistan</a></li>
-                        <li><a href="/wordpress/sudrid">Suðrið</a></li>
-                        <li><a href="/wordpress/lanztidindi">Lanztíðindi</a></li>
-                        <li><a href="/wordpress/bio">Bíó</a></li>
-                        <li><a href="/wordpress/um">Um</a></li>
+                        <?php $base = get_bloginfo('wpurl'); ?>
+                        <li><a href="<?php echo $base ?>/greinar">Greinasafn</a></li>
+                        <li><a href="<?php echo $base ?>/myndaalbum">Myndaalbúmið</a></li>
+                        <li><a href="<?php echo $base ?>/svartabloggid">Svörtu</a></li>
+                        <li><a href="<?php echo $base ?>/langtiburtistan">Langtíburtistan</a></li>
+                        <li><a href="<?php echo $base ?>/sudrid">Suðrið</a></li>
+                        <li><a href="<?php echo $base ?>/lanztidindi">Lanztíðindi</a></li>
+                        <li><a href="<?php echo $base ?>/bio">Bíó</a></li>
+                        <li><a href="<?php echo $base ?>/um">Um</a></li>
                     </ul>
                 </nav>
 
@@ -104,7 +105,7 @@
                 <?php if ( is_home() ) get_template_part('bordi'); ?>
                 <?php if ( is_category(63) ) get_template_part('myndaalbum-header'); ?>
                 
-                <div class="grid gutter collapse600">
+                <div class="grid gutter collapse720">
                     
                 	<div class="col s2of3">
                 

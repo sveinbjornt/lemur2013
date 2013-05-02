@@ -1,26 +1,18 @@
 .content {
 	padding: 0;
     // .transition(~"padding 200ms");
-	
-	.headline {
-	    margin-bottom: (@gutter/2);	    
-	}
-	
-	.meta {
-	    font-size: 14px;
-	}
-	
+    
 	.cat-title {
 	    font-family: @font-family-special;
 	    text-transform: uppercase;
 	    font-weight: bold;
 	}
 	
-/*  .content-title {
-        margin: @gutter/2 0 @gutter/2 0;
+    .content-title {
+        line-height:40px;
         font-weight: bold;
     }
-*/	
+    
     .pagination {
         font-size: 24px;
         font-weight: bold;
@@ -64,10 +56,16 @@
 	}
 	
 	.myndaalbum-top {
-	    margin-bottom: 10px;
+	    margin-bottom: @gutter/2;
 	}
 	
-	.article-item {
+	.bordi-item {
+	    margin-bottom: @gutter;
+	    
+	    h2 {
+	        margin-bottom: @gutter/3;
+	        margin-top: @gutter/3;
+	    }
 	    
 	    .thumb {	    
     	    img {
@@ -78,80 +76,6 @@
     	    }
 	    }
 	}
-    
-	
-	
-  .side {
-      img {
-          max-width: 100% !important;
-          height: auto !important;
-      }
-        .album {
-            img {
-                height: auto !important;
-            }
-        }
-      
-        .photos img {
-            margin-bottom: @gutter;
-        }
-        
-        
-        .post-list {
-            
-            a.title {
-                display: block;
-                font-weight: bold;
-                margin-left: 10px;
-            }
-            a.title:hover {
-                // text-decoration: underline;
-            }
-            
-            img {
-                max-width: 100% !important;
-                height: auto !important;
-            }
-            
-            .grid {
-                margin-bottom: 10px;
-            }
-        }
-        
-        
-        h2.sidebar-box-header {
-            margin-bottom: 0;
-            text-transform: uppercase;
-            font-size: 18px;
-            width: 100%;
-            background-color: @color-gray-evenlighter;
-            
-            a {
-                padding-left: @gutter/2;
-                padding-right: @gutter/2;
-            }
-        }
-        
-        .svarta-box {
-                        
-            h2.sidebar-box-header {
-                background-color: black;                
-                a {
-                    color: @svortu-color-secondary;
-                    &:hover {
-                        color: @svortu-color-primary;
-                    }
-                }
-            }
-            
-            a.sidebar-box-headline {
-                background-color: fade(@color-black,80%);
-                color: @svortu-color-secondary;
-                font-weight: bold;
-            }
-            
-        }
-    }
 }
 
 @media only screen and (max-width: @page-width) {

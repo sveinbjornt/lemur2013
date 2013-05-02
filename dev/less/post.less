@@ -2,7 +2,7 @@
 	margin: 0 0 @gutter*2;
 	
 	blockquote {
-	    margin-left: @gutter * (@gutter/2);
+	    margin-left: @gutter + (@gutter/2);
 	    font-family: @font-family;
 	    font-size: 16px;
 	    margin-top: @gutter/2;
@@ -97,50 +97,12 @@
 	}
 }
 
-#loop .wp-caption {
+#loop .wp-caption, #loop .wp-caption-text {
     display: none;
 }
 
-.sidebar-box {
-    margin: 0 0 @gutter;
-    
-}
 
-.widget_execphp {
-    >h3 {
-        display: none;
-    }
-}
 
-.section-box {
-    font-family: @font-family-special;
-    
-    h2 {
-        font-family: @font-family-special;
-        .text-overflow();
-    }
-    
-    img {
-        display: block;
-        min-width: 100% !important;
-        height: auto;
-    }
 
-    div {
-        position: relative;
-        
-        a.sidebar-box-headline {
-            position: absolute;
-            font-size: 18px;
-            bottom: @gutter/2;
-            left: @gutter/2;
-            padding: 5px;
-            margin-right: @gutter/2;
-            background-color: fade(@color-white,90%);
-            text-transform: uppercase;
-            color: @font-color;
-        }
-    }
-    
-    
-}
+
+

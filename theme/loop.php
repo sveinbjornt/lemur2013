@@ -18,6 +18,11 @@
             	    <span class="post-date">
             	        ✦ <?php the_time(__('j. F, Y')) ?>
             	    </span>
+            	    <?php if ( !is_home() ) { ?>
+            	        <span class="fb-like">
+                	        <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
+                	    </span>
+                	<?php } ?>
             	</div>
             	<div class="featured-image">
             	        <?php if (has_post_thumbnail() and !in_category('139')): ?>
@@ -38,7 +43,6 @@
                         	<?php echo improved_trim_excerpt(''); ?>
                         <!-- <?php the_excerpt(); ?> -->
                     <?php } ?>
-            	    
             	</div>
             </div>
             
