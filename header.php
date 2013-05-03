@@ -32,6 +32,7 @@
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico" type="image/x-icon">
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri() ?>/style-lt-ie9.css">  
         <![endif]-->
         <!--[if lte IE 7]>
             <script src="<?php echo get_template_directory_uri() ?>/assets/js/lte-ie7.js"></script>

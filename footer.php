@@ -66,7 +66,10 @@
                 d.getElementsByTagName('head')[0].appendChild(js);
             }(document));
         </script>
-
+        
+        <!-- YouTube Placeholder -->
+        <!-- <script src="<?php echo get_template_directory_uri() ?>/assets/js/youtube-placeholder.js"></script> -->
+        
 	</body>
 
 </html>

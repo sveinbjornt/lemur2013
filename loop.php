@@ -41,7 +41,6 @@
                     	<?php echo improved_trim_excerpt(''); ?>
                     <?php } else { ?>
                         	<?php echo improved_trim_excerpt(''); ?>
-                        <!-- <?php the_excerpt(); ?> -->
                     <?php } ?>
             	</div>
             </div>
