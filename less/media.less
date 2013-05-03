@@ -22,6 +22,10 @@ img.image {
 	padding-bottom: 56.25%;
 	margin: 0 0 @spacing;
 
+    &.youtube {
+        margin: 0 0 @spacing;
+    }
+
 	iframe {
 		position: absolute;
 		top: 0;
@@ -37,8 +41,16 @@ img.image {
 	&.a16-9 {
 		padding-bottom: 16 / 9 * 100%;
 	}
+	
+	&.a320-240 {
+	    padding-bottom: 240 / 320  * 100%;
+	}
+	
+	&.a275-200 {
+	    padding-bottom: 200 / 275  * 100%;
+	}
 
 	&.a4-3 {
-		padding-bottom: 3 / 4 * 100%;
+		padding-bottom: 70%;
 	}
 }

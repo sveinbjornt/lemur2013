@@ -13,17 +13,10 @@ add_theme_support( 'automatic-feed-links' );
 function sight_setup() {
     update_option('thumbnail_size_w', 320);
     update_option('thumbnail_size_h', 320);
-    add_image_size( 'article-list', 110, 85, true );
-    add_image_size( 'mini-thumbnail', 50, 50, true );
-    add_image_size( 'book-thumbnail', 75, 9999 );
-    add_image_size( 'slide', 689, 290, true );
-    add_image_size( 'sbbig', 275, 9999 );
+    add_image_size( 'list', 120, 90, true );
     add_image_size( 'sidebar', 320, 240, true );
-    add_image_size( 'bordi', 320, 240, true);
-    add_image_size( 'blogthumb', 689, 400, true );
-    add_image_size( 'myndin', 689, 9999 );
-    register_nav_menu('Navigation', __('Navigation'));
-    register_nav_menu('Top menu', __('Top menu'));
+    add_image_size( 'safn', 275, 200, true);
+    add_image_size( 'myndin', 670, 9999 );
 }
 add_action( 'init', 'sight_setup' );
 
@@ -765,7 +758,7 @@ function improved_trim_excerpt($text) {
                 $text = apply_filters('the_content', $text);
                 $text = str_replace('\]\]\>', ']]&gt;', $text);
                 $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-                $text = strip_tags($text, '<p> <iframe> <strong> <em> <a>');
+                $text = strip_tags($text, '<p> <iframe> <a>');
                 $excerpt_length = 100;
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);

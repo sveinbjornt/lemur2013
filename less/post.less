@@ -23,15 +23,16 @@
 	    }
 	    
 	    .fb-like {
-	        float: right;
+	        text-align: right;
 	    }
 	}
 	
-	.featured-image, .youtube-player {
-	    margin-bottom: @spacing/2;
+	.featured-image {
+	    
 	    img {
-	        max-width: 100% !important;
-	        height: auto !important
+	        width: 100% !important;
+	        height: auto !important;
+	        margin-bottom: @spacing;
 	    }
 	}
 	
@@ -53,12 +54,21 @@
 	        line-height: @font-size + 9px;
 	        margin: 0px 0;
 	    }
+	    p.youtube {
+	        margin-bottom: @spacing/2;
+	    }
 	}
 	
 	.post-footer {
 	    .flokkar {
 	        font-size: 14px;
-	        margin: @gutter 0;
+	        margin-bottom: @spacing;
+	        margin-top: @spacing * 2;
+	    }
+	    
+	    .comments {
+	        max-width: 100%;
+	        margin: @spacing 0;
 	    }
 	}
 	
@@ -76,6 +86,7 @@
 	    
 	    p.wp-caption-text {
 	        
+	        margin-top: 4px;
 	        font-size: 14px;
 	        line-height: 18px;
 	    }

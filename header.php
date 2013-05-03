@@ -77,7 +77,7 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="<?php echo $base ?>/greinar" title="Greinasafn Lemúrsins">Greinasafn</a></li>
-                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Myndaalbúmið</a></li>
+                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
                         <li><a href="<?php echo $base ?>/svartabloggid" title="Svörtu síðurnar">Svörtu</a></li>
                         <li><a href="<?php echo $base ?>/langtiburtistan" title="Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>
                         <li><a href="<?php echo $base ?>/sudrid" title="Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
@@ -90,10 +90,18 @@
             </header>
             
             <div class="content">
-                <?php if ( is_home() ) get_template_part('bordi'); ?>
-                <?php if ( is_category(63) ) get_template_part('myndaalbum-header'); ?>
+                <?php 
+                    $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 
+                    if ( is_home() and $page == 1) {
+                        get_template_part('bordi'); 
+                    }
+                    
+                    if ( is_category(63) ) {
+                        get_template_part('myndaalbum-header');
+                    }
+                ?>
                 <div class="grid gutter collapse720">
                     
                 	<div class="col s2of3">
-                
+

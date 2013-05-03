@@ -7090,7 +7090,7 @@ ol {
 }
 .content .bordi .bordi-item h2 {
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: -10px;
 }
 .content .bordi .bordi-item img {
   min-width: 100% !important;
@@ -7102,6 +7102,30 @@ ol {
   .content {
     padding: 0 30px;
   }
+}
+/* Facebook Comments */
+/*.fb-comments, .fb-comments iframe[style], .fb-comments span {
+width: 100% !important;
+}
+
+.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
+    width: 100% !important;
+}
+*/
+/*#fbcomments, .fb-comments, .fb-comments iframe[style], .fb-comments span {
+width: 100% !important;
+}*/
+.fb-comments,
+.fb-comments iframe[style],
+.fb-like-box,
+.fb-like-box iframe[style] {
+  width: 100% !important;
+}
+.fb-comments span,
+.fb-comments iframe span[style],
+.fb-like-box span,
+.fb-like-box iframe span[style] {
+  width: 100% !important;
 }
 .footer {
   padding: 30px;
@@ -7216,6 +7240,10 @@ ol {
   top: 0;
   left: 0;
   width: 110px;
+}
+.sidebar ul.article-list li .figure img,
+.sidebar ul.article-list li .wpp-thumbnail img {
+  width: 100%;
 }
 .sidebar div.section-box h2 {
   font-family: 'Brandon Grotesque Medium', "Palatino Linotype", "Book Antiqua", "Palatino", serif;
@@ -7376,14 +7404,6 @@ body.lanztidindi .header .logo,
 body.category-lanztidindi .header .logo {
   background-image: url('assets/images/header-lanztidindi.jpg');
 }
-body.bio a:hover,
-body.category-bio a:hover {
-  color: #5c6a78;
-}
-body.bio .nav ul li a:hover,
-body.category-bio .nav ul li a:hover {
-  background: #667482;
-}
 body.bio .header .logo,
 body.category-bio .header .logo {
   background-image: url('assets/images/header-bio.jpg');
@@ -7460,6 +7480,10 @@ img.image {
   padding-bottom: 56.25%;
   margin: 0 0 20px;
 }
+.aspect.youtube,
+.youtube.youtube {
+  margin: 0 0 20px;
+}
 .aspect iframe,
 .youtube iframe {
   position: absolute;
@@ -7476,9 +7500,17 @@ img.image {
 .youtube.a16-9 {
   padding-bottom: 177.77777777777777%;
 }
+.aspect.a320-240,
+.youtube.a320-240 {
+  padding-bottom: 75%;
+}
+.aspect.a275-200,
+.youtube.a275-200 {
+  padding-bottom: 72.72727272727273%;
+}
 .aspect.a4-3,
 .youtube.a4-3 {
-  padding-bottom: 75%;
+  padding-bottom: 70%;
 }
 .post,
 .page {
@@ -7508,20 +7540,13 @@ img.image {
 }
 .post .post-meta .fb-like,
 .page .post-meta .fb-like {
-  float: right;
-}
-.post .featured-image,
-.page .featured-image,
-.post .youtube-player,
-.page .youtube-player {
-  margin-bottom: 10px;
+  text-align: right;
 }
 .post .featured-image img,
-.page .featured-image img,
-.post .youtube-player img,
-.page .youtube-player img {
-  max-width: 100% !important;
+.page .featured-image img {
+  width: 100% !important;
   height: auto !important;
+  margin-bottom: 20px;
 }
 .post .post-content a,
 .page .post-content a {
@@ -7545,10 +7570,20 @@ img.image {
   line-height: 25px;
   margin: 0px 0;
 }
+.post .post-content p.youtube,
+.page .post-content p.youtube {
+  margin-bottom: 10px;
+}
 .post .post-footer .flokkar,
 .page .post-footer .flokkar {
   font-size: 14px;
-  margin: 30px 0;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.post .post-footer .comments,
+.page .post-footer .comments {
+  max-width: 100%;
+  margin: 20px 0;
 }
 .post .wp-caption,
 .page .wp-caption {
@@ -7565,6 +7600,7 @@ img.image {
 }
 .post .wp-caption p.wp-caption-text,
 .page .wp-caption p.wp-caption-text {
+  margin-top: 4px;
   font-size: 14px;
   line-height: 18px;
 }

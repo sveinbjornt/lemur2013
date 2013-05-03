@@ -7,7 +7,7 @@
         <div class="col s1of3 grein">
             <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
             
-                <?php if (has_post_thumbnail() and !in_category('139')): ?>
+                <?php if (has_post_thumbnail()): ?>
                         <?php the_post_thumbnail('sidebar', array(
                             'alt'	=> trim(strip_tags( $post->post_title )),
                             'title'	=> trim(strip_tags( $post->post_title )),

@@ -10,19 +10,24 @@
             	    </a>
             	</h2>
             	
-            	<div class="post-meta">
-            	    eftir 
-            	    <a class="author" href="<?php $id = get_the_author_meta('ID'); echo get_author_posts_url($id); ?>" title="Greinar eftir <?php the_author_meta( 'name2' ); ?>">
-            	        <?php the_author_meta('name2'); ?>
-            	    </a> 
-            	    <span class="post-date">
-            	        ✦ <?php the_time(__('j. F, Y')) ?>
-            	    </span>
-            	    <?php if ( !is_home() ) { ?>
-            	        <span class="fb-like">
-                	        <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
+            	<div class="post-meta grid">
+            	    
+            	    <div class="col s1of2">
+            	        eftir 
+                	    <a class="author" href="<?php $id = get_the_author_meta('ID'); echo get_author_posts_url($id); ?>" title="Greinar eftir <?php the_author_meta( 'name2' ); ?>">
+                	        <?php the_author_meta('name2'); ?>
+                	    </a> 
+                	    <span class="post-date">
+                	        ✦ <?php the_time(__('j. F, Y')) ?>
                 	    </span>
-                	<?php } ?>
+                	</div>
+                	
+                	<div class="col s1of2 fb-like">
+                	    <?php if ( !is_home() ) { ?>
+                    	    <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
+                    	<?php } ?>
+                    </div>
+                    
             	</div>
             	<div class="featured-image">
             	        <?php if (has_post_thumbnail() and !in_category('139')): ?>

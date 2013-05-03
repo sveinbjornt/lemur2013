@@ -5,8 +5,8 @@
     	<div class="col s1of3 bordi-item">
 		    
             <div class="thumb">
-                <a class="" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                    <?php the_post_thumbnail('bordi'); ?>
+                <a class="aspect a275-200" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                    <?php the_post_thumbnail('sidebar'); ?>
                 </a>
             </div>
 
