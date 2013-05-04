@@ -7010,6 +7010,9 @@ ol {
   margin: 0 0 20px 0;
   padding: 0 0 0 20px;
 }
+#wpstats {
+  display: none;
+}
 .wrap {
   padding: 0;
   max-width: 1020px;
@@ -7046,8 +7049,9 @@ ol {
   text-transform: uppercase;
   font-weight: bold;
 }
-.content .content-title {
-  line-height: 40px;
+.content .content-title div.archive {
+  line-height: 25px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 .content .pagination {
@@ -7232,6 +7236,10 @@ width: 100% !important;
 .sidebar ul.article-list li a {
   display: block;
   font-weight: bold;
+}
+.sidebar ul.article-list li span.date {
+  opacity: 0.2;
+  font-size: 0.9em;
 }
 .sidebar ul.article-list li .figure,
 .sidebar ul.article-list li .wpp-thumbnail {
@@ -7593,9 +7601,8 @@ img.image {
   max-width: 100% !important;
   background-color: #eeeeee;
   padding: 10px 10px;
-  margin-bottom: 15px !important;
-  /*      margin-top: @gutter/2;
-*/
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 .post .wp-caption p.wp-caption-text,

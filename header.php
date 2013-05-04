@@ -9,7 +9,7 @@
         <!-- META TAGS -->
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=1020">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
         <meta http-equiv="Content-language" content="<?php bloginfo('language'); ?>" />
 

@@ -42,11 +42,7 @@
             	</div>
             	
             	<div class="post-content">
-            	    <?php if ( in_category('139') ) { ?>
-                    	<?php echo improved_trim_excerpt(''); ?>
-                    <?php } else { ?>
-                        	<?php echo improved_trim_excerpt(''); ?>
-                    <?php } ?>
+                    <?php echo improved_trim_excerpt(''); ?>
             	</div>
             </div>
             
