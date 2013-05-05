@@ -83,6 +83,7 @@
                         <li><a href="<?php echo $base ?>/sudrid" title="Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
                         <li><a href="<?php echo $base ?>/lanztidindi" title="Úrklippusafn Lemúrsins">Lanztíðindi</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr, hreyfimyndablogg Lemúrsins">Bíó</a></li>
+                        <li><a href="<?php echo $base ?>/kvikindin" title="Dýrasíða Lemúrsins">Kvikindin</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
                     </ul>
                 </nav>

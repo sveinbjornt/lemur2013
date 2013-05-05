@@ -7416,6 +7416,10 @@ body.bio .header .logo,
 body.category-bio .header .logo {
   background-image: url('assets/images/header-bio.jpg');
 }
+body.kvikindin .header .logo,
+body.category-kvikindin .header .logo {
+  background-image: url('assets/images/header-kvikindin-large.jpg');
+}
 body.category-greinar .header .logo,
 body.author .header .logo,
 body.date .header .logo {
@@ -7614,12 +7618,12 @@ img.image {
 .post .alignright,
 .page .alignright {
   float: right;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .post .alignleft,
 .page .alignleft {
   float: left;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 .post .aligncenter,
 .page .aligncenter {

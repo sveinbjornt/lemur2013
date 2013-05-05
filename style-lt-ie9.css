@@ -29,35 +29,39 @@
 
 /* Fix image size for category headers */
 
-body.category-svartabloggid .lt-ie9 .header .logo, 
-body.category-svortu .lt-ie9 .header .logo,
-body.svortu .lt-ie9 .header .logo, 
-body.svartabloggid .lt-ie9 .header .logo {
+body.category-svartabloggid .header > .logo, 
+body.category-svortu .header > .logo,
+body.svortu .header > .logo, 
+body.svartabloggid .header > .logo {
     background-image: url('assets/images/header-svortu-small.jpg');
 }
 
 body.myndaalbum .header > .logo, 
-body.category-myndaalbum .header .logo {
+body.category-myndaalbum .header > .logo {
     background-image: url('assets/images/header-myndaalbum-small.jpg');
 }
 
 body.sudrid .header > .logo, 
-body.category-sudrid {
+body.category-sudrid .header > .logo {
     background-image: url('assets/images/header-sudrid-small.jpg');
 }
 
 body.langtiburtistan  .header > .logo, 
-body.category-langtiburtistan .header .logo {
+body.category-langtiburtistan .header > .logo {
     background-image: url('assets/images/header-langtiburtistan-small.jpg');
 }
 
 body.lanztidindi .header > .logo, 
-body.category-lanztidindi .header .logo {
+body.category-lanztidindi .header > .logo {
     background-image: url('assets/images/header-lanztidindi-small.jpg');
 }
 
 body.bio .header > .logo, body.category-bio .header > .logo {
     background-image: url('assets/images/header-bio-small.jpg');
+}
+
+body.kvikindin .header > .logo, body.category-kvikindin .header > .logo {
+    background-image: url('assets/images/header-kvikindin-small.jpg');
 }
 
 body.category-greinar .header > .logo , 
