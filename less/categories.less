@@ -29,6 +29,12 @@ body.category-svartabloggid, body.category-svortu, body.svortu, body.svartablogg
         font-weight: bold;
     }
     
+    ::selection, ::-moz-selection {
+        background-color: @svortu-color-secondary;
+        color: @svortu-color-primary;
+        opacity: 0;
+    }
+    
     .content, .wrap, .nav {
         background: @svortu-color-background;
         color: @svortu-color-primary;

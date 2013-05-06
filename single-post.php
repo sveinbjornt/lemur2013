@@ -55,8 +55,9 @@
         	    </div>
 
                 <fb:like href="<?php the_permalink() ?>" layout="standard" show_faces="false" width="670" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>                  
-                            
-                <?php comments_template(); ?>
+
+                <?php get_template_part('comments'); ?>
+                <!-- <?php comments_template(); ?> -->
             </div>
         </div>
         

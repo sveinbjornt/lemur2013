@@ -7319,6 +7319,18 @@ body.svartabloggid .section-box div a.sidebar-box-headline {
   color: #7b0800;
   font-weight: bold;
 }
+body.category-svartabloggid ::selection,
+body.category-svortu ::selection,
+body.svortu ::selection,
+body.svartabloggid ::selection,
+body.category-svartabloggid ::-moz-selection,
+body.category-svortu ::-moz-selection,
+body.svortu ::-moz-selection,
+body.svartabloggid ::-moz-selection {
+  background-color: #7b0800;
+  color: #eeeeee;
+  opacity: 0;
+}
 body.category-svartabloggid .content,
 body.category-svortu .content,
 body.svortu .content,
@@ -7585,6 +7597,10 @@ img.image {
 .post .post-content p.youtube,
 .page .post-content p.youtube {
   margin-bottom: 10px;
+}
+.post .post-content a.um-author-name,
+.page .post-content a.um-author-name {
+  text-decoration: none;
 }
 .post .post-footer .flokkar,
 .page .post-footer .flokkar {
