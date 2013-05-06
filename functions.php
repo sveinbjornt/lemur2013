@@ -762,7 +762,7 @@ function improved_trim_excerpt($text) {
                 $excerpt_length = 100;
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
-                array_push($words, '<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira &hellip;]', 'thematic') . '</a>');
+                array_push($words, '&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira &hellip;]', 'thematic') . '</a>');
                 $text = implode(' ', $words);
         }
         return $text;

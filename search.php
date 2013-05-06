@@ -36,11 +36,15 @@
 <style type="text/css">
   .gsc-control-cse {
     font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif !important;
+    font-size: 16px !important;
     border-color: #FFFFFF;
     background-color: #FFFFFF;
   }
   .gsc-control-cse .gsc-table-result {
     font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif !important;  
+    font-size: 16px !important;
+  }
+  .cse .gs-result .gs-snippet, .gs-result .gs-snippet, .cse .gs-spelling-original, .gs-spelling-original {
   }
   input.gsc-input {
     border-color: #777777;
