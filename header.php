@@ -1,9 +1,9 @@
-<!DOCTYPE html xmlns:fb="http://ogp.me/ns/fb#" lang="<?php bloginfo('language'); ?>">
+<!DOCTYPE html>
 
     <!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="en" class="lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--><html lang="<?php bloginfo('language'); ?>" class=""><!--<![endif]-->
+    <!--[if gt IE 8]><!--><html lang="<?php bloginfo('language'); ?>" class="" xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
 
     <head>
         <!-- META TAGS -->
