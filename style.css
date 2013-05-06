@@ -7087,7 +7087,7 @@ ol {
 */
 }
 .content .myndaalbum-top {
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 .content .bordi .bordi-item {
   margin-bottom: 30px;
@@ -7433,6 +7433,7 @@ body.category-kvikindin .header .logo {
   background-image: url('assets/images/header-kvikindin-large.jpg');
 }
 body.category-greinar .header .logo,
+body.tag .header .logo,
 body.author .header .logo,
 body.date .header .logo {
   background-image: url('assets/images/header-greinasafn.jpg');
@@ -7539,6 +7540,8 @@ img.image {
 .post,
 .page {
   margin: 0 0 60px;
+  font-style: normal;
+  font-weight: normal;
 }
 .post blockquote,
 .page blockquote {
@@ -7571,6 +7574,11 @@ img.image {
   width: 100% !important;
   height: auto !important;
   margin-bottom: 20px;
+}
+.post a.more-link,
+.page a.more-link {
+  font-weight: normal;
+  font-style: normal;
 }
 .post .post-content a,
 .page .post-content a {

@@ -65,7 +65,7 @@ body.kvikindin .header > .logo, body.category-kvikindin .header > .logo {
 }
 
 body.category-greinar .header > .logo , 
-body.author, body.date .header > .logo {
+body.author, body.date .header > .logo, body.tag .header > .logo {
     background-image: url('assets/images/header-greinasafn-small.jpg');
 }
 
