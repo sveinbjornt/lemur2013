@@ -35,10 +35,11 @@
         	
         	<div class="featured-image">
         	    <?php if ( !in_category('139') and has_post_thumbnail() ) { ?>
-                    <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>">
+        	        <?php $ttitle = trim(strip_tags( $post->post_title )) ?>
+                    <a rel="gallery" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" title="<?php echo $ttitle ?>">
                         <?php the_post_thumbnail('myndin', array(
-                            'alt'	=> trim(strip_tags( $post->post_title )),
-                            'title'	=> trim(strip_tags( $post->post_title )),
+                            'alt'	=> $ttitle,
+                            'title'	=> $ttitle,
                             'class' => 'image'
                         )); ?>
                     </a>
@@ -57,8 +58,8 @@
                 <fb:like href="<?php the_permalink() ?>" layout="standard" show_faces="false" width="670" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>                  
 
                 <?php get_template_part('comments'); ?>
-                <!-- <?php comments_template(); ?> -->
             </div>
+            
         </div>
         
     <?php endwhile; ?>

@@ -34,6 +34,52 @@
 		
 		<?php wp_footer(); ?>
 		
+		<?php if ( is_single() ): ?>
+		<!-- Fancybox -->
+		<script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js"></script>
+        <script>
+           
+        var fb_options = {
+            'openEffect': 'elastic',
+            'closeEffect': "elastic", 
+            // 'centerOnScroll': true,
+            'closeClick': true,
+            'autoSize': true,
+            'fitToView': true,
+            'aspectRatio': true,
+            'scrollOutside': false,
+            'helpers' : {
+                    title: {
+                    type: 'inside'
+                }
+            }
+        };
+
+        jQuery(document).ready(function($) {
+            
+            $('.post > div.featured-image > a').fancybox(fb_options);
+            
+            $('.post > .post-content img').each(function() {
+                
+                var p = $(this).parents('a'),
+                    t = $(this).attr('title'),
+                    h = $(this).attr('src'),
+                    fbo = $.extend({}, fb_options);
+                                
+                if (p.length) {
+                    t = $(p[0]).attr('title') ? $(p[0]).attr('title') : t;
+                    h = $(p[0]).attr('href') ? $(p[0]).attr('href') : h;
+                } 
+                
+                fbo.href = h, fbo.title = t;
+                // $(p[0]).attr('rel', 'gallery');
+                $(this).fancybox(fbo);
+            });
+            
+        });
+        </script>
+		<?php endif; ?>
+		
 		<!-- Google Analytics -->
 		<script type="text/javascript">
             var _gaq = _gaq || [];

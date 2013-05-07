@@ -38,7 +38,13 @@
         
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
-        <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico" type="image/x-icon">        
+        
+        <?php wp_enqueue_script("jquery"); ?>
+        <?php wp_head(); ?>
+        
+        <!-- SCRIPTS -->
+        <!-- <script type='text/javascript' src='http://lemurinn.is/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script> -->
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri() ?>/style-lt-ie9.css">  
@@ -47,8 +53,6 @@
             <script src="<?php echo get_template_directory_uri() ?>/assets/js/lte-ie7.js"></script>
         <![endif]-->
         
-        
-        <?php wp_head(); ?>
 
         <title><?php wp_title ( '|', true, 'right' ); ?></title>
 
