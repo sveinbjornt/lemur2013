@@ -7785,6 +7785,7 @@ img.image {
 }
 .post .post-meta .post-date,
 .page .post-meta .post-date {
+  line-height: 28px;
   opacity: 0.2;
   font-size: 0.9em;
 }

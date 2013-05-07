@@ -37,7 +37,7 @@
 		<?php if ( is_single() ): ?>
 		<!-- Fancybox -->
 		<script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js"></script>
-        <script>
+        <!--<script>
            
         var fb_options = {
             'openEffect': 'elastic',
@@ -77,7 +77,7 @@
             });
             
         });
-        </script>
+        </script>-->
 		<?php endif; ?>
 		
 		<!-- Google Analytics -->
@@ -114,7 +114,7 @@
         </script>
         
         <!-- YouTube Placeholder -->
-        <!-- <script src="<?php echo get_template_directory_uri() ?>/assets/js/youtube-placeholder.js"></script> -->
+        <script src="<?php echo get_template_directory_uri() ?>/assets/js/youtube-placeholder.js"></script>
         
 	</body>
 
