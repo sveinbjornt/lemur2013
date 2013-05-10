@@ -1,3 +1,13 @@
+/*
+Theme Name: Lemúr 2013
+Theme URI: http://lemurinn.is
+Author: Sveinbjörn Þórðarson
+Author URI: http://sveinbjorn.org/
+Description: The 2013 theme for Lemúrinn is a fully responsive theme that looks great on any device. 
+Version: 1.0
+License: Copyrighted.
+Text Domain: lemur2013
+*/
 @font-face {
   font-family: 'Brandon Grotesque Medium';
   src: url('assets/fonts/brandon_med-webfont.eot');
@@ -7862,10 +7872,9 @@ img.image {
 }
 .post .post-footer .comments,
 .page .post-footer .comments {
-  max-width: 100%;
+  width: 100%;
   margin: 20px 0;
 }
-
 .post .wp-caption,
 .page .wp-caption {
   -webkit-box-sizing: border-box;
