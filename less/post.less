@@ -1,4 +1,4 @@
-.post, .page {
+.post, div.page {
 	margin: 0 0 @gutter*2;
 	font-style: normal;
 	font-weight: normal;
@@ -152,10 +152,17 @@
         img {
             display: none;
         }
+        
+        iframe {
+            display: none;
+        }
         .youtube-placeholder {
             img {
                 display: block !important;
                 margin: auto;
+            }
+            iframe {
+                display: block !important;
             }
         }
     }

@@ -7771,51 +7771,51 @@ img.image {
   padding-bottom: 70%;
 }
 .post,
-.page {
+div.page {
   margin: 0 0 60px;
   font-style: normal;
   font-weight: normal;
 }
 .post blockquote,
-.page blockquote {
+div.page blockquote {
   margin-left: 45px;
   font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
   font-size: 16px;
   margin-top: 15px;
 }
 .post .post-meta,
-.page .post-meta {
+div.page .post-meta {
   margin-top: -15px;
   font-size: 0.85em;
   margin-bottom: 15px;
 }
 .post .post-meta a.author:hover,
-.page .post-meta a.author:hover {
+div.page .post-meta a.author:hover {
   text-decoration: underline;
 }
 .post .post-meta .post-date,
-.page .post-meta .post-date {
+div.page .post-meta .post-date {
   line-height: 28px;
   opacity: 0.2;
   font-size: 0.9em;
 }
 .post .post-meta .fb-like,
-.page .post-meta .fb-like {
+div.page .post-meta .fb-like {
   text-align: right;
 }
 .post .featured-image img,
-.page .featured-image img {
+div.page .featured-image img {
   width: 100% !important;
   height: auto !important;
   margin-bottom: 20px;
 }
 .post a.more-link,
-.page a.more-link {
+div.page a.more-link {
   font-weight: normal;
   font-style: normal;
 }
 .post .post-content .youtube-placeholder,
-.page .post-content .youtube-placeholder {
+div.page .post-content .youtube-placeholder {
   line-height: 0;
   background-color: black;
   text-align: center;
@@ -7824,7 +7824,7 @@ img.image {
   margin: 0 0 20px;
 }
 .post .post-content .youtube-placeholder .clickable,
-.page .post-content .youtube-placeholder .clickable {
+div.page .post-content .youtube-placeholder .clickable {
   display: block;
   position: absolute;
   left: 0;
@@ -7835,48 +7835,48 @@ img.image {
   background: url('assets/images/youtube-play-button.png') no-repeat center center;
 }
 .post .post-content a,
-.page .post-content a {
+div.page .post-content a {
   text-decoration: underline;
 }
 .post .post-content img,
-.page .post-content img,
+div.page .post-content img,
 .post .post-content div,
-.page .post-content div,
+div.page .post-content div,
 .post .post-content a,
-.page .post-content a {
+div.page .post-content a {
   max-width: 100% !important;
   height: auto !important;
 }
 .post .post-content iframe,
-.page .post-content iframe {
+div.page .post-content iframe {
   max-width: 100%;
 }
 .post .post-content p,
-.page .post-content p {
+div.page .post-content p {
   line-height: 25px;
   margin: 0px 0;
 }
 .post .post-content p.youtube,
-.page .post-content p.youtube {
+div.page .post-content p.youtube {
   margin-bottom: 10px;
 }
 .post .post-content a.um-author-name,
-.page .post-content a.um-author-name {
+div.page .post-content a.um-author-name {
   text-decoration: none;
 }
 .post .post-footer .flokkar,
-.page .post-footer .flokkar {
+div.page .post-footer .flokkar {
   font-size: 14px;
   margin-bottom: 20px;
   margin-top: 40px;
 }
 .post .post-footer .comments,
-.page .post-footer .comments {
+div.page .post-footer .comments {
   width: 100%;
   margin: 20px 0;
 }
 .post .wp-caption,
-.page .wp-caption {
+div.page .wp-caption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -7888,23 +7888,23 @@ img.image {
   text-align: center;
 }
 .post .wp-caption p.wp-caption-text,
-.page .wp-caption p.wp-caption-text {
+div.page .wp-caption p.wp-caption-text {
   margin-top: 4px;
   font-size: 14px;
   line-height: 18px;
 }
 .post .alignright,
-.page .alignright {
+div.page .alignright {
   float: right;
   margin-left: 20px;
 }
 .post .alignleft,
-.page .alignleft {
+div.page .alignleft {
   float: left;
   margin-right: 20px;
 }
 .post .aligncenter,
-.page .aligncenter {
+div.page .aligncenter {
   display: block;
   margin: auto;
 }
@@ -7915,7 +7915,13 @@ img.image {
 #loop .post-content img {
   display: none;
 }
+#loop .post-content iframe {
+  display: none;
+}
 #loop .post-content .youtube-placeholder img {
   display: block !important;
   margin: auto;
+}
+#loop .post-content .youtube-placeholder iframe {
+  display: block !important;
 }

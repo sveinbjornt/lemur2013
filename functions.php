@@ -759,11 +759,13 @@ function improved_trim_excerpt($text) {
                 $text = str_replace('\]\]\>', ']]&gt;', $text);
                 $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
                 $text = strip_tags($text, '<p> <iframe> <img> <a>');
-                $excerpt_length = 70;
+                $excerpt_length = 60;
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
-                array_push($words, '&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira &hellip;]', 'thematic') . '</a>');
                 $text = implode(' ', $words);
+                $more = '&hellip;&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira]', 'thematic') . '</a>';
+                $text = $text . $more;
+                
         }
         return $text;
 }
