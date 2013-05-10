@@ -758,8 +758,8 @@ function improved_trim_excerpt($text) {
                 $text = apply_filters('the_content', $text);
                 $text = str_replace('\]\]\>', ']]&gt;', $text);
                 $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-                $text = strip_tags($text, '<p> <iframe> <a>');
-                $excerpt_length = 100;
+                $text = strip_tags($text, '<p> <iframe> <img> <a>');
+                $excerpt_length = 70;
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
                 array_push($words, '&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira &hellip;]', 'thematic') . '</a>');
@@ -767,3 +767,6 @@ function improved_trim_excerpt($text) {
         }
         return $text;
 }
+
+
+add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );

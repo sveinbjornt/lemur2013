@@ -46,6 +46,25 @@
 	}
 	
 	.post-content {
+	    
+	    .youtube-placeholder {
+	        line-height: 0; 
+	        background-color: black; 
+	        text-align: center; 
+	        position: relative; 
+	        display:block; 
+	        margin: 0 0 20px;
+	        
+	        .clickable {
+	            display: block; 
+	            position: absolute; 
+	            left: 0; top: 0; bottom: 0; right:0; 
+	            text-align: center; 
+	            background: url('assets/images/youtube-play-button.png') no-repeat center center;
+	        }
+	    }
+	    
+	    
 	    a {
 	        text-decoration: underline;
 	    }
@@ -80,10 +99,11 @@
 	    }
 	    
 	    .comments {
-	        max-width: 100%;
+	        width: 100%;
 	        margin: @spacing 0;
 	    }
 	}
+	
 	
 	.wp-caption {
 	    .box-sizing(border-box);
@@ -121,8 +141,24 @@
 	}
 }
 
-#loop .wp-caption, #loop .wp-caption-text {
-    display: none;
+
+
+#loop {
+    
+    .wp-caption, .wp-caption-text {
+        display: none;
+    } 
+    .post-content {
+        img {
+            display: none;
+        }
+        .youtube-placeholder {
+            img {
+                display: block !important;
+                margin: auto;
+            }
+        }
+    }
 }
 
 

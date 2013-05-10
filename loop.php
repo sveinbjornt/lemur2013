@@ -23,9 +23,7 @@
                 	</div>
                 	
                 	<div class="col s1of2 fb-like">
-                	    <?php if ( !is_home() ) { ?>
                     	    <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
-                    	<?php } ?>
                     </div>
                     
             	</div>

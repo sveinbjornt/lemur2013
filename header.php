@@ -18,23 +18,26 @@
                 $src = '';
                 if (function_exists('wp_get_attachment_thumb_url')) {
                     $src = wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); 
-                } 
+                }
             ?>
-        <meta property="og:url" content="<?php the_permalink() ?>" />  
-        <meta property="og:title" content="<?php single_post_title(''); ?> | Lemúrinn" />  
-        <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />  
-        <meta property="og:site_name" content="Lemúrinn" />  
-        <meta property="og:type" content="article" />  
-        <meta property="og:image" content="<?php echo $src ?>" />
-        <link rel="image_src" href="<?php echo $src ?>" /> 
-        
-        <?php } else { ?>  
-        <meta property="og:site_name" content="Lemúrinn" />  
-        <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira." />  
-        <meta property="og:type" content="website" />  
-        <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg" />
-        <link rel="image_src" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg" />
-        <?php } ?>  
+            <meta property="og:title" content="<?php single_post_title(''); ?>" />
+            <meta property="og:site_name" content="Lemúrinn" />  
+            <meta property="og:type" content="article" /> 
+            <meta property="fb:app_id" content="186476388086986"/>
+            <meta property="og:image" content="<?php echo $src ?>" />
+            <meta property="og:description" content="" />  
+            <meta property="og:url" content="<?php the_permalink() ?>" />  
+            <link rel="image_src" href="<?php echo $src ?>" />
+        <?php } else { ?>
+            <meta property="og:title" content="<?php echo wp_title(); ?>" />
+            <meta property="og:site_name" content="Lemúrinn" /> 
+            <meta property="og:type" content="website" />
+            <meta property="fb:app_id" content="186476388086986"/>
+            <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg" /> 
+            <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira." />
+            <meta property="og:url" content="<?php the_permalink() ?>" />  
+            <link rel="image_src" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg" />
+        <?php } ?>
         
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
@@ -90,7 +93,7 @@
                 
                 <nav class="nav">
                     <ul>
-                        <li><a href="<?php echo $base ?>/greinar" title="Greinasafn Lemúrsins">Greinasafn</a></li>
+                        <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Greinasafn</a></li>
                         <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
                         <li><a href="<?php echo $base ?>/svartabloggid" title="Svörtu síðurnar">Svörtu</a></li>
                         <li><a href="<?php echo $base ?>/langtiburtistan" title="Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>

@@ -57,7 +57,15 @@
 
                 <fb:like href="<?php the_permalink() ?>" layout="standard" show_faces="false" width="670" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>                  
 
-                <?php get_template_part('comments'); ?>
+                <div class="comments">
+                    <fb:comments href="<?php the_permalink(); ?>" style="width: 100%;" width="670" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>" num_posts="10"></fb:comments>  
+                </div>
+
+                <style type="text/css">
+                div.comments iframe.fb_ltr, div.comments span {
+                    width: 100% !important;
+                }
+                </style>
             </div>
             
         </div>
