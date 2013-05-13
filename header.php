@@ -3,16 +3,18 @@
     <!--[if lt IE 7]> <html lang="is" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="is" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="is" class="lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--><html lang="is" class="" prefix="fb: http://www.facebook.com/2008/fbml"><!--<![endif]-->
+    <!--[if gt IE 8]><!--><html lang="is" class=""><!--<![endif]-->
 
     <head>
-        <!-- META TAGS -->
+        <title><?php wp_title ( '|', true, 'right' ); ?></title>
+        
+        <!-- META -->
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
 
-        <!-- FACEBOOK META -->
+        <!-- FB META -->
         <?php if (is_single()) { ?>
         <?php
             $src = '';
@@ -41,10 +43,15 @@
         
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
-        <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico" type="image/x-icon">        
         
+        <!-- RSS, favicon, etc. -->
+        <link rel="alternate" type="application/rss+xml" title="Lemúrinn &raquo; RSS-veita" href="<?php echo get_bloginfo('wpurl'); ?>/feed/">
+        <link rel="apple-touch-icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico">        
+        
+        <!-- WP HEADER -->
         <?php wp_enqueue_script("jquery"); ?>
-<?php wp_head(); ?>
+        <?php wp_head(); ?>
         
         <!-- SCRIPTS -->
         <!--[if lt IE 9]>
@@ -54,12 +61,11 @@
         <!--[if lte IE 7]>
             <script src="<?php echo get_template_directory_uri() ?>/assets/js/lte-ie7.js"></script>
         <![endif]-->
-
-        <title><?php wp_title ( '|', true, 'right' ); ?></title>
-
+        
     </head>
     
     <?php
+        /* Append category slug to body class if in category or cat item */
         if (!is_home() and is_single()) {
             $cat_strings = array();
             $cat = get_the_category($post->ID);
@@ -73,7 +79,7 @@
 
     <body <?php body_class($cat_strings)?>>
         
-        <div id="fb-root" style="display: none;"></div>
+        <div id="fb-root"></div>
         
         <div class="wrap">
             
@@ -118,5 +124,5 @@
                 ?>
                 <div class="grid gutter collapse720">
                     
-                	<div class="col s2of3">
+                    <div class="col s2of3">
 
