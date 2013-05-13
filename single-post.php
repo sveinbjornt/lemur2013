@@ -20,14 +20,12 @@
             	        <?php the_author_meta('name2'); ?>
             	    </a> 
             	    <span class="post-date">
-            	        ✦ <?php the_time(__('j. F, Y')) ?>
+            	        ♦ <?php the_time(__('j. F, Y')) ?>
             	    </span>
             	</div>
             	
-            	<div class="col s1of3 fb-like">
-            	    <?php if ( !is_home() ) { ?>
-                	    <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
-                	<?php } ?>
+            	<div class="col s1of3 facebook-like">
+            	    <div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-width="60" data-show-faces="false" data-colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
                 </div>
                 
         	</div>
@@ -36,7 +34,7 @@
         	<div class="featured-image">
         	    <?php if ( !in_category('139') and has_post_thumbnail() ) { ?>
         	        <?php $ttitle = trim(strip_tags( $post->post_title )) ?>
-                    <a rel="gallery" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" title="<?php echo $ttitle ?>">
+                    <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" title="<?php echo $ttitle ?>">
                         <?php the_post_thumbnail('myndin', array(
                             'alt'	=> $ttitle,
                             'title'	=> $ttitle,
@@ -55,17 +53,12 @@
         	        <?php the_tags(__('<strong>Flokkar: </strong>'), ', '); ?>
         	    </div>
 
-                <fb:like href="<?php the_permalink() ?>" layout="standard" show_faces="false" width="670" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></fb:like>                  
+                <div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-action="like" data-width="670" data-show-faces="false" data-colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="standard"></div>
 
                 <div class="comments">
-                    <fb:comments href="<?php the_permalink(); ?>" style="width: 100%;" width="670" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>" num_posts="10"></fb:comments>  
+                    <div class="fb-comments" data-href="<?php the_permalink(); ?>" style="width: 100%;" data-width="670" data-num-posts="10" data-colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>"></div>
                 </div>
-
-                <style type="text/css">
-                div.comments iframe.fb_ltr, div.comments span {
-                    width: 100% !important;
-                }
-                </style>
+                
             </div>
             
         </div>

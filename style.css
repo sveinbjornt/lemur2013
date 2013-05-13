@@ -7041,7 +7041,7 @@ ol {
   background: url('assets/images/header-large.png') no-repeat center center;
   background-size: cover;
 }
-.header .fb-like {
+.header .facebook-like {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -7115,6 +7115,9 @@ ol {
 @media only screen and (max-width: 1020px) {
   .content {
     padding: 0 30px;
+  }
+  .content > .footer {
+    padding: 0;
   }
 }
 /* Facebook Comments */
@@ -7201,7 +7204,7 @@ width: 100% !important;
 }
 .nav ul li a {
   display: block;
-  padding: 0 15px;
+  padding: 0 10px;
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
@@ -7695,9 +7698,11 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
+.icon-home,
+.icon-feed,
 .icon-facebook,
 .icon-twitter,
-.icon-feed {
+.icon-home-2 {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -7707,14 +7712,20 @@ you can use the generic selector below, but it's slower:
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-.icon-facebook:before {
+.icon-home:before {
   content: "\e000";
 }
-.icon-twitter:before {
+.icon-feed:before {
   content: "\e001";
 }
-.icon-feed:before {
+.icon-facebook:before {
   content: "\e002";
+}
+.icon-twitter:before {
+  content: "\e003";
+}
+.icon-home-2:before {
+  content: "\e004";
 }
 img.image {
   max-width: 100%;
@@ -7799,8 +7810,8 @@ div.page .post-meta .post-date {
   opacity: 0.2;
   font-size: 0.9em;
 }
-.post .post-meta .fb-like,
-div.page .post-meta .fb-like {
+.post .post-meta .facebook-like,
+div.page .post-meta .facebook-like {
   text-align: right;
 }
 .post .featured-image img,

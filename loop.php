@@ -18,12 +18,12 @@
                 	        <?php the_author_meta('name2'); ?>
                 	    </a> 
                 	    <span class="post-date">
-                	        ✦ <?php the_time(__('j. F, Y')) ?>
+                	        ♦ <?php the_time(__('j. F, Y')) ?>
                 	    </span>
                 	</div>
                 	
-                	<div class="col s1of2 fb-like">
-                    	    <fb:like href="<?php the_permalink() ?>" layout="button_count" show_faces="false" width="60" action="like" colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>">
+                	<div class="col s1of2 facebook-like">
+                	    <div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-width="60" data-show-faces="false" data-colorscheme="<?php if ( in_category(26) ) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
                     </div>
                     
             	</div>
