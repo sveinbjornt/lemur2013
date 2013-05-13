@@ -30,12 +30,13 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow == 'themes.php' ) {
 
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
-
-function remove_comments_rss( $for_comments ) {
-    return '';
-}
-add_filter('post_comments_feed_link_html','remove_comments_rss');
-add_filter('post_comments_feed_link','remove_comments_rss');
+remove_action(‘wp_head’, ‘feed_links’, 1);
+// 
+// function remove_comments_rss( $for_comments ) {
+//     return '';
+// }
+// add_filter('post_comments_feed_link_html','remove_comments_rss');
+// add_filter('post_comments_feed_link','remove_comments_rss');
 
 /*** Navigation ***/
 
