@@ -7809,6 +7809,7 @@ div.page .post-meta .post-date {
   line-height: 28px;
   opacity: 0.2;
   font-size: 0.9em;
+  display: inline-block;
 }
 .post .post-meta .facebook-like,
 div.page .post-meta .facebook-like {
