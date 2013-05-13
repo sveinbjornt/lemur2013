@@ -45,7 +45,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
         
         <!-- RSS, favicon, etc. -->
-        <link rel="alternate" type="application/rss+xml" title="Lemúrinn &raquo; RSS-veita" href="<?php echo get_bloginfo('wpurl'); ?>/feed/">
+        <link rel="alternate" type="application/rss+xml" title="RSS-veita Lemúrsins" href="<?php echo get_bloginfo('wpurl'); ?>/feed/">
         <link rel="apple-touch-icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-apple-icon.png">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico">        
         
