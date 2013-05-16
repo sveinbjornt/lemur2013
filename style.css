@@ -7445,10 +7445,14 @@ body.kvikindin .header .logo,
 body.category-kvikindin .header .logo {
   background-image: url('assets/images/header-kvikindin-large.jpg');
 }
+body.arodursmal .header .logo {
+  background-image: url('assets/images/header-arodur.jpg');
+}
 body.page-template-template-greinasafn-php .header .logo,
 body.tag .header .logo,
 body.author .header .logo,
-body.date .header .logo {
+body.date .header .logo,
+body.search-results .header .logo {
   background-image: url('assets/images/header-greinasafn.jpg');
 }
 /*! fancyBox v2.1.4 fancyapps.com | fancyapps.com/fancybox/#license */
