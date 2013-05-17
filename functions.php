@@ -670,7 +670,7 @@ function seo_title() {
 
     # Page number
     if ($paged >= 2 || $page >= 2)
-            $newtitle .= $sep . sprintf('Page %s', max($paged, $page));
+            $newtitle .= $sep . sprintf('Síða %s', max($paged, $page));
 
     # Home & Front Page ########################################
     if (is_home() || is_front_page()) {
@@ -774,7 +774,7 @@ function improved_trim_excerpt($text) {
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
                 $text = implode(' ', $words);
-                $more = '&hellip;&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira]', 'thematic') . '</a>';
+                $more = '</a>&hellip;&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira]', 'thematic') . '</a>';
                 $text = $text . $more;
                 
         }
