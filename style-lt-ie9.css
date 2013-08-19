@@ -68,6 +68,10 @@ body.arodursmal .header > .logo, body.category-arodursmal .header > .logo {
     background-image: url('assets/images/header-arodur-small.jpg');
 }
 
+body.babel .header > .logo, body.category-babel .header > .logo {
+    background-image: url('assets/images/header-babel-small.jpg');
+}
+
 body.category-greinar .header > .logo , 
 body.author, body.date .header > .logo, body.tag .header > .logo {
     background-image: url('assets/images/header-greinasafn-small.jpg');

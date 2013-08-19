@@ -7318,81 +7318,133 @@ width: 100% !important;
   font-weight: bold;
 }
 body.category-svartabloggid,
+body.svartabloggid,
 body.category-svortu,
 body.svortu,
-body.svartabloggid {
+body.category-svartaspolan,
+body.svartaspolan,
+body.category-svarta-ljosmyndin,
+body.svarta-ljosmyndin {
   background: #000000;
   color: #eeeeee;
 }
 body.category-svartabloggid .section-box div a.sidebar-box-headline,
+body.svartabloggid .section-box div a.sidebar-box-headline,
 body.category-svortu .section-box div a.sidebar-box-headline,
 body.svortu .section-box div a.sidebar-box-headline,
-body.svartabloggid .section-box div a.sidebar-box-headline {
+body.category-svartaspolan .section-box div a.sidebar-box-headline,
+body.svartaspolan .section-box div a.sidebar-box-headline,
+body.category-svarta-ljosmyndin .section-box div a.sidebar-box-headline,
+body.svarta-ljosmyndin .section-box div a.sidebar-box-headline {
   background-color: rgba(0, 0, 0, 0.8);
   color: #7b0800;
   font-weight: bold;
 }
 body.category-svartabloggid ::selection,
+body.svartabloggid ::selection,
 body.category-svortu ::selection,
 body.svortu ::selection,
-body.svartabloggid ::selection,
+body.category-svartaspolan ::selection,
+body.svartaspolan ::selection,
+body.category-svarta-ljosmyndin ::selection,
+body.svarta-ljosmyndin ::selection,
 body.category-svartabloggid ::-moz-selection,
+body.svartabloggid ::-moz-selection,
 body.category-svortu ::-moz-selection,
 body.svortu ::-moz-selection,
-body.svartabloggid ::-moz-selection {
+body.category-svartaspolan ::-moz-selection,
+body.svartaspolan ::-moz-selection,
+body.category-svarta-ljosmyndin ::-moz-selection,
+body.svarta-ljosmyndin ::-moz-selection {
   background-color: #7b0800;
   color: #eeeeee;
   opacity: 0;
 }
 body.category-svartabloggid .content,
+body.svartabloggid .content,
 body.category-svortu .content,
 body.svortu .content,
-body.svartabloggid .content,
+body.category-svartaspolan .content,
+body.svartaspolan .content,
+body.category-svarta-ljosmyndin .content,
+body.svarta-ljosmyndin .content,
 body.category-svartabloggid .wrap,
+body.svartabloggid .wrap,
 body.category-svortu .wrap,
 body.svortu .wrap,
-body.svartabloggid .wrap,
+body.category-svartaspolan .wrap,
+body.svartaspolan .wrap,
+body.category-svarta-ljosmyndin .wrap,
+body.svarta-ljosmyndin .wrap,
 body.category-svartabloggid .nav,
+body.svartabloggid .nav,
 body.category-svortu .nav,
 body.svortu .nav,
-body.svartabloggid .nav {
+body.category-svartaspolan .nav,
+body.svartaspolan .nav,
+body.category-svarta-ljosmyndin .nav,
+body.svarta-ljosmyndin .nav {
   background: #000000;
   color: #eeeeee;
 }
 body.category-svartabloggid .cat-title,
+body.svartabloggid .cat-title,
 body.category-svortu .cat-title,
 body.svortu .cat-title,
-body.svartabloggid .cat-title {
+body.category-svartaspolan .cat-title,
+body.svartaspolan .cat-title,
+body.category-svarta-ljosmyndin .cat-title,
+body.svarta-ljosmyndin .cat-title {
   color: #7b0800;
 }
 body.category-svartabloggid a,
+body.svartabloggid a,
 body.category-svortu a,
 body.svortu a,
-body.svartabloggid a {
+body.category-svartaspolan a,
+body.svartaspolan a,
+body.category-svarta-ljosmyndin a,
+body.svarta-ljosmyndin a {
   color: #eeeeee;
 }
 body.category-svartabloggid a:hover,
+body.svartabloggid a:hover,
 body.category-svortu a:hover,
 body.svortu a:hover,
-body.svartabloggid a:hover {
+body.category-svartaspolan a:hover,
+body.svartaspolan a:hover,
+body.category-svarta-ljosmyndin a:hover,
+body.svarta-ljosmyndin a:hover {
   color: #7b0800;
 }
 body.category-svartabloggid .nav ul li a:hover,
+body.svartabloggid .nav ul li a:hover,
 body.category-svortu .nav ul li a:hover,
 body.svortu .nav ul li a:hover,
-body.svartabloggid .nav ul li a:hover {
+body.category-svartaspolan .nav ul li a:hover,
+body.svartaspolan .nav ul li a:hover,
+body.category-svarta-ljosmyndin .nav ul li a:hover,
+body.svarta-ljosmyndin .nav ul li a:hover {
   background: #7b0800;
 }
 body.category-svartabloggid .header .logo,
+body.svartabloggid .header .logo,
 body.category-svortu .header .logo,
 body.svortu .header .logo,
-body.svartabloggid .header .logo {
+body.category-svartaspolan .header .logo,
+body.svartaspolan .header .logo,
+body.category-svarta-ljosmyndin .header .logo,
+body.svarta-ljosmyndin .header .logo {
   background-image: url('assets/images/header-svortu-large.jpg');
 }
 body.category-svartabloggid .wp-caption,
+body.svartabloggid .wp-caption,
 body.category-svortu .wp-caption,
 body.svortu .wp-caption,
-body.svartabloggid .wp-caption {
+body.category-svartaspolan .wp-caption,
+body.svartaspolan .wp-caption,
+body.category-svarta-ljosmyndin .wp-caption,
+body.svarta-ljosmyndin .wp-caption {
   background-color: #282828;
   color: #eeeeee;
 }
@@ -7448,6 +7500,44 @@ body.category-kvikindin .header .logo {
 body.arodursmal .header .logo,
 body.category-arodursmal .header .logo {
   background-image: url('assets/images/header-arodur.jpg');
+}
+body.arodursmal a:hover,
+body.category-arodursmal a:hover {
+  color: #ac422a;
+}
+body.arodursmal .nav ul li a,
+body.category-arodursmal .nav ul li a {
+  color: #ffffff;
+}
+body.arodursmal .nav ul li a:hover,
+body.category-arodursmal .nav ul li a:hover {
+  color: #ffffff;
+  background: #a23820;
+}
+body.babel,
+body.category-babel {
+  /*    a {
+        &:hover {
+            color: @babel-color-primary;
+        }
+    }
+    
+    .nav {
+        
+        ul li a {
+            color: @color-white;
+            
+            &:hover {
+                color: @color-white;
+                background: @babel-color-primary;
+            }
+        }
+    }
+*/
+}
+body.babel .header .logo,
+body.category-babel .header .logo {
+  background-image: url('assets/images/header-babel.jpg');
 }
 body.page-template-template-greinasafn-php .header .logo,
 body.tag .header .logo,
@@ -7839,6 +7929,7 @@ div.page .post-content .youtube-placeholder {
   position: relative;
   display: block;
   margin: 0 0 20px;
+  min-height: 350px;
 }
 .post .post-content .youtube-placeholder .clickable,
 div.page .post-content .youtube-placeholder .clickable {
