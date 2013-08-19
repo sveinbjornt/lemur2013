@@ -96,14 +96,15 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="<?php echo $base ?>/" title="Fara á forsíðu"><i class="icon-home"></i></a></li>
-                        <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Greinasafn</a></li>
+                        <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Safnið</a></li>
                         <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
                         <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar">Svörtu</a></li>
                         <li><a href="<?php echo $base ?>/langtiburtistan" title="Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>
                         <li><a href="<?php echo $base ?>/sudrid" title="Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
+                        <li><a href="<?php echo $base ?>/babel" title="Vísinda- og fræðimannablogg Lemúrsins">Babel</a></li>
                         <li><a href="<?php echo $base ?>/lanztidindi" title="Úrklippusafn Lemúrsins">Lanztíðindi</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr, hreyfimyndablogg Lemúrsins">Bíó</a></li>
-                        <li><a href="<?php echo $base ?>/kvikindin" title="Dýrasíða Lemúrsins">Kvikindi</a></li>
+                        <li><a href="<?php echo $base ?>/kvikindin" title="Dýrasíða Lemúrsins">Dýr</a></li>
                         <li><a href="<?php echo $base ?>/arodursmal" title="Áróðursmálaráðuneytið">Áróður</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
                     </ul>
