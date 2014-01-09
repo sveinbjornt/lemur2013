@@ -101,7 +101,7 @@
                         <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar">Svörtu</a></li>
                         <li><a href="<?php echo $base ?>/langtiburtistan" title="Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>
                         <li><a href="<?php echo $base ?>/sudrid" title="Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
-                        <li><a href="<?php echo $base ?>/babel" title="Vísinda- og fræðimannablogg Lemúrsins">Babel</a></li>
+                        <li><a href="<?php echo $base ?>/babel" title="Hugmyndasögublogg Lemúrsins">Babel</a></li>
                         <li><a href="<?php echo $base ?>/lanztidindi" title="Úrklippusafn Lemúrsins">Lanztíðindi</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr, hreyfimyndablogg Lemúrsins">Bíó</a></li>
                         <li><a href="<?php echo $base ?>/kvikindin" title="Dýrasíða Lemúrsins">Dýr</a></li>
@@ -116,9 +116,9 @@
                 <?php 
                     $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 
-                    if ( is_home() and $page == 1) {
-                        get_template_part('bordi'); 
-                    }
+                    // if ( is_home() and $page == 1) {
+                    //     get_template_part('bordi'); 
+                    // }
                     
                     if ( is_category(63) ) {
                         get_template_part('myndaalbum-header');

@@ -54,8 +54,14 @@ Text Domain: lemur2013
 // Grid
 @grid-count: 10;
 @grid-min-break: 320;
-@grid-max-break: 960;
+@grid-max-break: @grid-min-break * 3;
 @grid-break-interval: 120;
+
+@grid-min-break-px: 320 * 1px;
+@grid-greinasafn-two-break: 960px;
+@grid-greinasafn-three-back-break: 720px;
+@grid-greinasafn-two-back-break: 600px;
+@grid-greinasafn-one-break: 480px;
 
 // Buttons
 @button-min-break: @grid-min-break;

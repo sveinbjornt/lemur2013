@@ -30,12 +30,18 @@
     .greinasafn {
         
         .grein {
-            height: 240px;
-            overflow: hidden;
+/*          height: 240px;
+*/            overflow: hidden;
             margin-bottom: @gutter/2;
+/*            float: left;
+*/            width: 33%;
+/*            width: 100%;
+*/            min-width: 180px !important;
+            min-height: 285px !important;
         }
         img {
             height: auto !important;
+            width: 100%;
         }
         
         h2 {
@@ -95,6 +101,62 @@
     
     .content > .footer {
         padding: 0;
+    }
+}
+
+@media only screen and (max-width: @grid-greinasafn-two-break) {
+
+    .greinasafn {
+        
+        .grein { 
+            width: 50% !important;
+        }
+    }
+    
+    .content {
+/*        display: none;
+*/    }
+}
+
+@media only screen and  (max-width: @grid-greinasafn-three-back-break) {
+    .greinasafn {
+        
+        .grein { 
+            width: 33% !important;
+        }
+    }
+}
+
+
+
+@media only screen and  (max-width: @grid-greinasafn-two-back-break) {
+    .greinasafn {
+        
+        .grein { 
+            width: 50% !important;
+        }
+    }
+}
+
+
+@media only screen and  (max-width: @grid-greinasafn-one-break) {
+    .greinasafn {
+        
+        .grein { 
+            width: 100% !important;
+            h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Facebook Like Box in Sidebar */
+
+.section-box {
+    .fb-like-box {
+        height: 395px !important;
     }
 }
 
