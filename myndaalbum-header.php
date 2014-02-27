@@ -12,8 +12,8 @@
             
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>     
                 <div class="col s1of4">
-                    <div>
-                        <a class="aspect a4-3" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <div class="myndaalbum-header-image">
+                        <a class="aspect a4-3 image" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                             <?php the_post_thumbnail('sidebar'); ?>
                         </a>
                     </div>

@@ -762,7 +762,7 @@ function my_save_extra_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'name2', $_POST['name2'] );
 }
 
-function improved_trim_excerpt($text) {
+function improved_trim_excerpt($text, $length) {
         global $post;
         if ( '' == $text ) {
                 $text = get_the_content('');
@@ -770,7 +770,11 @@ function improved_trim_excerpt($text) {
                 $text = str_replace('\]\]\>', ']]&gt;', $text);
                 $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
                 $text = strip_tags($text, '<p> <iframe> <img> <a>');
-                $excerpt_length = 60;
+                if (!$length) {
+                    $excerpt_length = 60;
+                } else {
+                    $excerpt_length = $length;
+                }
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
                 $text = implode(' ', $words);
@@ -854,5 +858,17 @@ function numeric_posts_nav() {
 		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
 
 	echo '</ul></div>' . "\n";
-
 }
+
+
+// function rss_post_thumbnail($content) {
+//     global $post;
+//     if(has_post_thumbnail($post->ID)) {
+//     $content = '<p>' . get_the_post_thumbnail($post->ID) . '</p>' . get_the_content();
+//     }
+//     return $content;
+// }
+// add_filter('the_excerpt_rss', 'rss_post_thumbnail');
+// add_filter('the_content_feed', 'rss_post_thumbnail');
+
+

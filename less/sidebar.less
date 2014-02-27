@@ -38,15 +38,22 @@
     }
     
     .widget_related_posts {
-        img {
+        ul li a:first-child {
+            width: 110px;
+            overflow: hidden;
             position: absolute;
+            height: 0;
             top: 0;
             left: 0;
+            padding-bottom: 71.851851851851851851851851851852%;
+        }
+        img {
+            
         }
     }
     
     // ARTICLE LIST
-    ul.article-list {
+    ul.article-list, .widget_related_posts > div.widget-body > ul {
         padding: 0;
         list-style: none;
         li {
