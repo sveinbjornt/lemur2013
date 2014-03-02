@@ -762,7 +762,7 @@ function my_save_extra_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'name2', $_POST['name2'] );
 }
 
-function improved_trim_excerpt($text, $length) {
+function improved_trim_excerpt($text, $length, $more_text) {
         global $post;
         if ( '' == $text ) {
                 $text = get_the_content('');
@@ -778,7 +778,7 @@ function improved_trim_excerpt($text, $length) {
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
                 $text = implode(' ', $words);
-                $more = '</a>&hellip;&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[Lesa meira]', 'thematic') . '</a>';
+                $more = '</a>&hellip;&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[' . $more_text . ']', 'thematic') . '</a>';
                 $text = $text . $more;
                 
         }

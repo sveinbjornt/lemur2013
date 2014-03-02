@@ -97,9 +97,9 @@
                     <ul>
                         <li><a href="<?php echo $base ?>/" title="Fara á forsíðu"><i class="icon-home"></i></a></li>
                         <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Safnið</a></li>
-                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
-                        <!--<li><a href="<?php echo $base ?>/utvarp" title="Útvarpsþættir Lemúrsins">Útvarp</a></li>-->
-                        <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar">Svörtu</a></li>
+                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúm</a></li>
+                        <li><a href="<?php echo $base ?>/utvarp" title="Útvarp Lemúr: Útvarpsþættir Lemúrsins">Útvarp</a></li>
+                        <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar: Allt á sviði hryllings og viðbjóðs">Svörtu</a></li>
                         <li><a href="<?php echo $base ?>/langtiburtistan" title="Langtíburtistan: Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>
                         <li><a href="<?php echo $base ?>/sudrid" title="Suðrið: Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
                         <li><a href="<?php echo $base ?>/babel" title="Babelsturninn: Hugmyndasögublogg Lemúrsins">Babel</a></li>

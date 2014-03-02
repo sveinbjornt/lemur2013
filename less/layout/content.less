@@ -8,6 +8,20 @@
 	    font-weight: bold;
 	}
 	
+	.play-overlay {
+	    width:100%;
+	}
+	
+	a.play-link {
+        background-size: cover; 
+        overflow:hidden; 
+        display:block; 
+        float: left;
+        margin-bottom: @gutter;
+        img {
+            display: block;
+        }
+    }
 	
     .content-title {
         div.archive {
@@ -93,24 +107,42 @@
     }
     
     .utvarp-post {
+        margin-bottom: @gutter/2;
+        
         h2 {
             font-family: @font-family-special;
             text-transform: uppercase;
             font-size: @font-size + 2;
+            text-decoration: none;
+            line-height: 24px;
+            a {
+                text-decoration: none !important;
+            }
         }
         
-        .post-date {
-            
+        a.play-link {
+            width: 200px !important; 
+            height: 145px !important;
+            margin-right: @gutter;
+            img {
+                display: block;
+            }
         }
-        
-        
         
         .utvarp-description {
-            font-size: 0.85em;
+            margin-bottom: @gutter;
+            
+            img {
+                display: none;
+            }
             
             p {
                 display: inline;
                 margin: 0;
+            }
+            
+            .post-date {
+                display: none;
             }
             
             .youtube-placeholder {
@@ -179,11 +211,25 @@
     }
 }
 
+@media only screen and  (max-width: 480px) {
+    .content {
+        .utvarp-post {
+            .utvarp-description {
+                a.play-link {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+
 /* Facebook Like Box in Sidebar */
 
 .section-box {
     .fb-like-box {
         height: 395px !important;
+        max-width: 100%;
     }
 }
 
