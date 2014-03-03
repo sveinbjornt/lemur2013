@@ -1,5 +1,5 @@
 <img src="http://lemurinn.is/images/utvarp-lemur.jpg" style="margin-bottom: 20px;">
-<?php $my_query = new WP_Query('category_name=utvarplemur&showposts=5&orderby=date'); ?>
+<?php $my_query = new WP_Query('category_name=utvarplemur&showposts=50&orderby=date'); ?>
 <?php $counter = $my_query->found_posts; ?>
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
     <div class="utvarp-post grid">
