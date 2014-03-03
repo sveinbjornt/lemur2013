@@ -28,32 +28,7 @@
                     
             	</div>
             	<div class="featured-image">
-            	        <?php if ( in_category('utvarplemur') and has_post_thumbnail() ) { ?>
-                	        <?php $ttitle = trim(strip_tags( $post->post_title )) ?>
-                	        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' ); ?>
-
-            	            <a style="background-image: url('<?php echo $image[0]; ?>');" class="play-link" href="<?php
-                                global $post;
-                                $mp3_url = get_post_meta($post->ID, 'remote_mp3_url', true);
-                                if ($mp3_url and $mp3_url != '') {
-                                    echo $mp3_url;
-                                } else {
-                                    echo the_permalink();
-                                }
-                                ?>">
-                                <?php if ($mp3_url and $mp3_url != ''): ?>
-                                    <img src="http://lemurinn.is/images/utvarp-play-overlay.png" class="play-overlay">
-                                <?php endif; ?>
-                            </a>
-                	    <?php } else if ( !in_category('139') and has_post_thumbnail() ) { ?>
-                            <a href="<?php the_permalink() ?>" title="<?php echo trim(strip_tags( $post->post_title )); ?>">
-                                <?php the_post_thumbnail('myndin', array(
-                                    'alt'	=> trim(strip_tags( $post->post_title )),
-                                    'title'	=> trim(strip_tags( $post->post_title )),
-                                    'class' => 'image'
-                                )); ?>
-                            </a>
-                        <?php } ?>            	          	    
+                    <?php get_template_part('featured-image'); ?>
             	</div>
             	
             	<div class="post-content">

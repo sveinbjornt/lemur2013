@@ -778,7 +778,7 @@ function improved_trim_excerpt($text, $length, $more_text) {
                 $words = explode(' ', $text, $excerpt_length + 1);
                 array_pop($words);
                 $text = implode(' ', $words);
-                $more = '</a>&hellip;&nbsp;<a class="more-link" href="'. get_permalink() . '">' .__('[' . $more_text . ']', 'thematic') . '</a>';
+                $more = '</a>&hellip;&nbsp;<a class="more-link" title="' . $more_text . '" href="'. get_permalink() . '">' .__('[' . $more_text . ']', 'thematic') . '</a>';
                 $text = $text . $more;
                 
         }
@@ -787,9 +787,6 @@ function improved_trim_excerpt($text, $length, $more_text) {
 
 
 add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
-
-
-
 
 
 function numeric_posts_nav() {
