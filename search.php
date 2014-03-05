@@ -3,7 +3,7 @@
 
 <?php if ( have_posts() ) : ?>
 
-<div id="cse" style="width: 100%;">Loading</div>
+<div id="cse" style="width: 100%;">Hleð leitarniðurstöður...</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   function parseQueryFromUrl () {
@@ -19,13 +19,15 @@
     return '';
   }
 
-  google.load('search', '1', {language : 'is', style : google.loader.themes.MINIMALIST});
+  google.load('search', '1', {language : 'is', lr : 'is', style : google.loader.themes.MINIMALIST});
   google.setOnLoadCallback(function() {
     var customSearchControl = new google.search.CustomSearchControl(
       '003939949262846506078:66utdtcjsvu');
 
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    customSearchControl.setNoResultsString("Ekkert fannst.");
     customSearchControl.draw('cse');
+    
     var queryFromUrl = parseQueryFromUrl();
     if (queryFromUrl) {
       customSearchControl.execute(queryFromUrl);

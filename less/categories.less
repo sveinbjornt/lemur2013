@@ -24,6 +24,7 @@
 
 // SVÖRTU SÍÐURNAR
 body.category-svartabloggid, body.svartabloggid, 
+body.category-svarta-spolan,
 body.category-svortu, body.svortu,
 body.category-svartaspolan, body.svartaspolan,
 body.category-svarta-ljosmyndin, body.svarta-ljosmyndin,
@@ -50,12 +51,17 @@ body.page-template-template-svartasafnid-php {
     }
     
     .cat-title {
-        color: @svortu-color-secondary;
+        color: @svortu-color-secondary !important;
+        a {
+            color: @svortu-color-secondary !important;
+        }
     }
     
     a {
         color: @svortu-color-primary;
-        
+        .cat-title {
+            color: @svortu-color-secondary !important;
+        }
         &:hover {
             color: @svortu-color-secondary;
         }

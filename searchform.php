@@ -1,7 +1,7 @@
 <div id="cse-search-form" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
-  google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
+  google.load('search', '1', {language : 'is', style : google.loader.themes.MINIMALIST});
   google.setOnLoadCallback(function() {
     var customSearchControl = new google.search.CustomSearchControl(
       '003939949262846506078:66utdtcjsvu');

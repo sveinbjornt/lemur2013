@@ -3,6 +3,9 @@
     <?php
         $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' );
         $src = $src[0];
+        if ( is_page('utvarp') ) {
+            $desc = 'Útvarp Lemúr geymir útvarpsþætti Lemúrsins. Þættirnir eru á dagskrá Rásar 1 alla þriðjudaga kl. 16:05.';
+        }
     ?>
     <meta property="og:title" content="<?php single_post_title(''); ?>">
     <meta property="og:site_name" content="Lemúrinn">  
