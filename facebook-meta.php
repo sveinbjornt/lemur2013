@@ -42,9 +42,9 @@
     <meta property="og:site_name" content="Lemúrinn"> 
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="186476388086986">
-    <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg"> 
+    <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon-highres.jpg"> 
     <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira.">
     <meta property="og:url" content="<?php echo home_url(add_query_arg(array(),$wp->request)); ?>">  
-    <link rel="image_src" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon.jpg">
+    <link rel="image_src" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon-highres.jpg">
 
 <?php } ?>
