@@ -22,7 +22,14 @@
     </a>
 
 <?php } else if ( !in_category('vidjo') and has_post_thumbnail() ) { ?>
-    <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" title="<?php echo $ttitle ?>">
+    <?php
+        $featured_link = get_permalink($post->ID);
+        if (is_single()) {
+            $featured_link = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+        }
+    ?>
+    
+    <a href="<?php echo $featured_link; ?>" title="<?php echo $ttitle ?>">
         <?php the_post_thumbnail('myndin', array(
             'alt'	=> $ttitle,
             'title'	=> $ttitle,
