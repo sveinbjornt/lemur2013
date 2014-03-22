@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Root Category Recent Posts\n"
+"POT-Creation-Date: 2013-12-05 10:46+0100\n"
+"PO-Revision-Date: 2013-12-05 10:47+0100\n"
+"Last-Translator: LordPretender <lordp.webmaster@gmail.com>\n"
+"Language-Team: LordPretender <lordp.webmaster@gmail.com>\n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;_e;_n:1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=n<=1 ? n : 2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../jetpack-popular-posts.php:37
+msgid "Shows your most viewed posts, based on Jetpack stats."
+msgstr "Affiche les articles les plus vus à partir des stats de Jetpack."
+
+#: ../jetpack-popular-posts.php:71
+msgid "Range:"
+msgstr "Période :"
+
+#: ../jetpack-popular-posts.php:73
+msgid "All time"
+msgstr "Toute la période"
+
+#: ../jetpack-popular-posts.php:74
+msgid "From one day"
+msgstr "Du jour"
+
+#: ../jetpack-popular-posts.php:75
+msgid "From one week"
+msgstr "De la semaine"
+
+#: ../jetpack-popular-posts.php:76
+msgid "From one month"
+msgstr "Du mois"
+
+#: ../jetpack-popular-posts.php:77
+msgid "From one year"
+msgstr "De l'année"
+
+#: ../jetpack-popular-posts.php:83
+msgid "Display post category?"
+msgstr "Afficher la catégorie du contenu ?"
+
+#~ msgid ""
+#~ "This widget displays your recent posts according the current main "
+#~ "category. Based on the \"Recent Posts\" widget. The plugin \"Category "
+#~ "class\" must be installed."
+#~ msgstr ""
+#~ "Les articles les plus récents pour la catégorie mère de l'article (ou la "
+#~ "catégorie) en cours.L'extension \"Category class\" doit être installée."
+
+#~ msgid "The plugin \"Category class\" must be installed and enabled."
+#~ msgstr "L'extension \"Category class\" doit être installée et activée."
+
+#~ msgid "Main category ID : "
+#~ msgstr "ID de la catégorie principale : "
+
+#~ msgid "Secondary category ID : "
+#~ msgstr "ID de la catégorie secondaire : "
+
+#~ msgid ""
+#~ "This widget will let visitors order posts by context rather than date "
+#~ "with a dropdown menu."
+#~ msgstr ""
+#~ "Ce widget permet aux utilisateurs de trier les articles grâce à une liste "
+#~ "déroulante."
+
+#~ msgid "By title"
+#~ msgstr "Par titre"
+
+#~ msgid "Newest to oldest"
+#~ msgstr "Du plus récent au plus ancien"
+
+#~ msgid "Oldest to newest"
+#~ msgstr "Du plus ancien au plus récent"
+
+#~ msgid "By modification"
+#~ msgstr "Par modification"
+
+#~ msgid "Sort posts"
+#~ msgstr "Trier les articles"
+
+#~ msgid "Display the order by title"
+#~ msgstr "Afficher le tri par titre"
+
+#~ msgid "Display the order by descending date"
+#~ msgstr "Afficher le tri par date descendante"
+
+#~ msgid "Display the order by ascending date"
+#~ msgstr "Afficher le tri par date ascendante"
+
+#~ msgid "Display the order by modification"
+#~ msgstr "Afficher le tri par modification"
+
+#~ msgid "Adaptation of the plugin \"WP Sort Posts\""
+#~ msgstr "Adaptation de l'extension \"WP Sort Posts\""
+
+#~ msgid "By newest"
+#~ msgstr "Par nouveauté"
+
+#~ msgid "By oldest"
+#~ msgstr "Par ancienneté"
