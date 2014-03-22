@@ -61,9 +61,28 @@
             
             <header class="header">
                 
-                <?php $base = get_bloginfo('wpurl'); ?>
+                <?php
+                    $base = get_bloginfo('wpurl');
                 
-                <a href="<?php echo $base ?>" class="logo" title="Aftur á forsíðu Lemúrsins">
+                    $headerlink = $base . '/';
+                    
+                    $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan',
+                                    'lanztidindi', 'bio', 'kvikindin', 'arodursmal'     );
+                    
+                    foreach ($arr as &$cat) {
+                        if ( is_category($cat) || (is_single() and in_category($cat)) ) {
+                            $headerlink .= $cat;
+                        }
+                    }
+                    
+                    if (is_page('greinasafn') or is_date() or is_category('greinar') 
+                        or (is_archive() and !is_category()) or is_tag() or is_search()) {
+                            $headerlink .= 'greinasafn';
+                    }
+                    
+                ?>
+                
+                <a href="<?php echo $headerlink ?>" class="logo" title="Aftur á forsíðu Lemúrsins">
                     <div class="facebook-like">
                         <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
                     </div>
@@ -84,6 +103,7 @@
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>
                         <li><a href="<?php echo $base ?>/arodursmal" title="Áróðursmálaráðuneytið">Áróður</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
+                        <li><a href="<?php echo $base ?>/leita" title="Leita á Lemúrnum"><i class="icon-search"></i></a></li>
                     </ul>
                 </nav>
 
@@ -104,4 +124,3 @@
                 <div class="grid gutter collapse720">
                     
                     <div class="col s2of3">
-

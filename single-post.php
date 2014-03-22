@@ -14,9 +14,9 @@
         	
         	<div class="post-meta grid">
         	    
-        	    <div class="col s2of3">
-        	        eftir 
+        	    <div class="col s2of3"> 
             	    <a class="author" href="<?php $id = get_the_author_meta('ID'); echo get_author_posts_url($id); ?>" title="Greinar eftir <?php the_author_meta( 'name2' ); ?>">
+            	        eftir
             	        <?php the_author_meta('name2'); $c = get_post_meta($post->id, "geotag_country", true); echo $c; ?> 
             	    </a> 
             	    <span class="post-date">
