@@ -37,8 +37,8 @@
         
         <?php if ( is_single() ): ?>
         <!-- Fancybox -->
-        <!-- <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js"></script> -->
-        <!--<script>
+        <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js"></script>
+        <script>
            
         var fb_options = {
             'openEffect': 'elastic',
@@ -78,7 +78,7 @@
             });
             
         });
-        </script>-->
+        </script>
         <?php endif; ?>
         
         <!-- YouTube Placeholder -->
@@ -103,7 +103,7 @@
               var js, fjs = d.getElementsByTagName(s)[0];
               if (d.getElementById(id)) return;
               js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/is_IS/all.js#xfbml=1&status=0";
+              js.src = "http://connect.facebook.net/is_IS/all.js#xfbml=1&status=0";
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         </script>
