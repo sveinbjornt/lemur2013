@@ -29,6 +29,18 @@ Template Name: Kort
 <script src="http://lemurinn.is/js/jquery.maphilight.min.js"></script>
 <script src="http://lemurinn.is/js/jquery.rwdImageMaps.min.js"></script>
 
+<link rel="stylesheet" href="jquery-jvectormap-1.0.css" type="text/css" media="screen"/>
+<script src="http://lemurinn.is/js/jquery-jvectormap-1.0.min.js"></script>
+<script src="http://lemurinn.is/js/jquery-jvectormap-world-mill-en.js"></script>
+
+<div id="world-map" style="width: 600px; height: 400px"></div>
+  <script>
+    $(function(){
+      $('#world-map').vectorMap();
+    });
+  </script>
+
+
 
 <script type="text/javascript">
 
@@ -36,52 +48,21 @@ $(document).ready(function(e) {
     $('img[usemap]').rwdImageMaps();
 });
 
-// window.onload = function () {
-//     var ImageMap = function (map) {
-//             var n,
-//                 areas = map.getElementsByTagName('area'),
-//                 len = areas.length,
-//                 coords = [],
-//                 previousWidth = 800;
-//             for (n = 0; n < len; n++) {
-//                 coords[n] = areas[n].coords.split(',');
-//             }
-//             this.resize = function () {
-//                 var n, m, clen,
-//                     x = document.body.clientWidth / previousWidth;
-//                 for (n = 0; n < len; n++) {
-//                     clen = coords[n].length;
-//                     for (m = 0; m < clen; m++) {
-//                         coords[n][m] *= x;
-//                     }
-//                     areas[n].coords = coords[n].join(',');
-//                 }
-//                 previousWidth = document.body.clientWidth;
-//                 return true;
-//             };
-//             window.onresize = this.resize;
-//         },
-//         imageMap = new ImageMap(document.getElementById('map_ID'));
-//     imageMap.resize();
-//     return;
-// }
-
-
 $(function() {
 
 	//$('.map').maphilight({fade: false});
 
     $('#map_ID > area').hover(function(){
-        console.log($(this).attr('title'));
         $('#current-country').text($(this).attr('title'));
     });
     
     $('#map_ID > area').click(function(){
         
         var country = $(this).attr('title');
-        var country_slug = country.replace(/\s+/g, '-').toLowerCase();
+        var country_slug = $(this).data('tag');
         
         console.log(country);
+        console.log(country_slug);
         
         $('#selected-country').text(country);
         

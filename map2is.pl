@@ -56,7 +56,7 @@ use Data::Dumper;
 
 # READ IN MAP HTML
 
-open(FILE, "kort.php") or die;
+open(FILE, "kort-base.php") or die;
 @lines = <FILE>;
 close(FILE);
 
@@ -72,10 +72,8 @@ while ($file =~ m/alt=\"(.+)\" href?/ig) {
     
     print "$1 --> $iso --> $icelandic --> " . $tag . "\n";
     
-    my $rep_str = "alt=\"$icelandic\" data-tag=\"$tag\" data-iso=\"$iso\" data-en-title=\"$1\" href";
-    my $title_rep = " title=\"$icelandic\"";
-    $dupl =~ s/alt=\"$1\" href?/$rep_str/ig;
-    $dupl =~ s/ title=\"$1\"/$title_rep/ig;
+    my $rep_str = "title=\"$icelandic\" alt=\"$icelandic\" data-tag=\"$tag\" data-iso=\"$iso\" data-en-title=\"$1\" href";
+    $dupl =~ s/title=\"$1\" alt=\"$1\" href?/$rep_str/ig;
 }
 
 
