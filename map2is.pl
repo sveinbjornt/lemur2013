@@ -70,7 +70,10 @@ while ($file =~ m/alt=\"(.+)\" href?/ig) {
     my $icelandic = $iso2is{$iso} ? $iso2is{$iso} : "?";
     my $tag = tagify($icelandic);
     
-    print "$1 --> $iso --> $icelandic --> " . $tag . "\n";
+    
+    
+    print "'$iso' => '$tag',\n";
+    #print "$1 --> $iso --> $icelandic --> " . $tag . "\n";
     
     my $rep_str = "title=\"$icelandic\" alt=\"$icelandic\" data-tag=\"$tag\" data-iso=\"$iso\" data-en-title=\"$1\" href";
     $dupl =~ s/title=\"$1\" alt=\"$1\" href?/$rep_str/ig;
@@ -80,7 +83,7 @@ while ($file =~ m/alt=\"(.+)\" href?/ig) {
 
 
 
-print $dupl;
+# print $dupl;
 
 
 
