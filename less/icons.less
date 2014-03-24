@@ -15,7 +15,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-home, .icon-feed, .icon-facebook, .icon-twitter, .icon-home-2, .icon-search {
+.icon-home, .icon-feed, .icon-facebook, .icon-twitter, .icon-home-2, .icon-search, .icon-dice, .icon-earth  {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -25,11 +25,24 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
+
+/*.nav {
+    .icon-home, .icon-feed, .icon-facebook, .icon-twitter, .icon-home-2, .icon-search, .icon-dice, .icon-earth {
+        display: block;
+    }
+}
+*/
 .icon-home:before {
 	content: "\e600";
 }
+.icon-dice:before {
+	content: "\e605";
+}
 .icon-search:before {
 	content: "\e601";
+}
+.icon-earth:before {
+	content: "\e606";
 }
 .icon-facebook:before {
 	content: "\e602";

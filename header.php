@@ -91,6 +91,7 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="<?php echo $base ?>/" title="Fara á forsíðu"><i class="icon-home"></i></a></li>
+                        <li><a href="<?php echo $base ?>/lemurskort" title="Farðu á flakk um heiminn með heimskorti Lemúrsins"><i class="icon-earth"></i></a></li>
                         <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Greinasafn</a></li>
                         <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
                         <li><a href="<?php echo $base ?>/utvarp" title="Útvarp Lemúr: Útvarpsþættir Lemúrsins">Útvarp</a></li>
@@ -98,12 +99,14 @@
                         <!--<li><a href="<?php echo $base ?>/langtiburtistan" title="Langtíburtistan: Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>-->
                         <li><a href="<?php echo $base ?>/sudrid" title="Suðrið: Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
                         <li><a href="<?php echo $base ?>/babel" title="Babelsturninn: Hugmyndasögublogg Lemúrsins">Babel</a></li>
-                        <li><a href="<?php echo $base ?>/lanztidindi" title="Lanztíðindi: Úrklippusafn Lemúrsins">Lanztíðindi</a></li>
+                        <li><a href="<?php echo $base ?>/lanztidindi" title="Lanztíðindi: Úrklippusafn Lemúrsins">Lanz</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr: Hreyfimyndablogg Lemúrsins">Bíó</a></li>
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>
                         <li><a href="<?php echo $base ?>/arodursmal" title="Áróðursmálaráðuneytið">Áróður</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
+                        <li><a href="<?php echo $base ?>/?random" title="Teningunum er kastað. Grein af handahófi."><i class="icon-dice"></i></a></li>
                         <li><a href="<?php echo $base ?>/leita" title="Leita á Lemúrnum"><i class="icon-search"></i></a></li>
+                        
                     </ul>
                 </nav>
 
