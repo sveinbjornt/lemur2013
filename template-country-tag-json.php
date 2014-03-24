@@ -189,7 +189,7 @@ $array = array(
 'IN' => 'indland' );
 
 header('Content-type: application/json');
-echo "function countryTagData() { return {\n";
+echo "var countryTagData = {\n";
 
 foreach ($array as $key => $value) {
     //echo $i;
@@ -202,6 +202,6 @@ foreach ($array as $key => $value) {
     }
 }
 
-echo "}; }\n";
+echo "};\n";
 
 ?>

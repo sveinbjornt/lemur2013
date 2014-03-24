@@ -30,7 +30,9 @@ Template Name: Kort
     </div>
         
     <div class="col s1of3 sidebar">
-        <p>Á <span class="cat-title">Lemúrskortinu</span> geta menn flakkað heimshornanna á milli. Eins sést hefur Lemúrinn  fjallað um flestar þjóðir heims gegnum árin. Smelltu á land til þess að fá upp tengdar færslur.</p>
+        <p>Á <span class="cat-title">Lemúrskortinu</span> geta menn flakkað heims-hornanna á milli. 
+            <img src="http://lemurinn.is/images/whacky-lemur-small.jpg" style="float: right; width: 80px; height: 94px;">
+            Eins sést hefur Lemúrinn farið um flestar þjóðir heimsins gegnum árin. Smelltu á land til þess að fá upp tengdar greinar.</p>
     </div>
 
 </div>
