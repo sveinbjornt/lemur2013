@@ -1,5 +1,4 @@
 <?php
-
 /*
 Template Name: Country Tag JSON
 
@@ -19,13 +18,6 @@ Template Name: Country Tag JSON
 			   3. Set the Page Template to "Greinasafn"
 			   4. Publish
  */
-
-?>
-
-
-
-
-<?php
 
 $array = array(
 'AQ' => 'sudurskautslandid',
@@ -119,7 +111,6 @@ $array = array(
 'RW' => 'ruanda',
 'BI' => 'burundi',
 'AO' => 'angola',
-'AO' => 'angola',
 'ZM' => 'sambia',
 'MW' => 'malavi',
 'NA' => 'namibia',
@@ -143,6 +134,7 @@ $array = array(
 'SO' => 'somalia',
 'ET' => 'ethiopia',
 'SD' => 'sudan',
+'SS' => 'sudur-sudan',
 'EG' => 'egyptaland',
 'LY' => 'libya',
 'TN' => 'tunis',
@@ -197,7 +189,7 @@ $array = array(
 'IN' => 'indland' );
 
 header('Content-type: application/json');
-echo "var countryTagData = {\n";
+echo "function countryTagData() { return {\n";
 
 foreach ($array as $key => $value) {
     //echo $i;
@@ -210,7 +202,6 @@ foreach ($array as $key => $value) {
     }
 }
 
-echo "};\n";
-
+echo "}; }\n";
 
 ?>

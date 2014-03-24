@@ -1,3 +1,5 @@
+<script src="http://lemurinn.is/js/jquery.maphilight.min.js"></script>
+<script src="http://lemurinn.is/js/jquery.rwdImageMaps.min.js"></script>
 
 <img class="map" src="http://lemurinn.is/images/world.png" style="width:100% !important; height: auto; margin-bottom: 20px;" usemap="#world">
 <map name="world" id="map_ID">
