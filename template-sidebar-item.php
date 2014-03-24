@@ -5,7 +5,7 @@
 ?>
 <?php
     $tag = $_GET['tag'];
-    $num_posts = 12;
+    $num_posts = 10;
     $term = get_term_by('slug', $tag, 'post_tag');
     $tag_count = $term->count;    
 ?>
@@ -22,7 +22,7 @@ style="display: none;"></div>
 <div class="grid gutter greinasafn">
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
     
-        <div class="col s1of6 grein">
+        <div class="col s1of5 grein full">
             <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
             
                 <?php if (has_post_thumbnail()): ?>

@@ -104,7 +104,7 @@
         'CF': { ice_name:'Mið-Afríkulýðveldið', tag:'mid-afrikulydveldid' },
         'CM': { ice_name:'Kamerún', tag:'kamerun' },
         'CG': { ice_name:'Kongó-Brazzaville', tag:'kongo-brazzaville' },
-        'CD': { ice_name:'Kongó-Kinshasa', tag:'kongo-kinshasa' },
+        'CD': { ice_name:'Kongó', tag:'kongo' },
         'UG': { ice_name:'Úganda', tag:'uganda' },
         'RW': { ice_name:'Rúanda', tag:'ruanda' },
         'BI': { ice_name:'Búrúndí', tag:'burundi' },
@@ -113,7 +113,7 @@
         'MW': { ice_name:'Malaví', tag:'malavi' },
         'NA': { ice_name:'Namibía', tag:'namibia' },
         'BW': { ice_name:'Botsvana', tag:'botsvana' },
-        'ZW': { ice_name:'Simbabve', tag:'simbabve' },
+        'ZW': { ice_name:'Simbabve', tag:'zimbabwe' },
         'SZ': { ice_name:'Svasíland', tag:'svasiland' },
         'KE': { ice_name:'Kenía', tag:'kenia' },
         'TZ': { ice_name:'Tansanía', tag:'tansania' },
@@ -180,18 +180,27 @@
         'VN': { ice_name:'Víetnam', tag:'vietnam' },
         'MM': { ice_name:'Mjanmar (Búrma)', tag:'burma' },
         'LK': { ice_name:'Srí Lanka', tag:'sri-lanka' },
-        'BD': { ice_name:'Bangladess', tag:'bangladesh' },
+        'BD': { ice_name:'Bangladess', tag:'bangladess' },
         'BT': { ice_name:'Bútan', tag:'butan' },
         'NP': { ice_name:'Nepal', tag:'nepal' },
         'KR': { ice_name:'Suður-Kórea', tag:'sudur-korea' },
         'KP': { ice_name:'Norður-Kórea', tag:'nordur-korea' },
         'JP': { ice_name:'Japan', tag:'japan' },
-        'JP': { ice_name:'Japan', tag:'japan' },
-        'JP': { ice_name:'Japan', tag:'japan' },
-        'JP': { ice_name:'Japan', tag:'japan' },
         'CN': { ice_name:'Kína', tag:'kina' },
-        'CN': { ice_name:'Kína', tag:'kina' },
-        'IN': { ice_name:'Indland', tag:'indland' }
+        'IN': { ice_name:'Indland', tag:'indland' },
+        
+        'PS': { ice_name:'Palestína', tag:'palestina' },
+        'FJ': { ice_name:'Fíjíeyjar', tag:'fijieyjar' },
+        'FK': { ice_name:'Falklandseyjar', tag:'falklandseyjar' },
+        'SB': { ice_name:'Sólomon-eyjar', tag:'solomon-eyjar' },
+        'TL': { ice_name:'Austur-Tímor', tag:'austur-timor' },
+        'BS': { ice_name:'Bahamaeyjar', tag:'bahamaeyjar' },
+        'VU': { ice_name:'Vanuatú', tag:'vanuatu' },
+        'NC': { ice_name:'Nýja Kaledónía', tag:'nyja-kaledonia'},
+        '_3': { ice_name:'Sómalíland', tag:'somaliland' },
+        '_2': { ice_name:'Vestur-Sahara', tag:'vestur-sahara' },
+        '_1': { ice_name:'Kósóvó', tag:'kosovo' },
+        '_0': { ice_name:'Norður-Kýpur', tag:'nordur-kypur' }
     };
     
     function initVectorMap (data) {
@@ -210,7 +219,7 @@
           series: {
             regions: [{
               values: data,
-              scale: ['#C8EEFF', '#0071A4'], //['#cbffc8', '#006c24'],//
+              scale: ['#fcfeff', '#005277'], //['#cbffc8', '#006c24'],//
               normalizeFunction: 'polynomial'
             }]
           },
@@ -223,11 +232,14 @@
             el.html(lemurimg + iso_map[code]['ice_name'] + greinar);
           },
           onRegionClick: function(e, code) {
+              console.log(code);
+              
             var tag = iso_map[code]['tag'];
             var ice_name = iso_map[code]['ice_name'];
-            
-            $('#selected-country').text(ice_name);
-            $("#country-article-results").html("Sæki færslur fyrir " + ice_name + "...");
+            $('#selected-country').text(ice_name + " – sæki greinar...");
+            $("#country-article-results").html('');
+            $("#more-articles").hide();
+            $("#ajax-loader").show();
             $("#country-article-results").load("./lemurskort-sidebar-item/?tag=" + tag, function() {
                 if ($("#lemurmap-results").data('count') == $("#lemurmap-results").data('max')) {
                     $("#more-articles").show();
@@ -235,6 +247,7 @@
                 } else {
                     $("#more-articles").hide();
                 }
+                $("#ajax-loader").hide();
                 $('#selected-country').text(ice_name + ' – ' + $("#lemurmap-results").data('total') +' greinar');
             });
             
