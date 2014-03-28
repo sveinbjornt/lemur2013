@@ -36,7 +36,8 @@ $(function(){
     var options = {
         colors: ["#6185AB","#363636"],
         lines: {
-            show: true
+            show: true,
+            fill: true
         },
         points: {
             show: true
