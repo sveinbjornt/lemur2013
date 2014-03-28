@@ -6,8 +6,6 @@
 <?php
     $tag = $_GET['tag'];
     $num_posts = 10;
-    $term = get_term_by('slug', $tag, 'post_tag');
-    $tag_count = $term->count;    
 ?>
 
 <?php $my_query = new WP_Query('tag=' . $tag . '&showposts=' . $num_posts . '&orderby=rand'); ?>
@@ -17,7 +15,6 @@ data-count="<?php
     echo $number_of_posts;
 ?>" 
 data-max="<?php echo $num_posts; ?>" 
-data-total="<?php echo $tag_count; ?>"
 style="display: none;"></div>
 <div class="grid gutter greinasafn">
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>

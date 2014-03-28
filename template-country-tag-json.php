@@ -51,7 +51,7 @@ $array = array(
 'AR' => 'argentina',
 'BR' => 'brasilia',
 'GL' => 'graenland',
-'RU' => 'russland',
+'RU' => 'russland,sovetrikin',
 'CY' => 'kypur',
 'ME' => 'svartfjallaland',
 'AL' => 'albania',
@@ -148,7 +148,7 @@ $array = array(
 'AZ' => 'aserbaidsjan',
 'AM' => 'armenia',
 'IR' => 'iran',
-'TR' => 'tyrkland',
+'TR' => 'tyrkland,ottoman-veldid',
 'JO' => 'jordania',
 'IL' => 'israel',
 'LB' => 'libanon',
@@ -167,7 +167,6 @@ $array = array(
 'UZ' => 'usbekistan',
 'KZ' => 'kasakstan',
 'MN' => 'mongolia',
-'RU' => 'russland',
 'BN' => 'brunei',
 'TW' => 'taivan',
 'PH' => 'filippseyjar',
@@ -204,13 +203,21 @@ header('Content-type: application/json');
 echo "var countryTagData = {\n";
 
 foreach ($array as $key => $value) {
-    //echo $i;
-    $term_slug = $value;
-    $taxonomy = "post_tag"; // can be category, post_tag, or custom taxonomy name
-    $term = get_term_by('slug', $term_slug, $taxonomy);
     
+    $tags = split(',', $value);
+    $count = 0;
+    
+    foreach ($tags as $t) {
+        $term = get_term_by('slug', $t, 'post_tag');
+        
+        if ($term->count and $term->count != '0') {
+            $count += $term->count;
+            
+        }
+    }
+        
     if ($term->count or $term->count == '0') {
-        echo "'$key'" . ": " . $term->count . ",\n";
+        echo "'$key'" . ": " . $count . ",\n";
     }
 }
 

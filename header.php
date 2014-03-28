@@ -67,7 +67,7 @@
                     $headerlink = $base . '/';
                     
                     $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan',
-                                    'lanztidindi', 'bio', 'kvikindin', 'arodursmal'     );
+                                    'lanztidindi', 'bio', 'kvikindin', 'arodursmal', 'nattbord'     );
                     
                     foreach ($arr as &$cat) {
                         if ( is_category($cat) || (is_single() and in_category($cat)) ) {
@@ -92,13 +92,15 @@
                     <ul>
                         <li><a href="<?php echo $base ?>/" title="Fara á forsíðu"><i class="icon-home"></i></a></li>
                         <li><a href="<?php echo $base ?>/lemurskort" title="Lemúrskortið: Farðu á flakk um heiminn!"><i class="icon-earth"></i></a></li>
+                        <li><a href="<?php echo $base ?>/timalina" title="Tímalína Lemúrsins: Farðu á flakk um tímann!"><i class="icon-busy"></i></a></li>
                         <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Safnið</a></li>
                         <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
                         <li><a href="<?php echo $base ?>/utvarp" title="Útvarp Lemúr: Útvarpsþættir Lemúrsins">Útvarp</a></li>
                         <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar: Allt á sviði hryllings og viðbjóðs">Svörtu</a></li>
                         <!--<li><a href="<?php echo $base ?>/langtiburtistan" title="Langtíburtistan: Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>-->
-                        <li><a href="<?php echo $base ?>/sudrid" title="Suðrið: Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
-                        <li><a href="<?php echo $base ?>/babel" title="Babelsturninn: Hugmyndasögublogg Lemúrsins">Babel</a></li>
+                        <!--<li><a href="<?php echo $base ?>/sudrid" title="Suðrið: Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
+                        <li><a href="<?php echo $base ?>/babel" title="Babelsturninn: Hugmyndasögublogg Lemúrsins">Babel</a></li>-->
+                        <li><a href="<?php echo $base ?>/nattbord" title="Náttborðið: Bókablogg Lemúrsins">Náttborðið</a></li>
                         <li><a href="<?php echo $base ?>/lanztidindi" title="Lanztíðindi: Úrklippusafn Lemúrsins">Lanz</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr: Hreyfimyndablogg Lemúrsins">Bíó</a></li>
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>

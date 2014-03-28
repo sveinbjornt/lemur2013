@@ -147,7 +147,7 @@
         'AZ': { ice_name:'Aserbaídsjan', tag:'aserbaidsjan' },
         'AM': { ice_name:'Armenía', tag:'armenia' },
         'IR': { ice_name:'Íran', tag:'iran' },
-        'TR': { ice_name:'Tyrkland', tag:'tyrkland' },
+        'TR': { ice_name:'Tyrkland', tag:'tyrkland,ottoman-veldid' },
         'JO': { ice_name:'Jórdanía', tag:'jordania' },
         'IL': { ice_name:'Ísrael', tag:'israel' },
         'LB': { ice_name:'Líbanon', tag:'libanon' },
@@ -203,6 +203,12 @@
         '_0': { ice_name:'Norður-Kýpur', tag:'nordur-kypur' }
     };
     
+    function articleQuantityDescription (code) {
+        var c = countryTagData[code] ? countryTagData[code] : 'Engar';
+        var quant = c+' grein' + (String(c).slice(-1) != '1' ? 'ar' : '');
+        return quant;
+    }
+    
     function initVectorMap (data) {
         $('#world-map').vectorMap({
             regionsSelectable: true,
@@ -224,16 +230,11 @@
             }]
           },
           onRegionLabelShow: function(e, el, code){
-              
               var c = countryTagData[code] ? countryTagData[code] : 0;
-            var lemurimg = c == 0 ? '' : '<img src="http://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-favicon-32.png" width="16" height="16" style="margin-bottom: -3px; margin-right: 5px; margin-left: 4px">';
-            var quant = c+' grein' + (c > 1 ? 'ar' : '');
-            var greinar = c == 0 ? ' (Ekkert)' : ' ('+ quant + ')';
-            el.html(lemurimg + iso_map[code]['ice_name'] + greinar);
+              var lemurimg = c == 0 ? '' : '<img src="http://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-favicon-32.png" width="16" height="16" style="margin-bottom: -3px; margin-right: 5px; margin-left: 4px">';
+              el.html(lemurimg + iso_map[code]['ice_name'] + ' (' + articleQuantityDescription(code) + ')');
           },
           onRegionClick: function(e, code) {
-              console.log(code);
-              
             var tag = iso_map[code]['tag'];
             var ice_name = iso_map[code]['ice_name'];
             $('#selected-country').text(ice_name + " – sæki greinar...");
@@ -248,7 +249,7 @@
                     $("#more-articles").hide();
                 }
                 $("#ajax-loader").hide();
-                $('#selected-country').text(ice_name + ' – ' + $("#lemurmap-results").data('total') +' greinar');
+                $('#selected-country').text(ice_name + ' – ' + articleQuantityDescription(code));
             });
             
           }
