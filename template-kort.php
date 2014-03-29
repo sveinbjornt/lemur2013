@@ -30,7 +30,7 @@ Template Name: Kort
     </div>
         
     <div class="col s1of3">
-        <p>Á <span class="cat-title">Lemúrs&shy;kortinu</span> geta menn flakkað heims&shy;hornanna á milli. 
+        <p><i class="icon-earth"></i> Á <span class="cat-title">Lemúrs&shy;kortinu</span> geta menn flakkað heims&shy;hornanna á milli. 
             <img src="http://lemurinn.is/images/whacky-lemur-small.jpg" title="Lemúrinn hefur séð ýmislegt" alt="Lemúrinn hefur séð ýmislegt" style="float: right;" width="80" height="94">
             Eins og sést hefur Lemúrinn farið um víðan völl gegnum árin. Smelltu á land til þess að fá upp tengdar greinar.</p>
             

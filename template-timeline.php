@@ -114,7 +114,7 @@ $(function(){
             $("#article-results").html('');
             $("#more-articles").hide();
             $("#ajax-loader").show();
-            $("#article-results").load("./lemurskort-sidebar-item/?tag=" + tag, function() {
+            $("#article-results").load("./query-result-items/?tag=" + tag, function() {
                 if ($("#article-results").data('count') == $("#article-results").data('max')) {
                     $("#more-articles").show();
                     $("#more-articles-link").attr('href', 'http://lemurinn.is/tag/' + tag);
@@ -150,7 +150,7 @@ $(function(){
     <div class="col s1of3">
         <p>
             <img src="http://lemurinn.is/images/lemur-timeline.jpg" title="Lemúrinn hefur séð ýmislegt gegnum aldirnar" alt="Lemúrinn hefur séð ýmislegt gegnum aldirnar" style="float: right;" width="80" height="94">
-        
+            <i class="icon-busy"></i>
             <span class="cat-title">Tímalína Lemúrsins</span> sýnir greinar eftir
             öldum og áratugum. Eins og sést er Lemúrinn sannkallaður tímaflakkari. Smelltu á ártal til þess að sækja greinar um það tímabil.
         </p>
