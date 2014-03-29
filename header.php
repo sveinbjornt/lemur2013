@@ -91,8 +91,8 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="<?php echo $base ?>/" title="Fara á forsíðu"><i class="icon-home"></i></a></li>
-                        <li><a href="<?php echo $base ?>/lemurskort" title="Lemúrskortið: Farðu á flakk um heiminn!"><i class="icon-earth"></i></a></li>
                         <li><a href="<?php echo $base ?>/timalina" title="Tímalína Lemúrsins: Farðu á flakk um tímann!"><i class="icon-busy"></i></a></li>
+                        <li><a href="<?php echo $base ?>/lemurskort" title="Lemúrskortið: Farðu á flakk um heiminn!"><i class="icon-earth"></i></a></li>
                         <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Safnið</a></li>
                         <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
                         <li><a href="<?php echo $base ?>/utvarp" title="Útvarp Lemúr: Útvarpsþættir Lemúrsins">Útvarp</a></li>
