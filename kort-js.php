@@ -241,7 +241,7 @@
             $("#country-article-results").html('');
             $("#more-articles").hide();
             $("#ajax-loader").show();
-            $("#country-article-results").load("./lemurskort-sidebar-item/?tag=" + tag, function() {
+            $("#country-article-results").load("./query-result-items/?tag=" + tag, function() {
                 if ($("#lemurmap-results").data('count') == $("#lemurmap-results").data('max')) {
                     $("#more-articles").show();
                     $("#more-articles-link").attr('href', 'http://lemurinn.is/tag/' + tag);
