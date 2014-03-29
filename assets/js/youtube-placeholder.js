@@ -1,5 +1,5 @@
 
-var yt_link = function(ytid) {
+var yt_link = function(ytid, list_id) {
     var tpl = '<span class="">\
     <iframe title="YouTube video player" class="youtube-player" type="text/html" \
             width="670" height="350" src="http://www.youtube.com/embed/' + ytid +
