@@ -1,4 +1,4 @@
-<?php if (is_single() or is_page('utvarp') or is_page('lemurskort') ) { ?>
+<?php if (is_single() or is_page('utvarp') or is_page('lemurskort') or is_page('timalina')) { ?>
 
     <?php
         $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' );
@@ -7,6 +7,8 @@
             $desc = 'Útvarp Lemúr geymir útvarpsþætti Lemúrsins. Þættirnir eru á dagskrá Rásar 1 alla þriðjudaga kl. 16:05.';
         } else if ( is_page('lemurskort')  ) {
             $desc = 'Á Lemúrskortinu geta menn flakkað heimshornanna á milli.';
+        } else if ( is_page('timalina') ) {
+            $desc = 'Með Tímalínu Lemúrsins getur þú flakkað í gegnum tímann.';
         }
     ?>
     <meta property="og:title" content="<?php single_post_title(''); ?>">
