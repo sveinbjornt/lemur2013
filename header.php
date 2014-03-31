@@ -65,26 +65,38 @@
                     $base = get_bloginfo('wpurl');
                 
                     $headerlink = $base . '/';
-                    
+                    $is_category = false;
                     $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan',
-                                    'lanztidindi', 'bio', 'kvikindin', 'arodursmal', 'nattbord'     );
+                                    'lanztidindi', 'bio', 'kvikindin', 'arodursmal', 'nattbord', 'mahlzeit'     );
                     
                     foreach ($arr as &$cat) {
                         if ( is_category($cat) || (is_single() and in_category($cat)) ) {
                             $headerlink .= $cat;
+                            $is_category = true;
                         }
                     }
                     
                     if (is_page('greinasafn') or is_date() or is_category('greinar') 
                         or (is_archive() and !is_category()) or is_tag() or is_search()) {
                             $headerlink .= 'greinasafn';
+                            $is_category = true;
                     }
                     
                 ?>
                 
-                <a href="<?php echo $headerlink ?>" class="logo" title="Aftur á forsíðu Lemúrsins">
+                <a href="<?php echo $headerlink ?>" class="logo" title="Aftur á forsíðu">
                     <div class="facebook-like">
                         <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
+                    </div>
+                    <div class="argangur">
+                        <?php
+                            if (!$is_category) {
+                                $d1 = new DateTime('2011-10-8');
+                                $d2 = new DateTime();
+                                $diff = $d1->diff($d2);
+                                echo ($diff->y + 1) . '. árgangur';
+                            }
+                        ?>
                     </div>
                 </a>
                 
@@ -106,7 +118,7 @@
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>
                         <li><a href="<?php echo $base ?>/arodursmal" title="Áróðursmálaráðuneytið">Áróður</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
-                        <li><a href="<?php echo $base ?>/?random" title="Teningunum er kastað. Grein af handahófi."><i class="icon-dice"></i></a></li>
+                        <li><a href="<?php echo $base ?>/?random&cachebuster=<?php echo rand(10000000,999999999) ?>" title="Teningunum er kastað. Grein af handahófi."><i class="icon-dice"></i></a></li>
                         <li><a href="<?php echo $base ?>/leita" title="Leita á Lemúrnum"><i class="icon-search"></i></a></li>
                         
                     </ul>
