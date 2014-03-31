@@ -10,7 +10,7 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
 
-function sight_setup() {
+function theme_setup() {
     update_option('thumbnail_size_w', 320);
     update_option('thumbnail_size_h', 320);
     add_image_size( 'list', 120, 90, true );
@@ -18,7 +18,7 @@ function sight_setup() {
     add_image_size( 'safn', 275, 200, true);
     add_image_size( 'myndin', 670, 9999 );
 }
-add_action( 'init', 'sight_setup' );
+add_action( 'init', 'theme_setup' );
 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow == 'themes.php' ) {
     update_option( 'posts_per_page', 12 );
@@ -27,51 +27,9 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow == 'themes.php' ) {
 
 /*** RSS ***/
 
-
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
 remove_action(‘wp_head’, ‘feed_links’, 1);
-// 
-// function remove_comments_rss( $for_comments ) {
-//     return '';
-// }
-// add_filter('post_comments_feed_link_html','remove_comments_rss');
-// add_filter('post_comments_feed_link','remove_comments_rss');
-
-/*** Navigation ***/
-
-/*** Slideshow ***/
-
-// Add meta box
-function sight_add_box() {
-    global $meta_box;
-
-    add_meta_box($meta_box['id'], $meta_box['title'], 'sight_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
-}
-
-// Callback function to show fields in meta box
-function sight_show_box() {
-    global $meta_box, $post;
-
-    // Use nonce for verification
-    echo '<input type="hidden" name="sight_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
-
-    echo '<table class="form-table">';
-
-    foreach ($meta_box['fields'] as $field) {
-        // get current post meta data
-        $meta = get_post_meta($post->ID, $field['id'], true);
-
-        echo '<tr>',
-                '<th style="width:50%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
-                '<td>';
-                echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
-        echo     '<td>',
-            '</tr>';
-    }
-
-    echo '</table>';
-}
 
 /*** Widgets ***/
 
