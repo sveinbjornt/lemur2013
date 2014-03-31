@@ -16,10 +16,25 @@
 	    bottom: @spacing/2;
 	    right: @spacing/2;
 	}
+	
+	.argangur {
+	    position: absolute;
+	    bottom: @spacing/2 - 6;
+	    left: @spacing/2;
+	    font-family: @font-family-special;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    font-size: 0.8em;
+	    color: @color-primary;
+	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
     .header .fb-like {
+        display: none;
+    }
+    
+    .header .argangur {
         display: none;
     }
 }
