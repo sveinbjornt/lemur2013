@@ -664,7 +664,7 @@ class SmartYouTube_PRO {
 		
 		$context = $side ? 'side' : 'post';
 		
-		preg_match_all( "/((http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtube\.com\/watch(\?v\=|\/v\/|#!v=)([a-zA-Z0-9\-\_]{11})([^<\s]*))|((http(v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtu\.be\/([a-zA-Z0-9\-\_]{11}))|((http(v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?metacafe\.com\/watch\/([a-zA-Z0-9\-\_]{7})\/([^<^\/\s]*)([\/])?)|((http(v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?vimeo\.com\/([a-zA-Z0-9\-\_]{8})([\/])?)|((http(v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?liveleak\.com\/view(\?i\=)([a-zA-Z0-9\-\_]*))|((http(v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?facebook\.com\/video\/video.php\?v\=([a-zA-Z0-9\-\_]*))|((http(vp|vhp)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtube\.com\/(view_play_list\?p\=|playlist\?list\=)([a-zA-Z0-9\-\_]{18,34})([^<\s]*))/", $the_content, $matches, PREG_SET_ORDER );
+		preg_match_all( "/((http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtube\.com\/watch(\?v\=|\/v\/|#!v=)([a-zA-Z0-9\-\_]{11})([^<\s]*))|((http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtu\.be\/([a-zA-Z0-9\-\_]{11}))|((http(v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?metacafe\.com\/watch\/([a-zA-Z0-9\-\_]{7})\/([^<^\/\s]*)([\/])?)|((http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?vimeo\.com\/([a-zA-Z0-9\-\_]{8})([\/])?)|((http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?liveleak\.com\/view(\?i\=)([a-zA-Z0-9\-\_]*))|((http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?facebook\.com\/video\/video.php\?v\=([a-zA-Z0-9\-\_]*))|((http(vp|vhp)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtube\.com\/(view_play_list\?p\=|playlist\?list\=)([a-zA-Z0-9\-\_]{18,34})([^<\s]*))/", $the_content, $matches, PREG_SET_ORDER );
 		
 		foreach ( $matches as $match ) {
 			if ( $match[1] != '' ) {
@@ -677,7 +677,7 @@ class SmartYouTube_PRO {
 					$the_content = str_replace( $match[1], $replace_text, $the_content );
 				} else if ( ( ($match[2] == 'http://' || $match[2] == 'https://') && $this->options['http'] == 'on' ) || ( $match[2] == '' && $this->options['www'] == 'on' ) || ( $match[3] == 'v' || $match[3] == 'vh' || $match[3] == 'vhd' )) {
                  $repl = <<<EOF
- <p class="youtube-placeholder"><img src="http://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Video"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]'));"></a></p>
+ <p class="youtube-placeholder"><img src="http://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Video"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]', '$match[7]'));"></a></p>
 EOF;
                  $the_content = str_replace( $match[1], $repl, $the_content);
                     // $the_content = str_replace( $match[1], $this->tag_youtube( $context, $match[6], 'v', $match[7] ), $the_content );
