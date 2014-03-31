@@ -85,7 +85,7 @@
         'DK': { ice_name:'Danmörk', tag:'danmork' },
         'IS': { ice_name:'Ísland', tag:'island' },
         'NO': { ice_name:'Noregur', tag:'noregur' },
-        'DE': { ice_name:'Þýskaland', tag:'thyskaland' },
+        'DE': { ice_name:'Þýskaland', tag:'thyskaland,austur-thyskaland' },
         'FI': { ice_name:'Finnland', tag:'finnland' },
         'SE': { ice_name:'Svíþjóð', tag:'svithjod' },
         'GM': { ice_name:'Gambía', tag:'gambia' },
