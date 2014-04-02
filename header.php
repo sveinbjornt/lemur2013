@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+    <!--HTML by Sveinbjörn Þórðarson-->
     <!--[if lt IE 7]> <html lang="is" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="is" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="is" class="lt-ie9"> <![endif]-->
@@ -12,7 +13,6 @@
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
 
         <!-- FB META -->
         <?php get_template_part('facebook-meta'); ?>
@@ -26,10 +26,12 @@
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico">        
         
         <!-- WP HEADER -->
-        <?php wp_enqueue_script("jquery"); ?>
         <?php wp_head(); ?>
         
         <!-- SCRIPTS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js"></script>
+        
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri() ?>/style-lt-ie9.css">  

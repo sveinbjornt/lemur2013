@@ -1,7 +1,4 @@
 
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<link rel="stylesheet" href="http://lemurinn.is/js/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
 <script src="http://lemurinn.is/js/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="http://lemurinn.is/js/jquery-jvectormap-world-mill-en.js"></script>
 
