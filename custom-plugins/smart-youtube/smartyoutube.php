@@ -132,9 +132,9 @@ class SmartYouTube_PRO {
 			
 			preg_match_all( "/(http(s|v|vh|vhd)?:\/\/)?([a-zA-Z0-9\-\_]+\.|)?youtube\.com\/watch(\?v\=|\/v\/|#!v=)([a-zA-Z0-9\-\_]{11})([^<\s]*)/", $the_content, $matches, PREG_SET_ORDER );
 			
-			if ( isset( $matches[0][5] ) )
-				if ( $matches[0][5] != '' )
-					echo '<meta property="og:image" content="http://i.ytimg.com/vi/' . $matches[0][5] . '/default.jpg" />';
+            // if ( isset( $matches[0][5] ) )
+            //  if ( $matches[0][5] != '' and is_single() )
+            //      echo '<meta property="og:image" content="http://i.ytimg.com/vi/' . $matches[0][5] . '/default.jpg" />';
 			
 			if ( $this->options['colorbox'] == 'on' ) {
 		?>
@@ -677,7 +677,7 @@ class SmartYouTube_PRO {
 					$the_content = str_replace( $match[1], $replace_text, $the_content );
 				} else if ( ( ($match[2] == 'http://' || $match[2] == 'https://') && $this->options['http'] == 'on' ) || ( $match[2] == '' && $this->options['www'] == 'on' ) || ( $match[3] == 'v' || $match[3] == 'vh' || $match[3] == 'vhd' )) {
                  $repl = <<<EOF
- <p class="youtube-placeholder"><img src="http://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Video"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]', '$match[7]'));"></a></p>
+ <p class="youtube-placeholder"><img src="http://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Vídjó"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]', '$match[7]'));"></a></p>
 EOF;
                  $the_content = str_replace( $match[1], $repl, $the_content);
                     // $the_content = str_replace( $match[1], $this->tag_youtube( $context, $match[6], 'v', $match[7] ), $the_content );
