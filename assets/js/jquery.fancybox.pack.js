@@ -43,3 +43,43 @@ this.update()},afterClose:function(a){this.overlay&&!b.isActive&&this.overlay.fa
 H&&d.width(d.width()),d.wrapInner('<span class="child"></span>'),b.current.margin[2]+=Math.abs(l(d.css("margin-bottom")))}d["top"===a.position?"prependTo":"appendTo"](c)}}};f.fn.fancybox=function(a){var d,e=f(this),c=this.selector||"",k=function(g){var h=f(this).blur(),j=d,k,l;!g.ctrlKey&&(!g.altKey&&!g.shiftKey&&!g.metaKey)&&!h.is(".fancybox-wrap")&&(k=a.groupAttr||"data-fancybox-group",l=h.attr(k),l||(k="rel",l=h.get(0)[k]),l&&(""!==l&&"nofollow"!==l)&&(h=c.length?f(c):e,h=h.filter("["+k+'="'+l+
 '"]'),j=h.index(this)),a.index=j,!1!==b.open(h,a)&&g.preventDefault())};a=a||{};d=a.index||0;!c||!1===a.live?e.unbind("click.fb-start").bind("click.fb-start",k):n.undelegate(c,"click.fb-start").delegate(c+":not('.fancybox-item, .fancybox-nav')","click.fb-start",k);this.filter("[data-fancybox-start=1]").trigger("click");return this};n.ready(function(){f.scrollbarWidth===r&&(f.scrollbarWidth=function(){var a=f('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo("body"),b=a.children(),
 b=b.innerWidth()-b.height(99).innerWidth();a.remove();return b});if(f.support.fixedPosition===r){var a=f.support,d=f('<div style="position:fixed;top:20px;"></div>').appendTo("body"),e=20===d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defaults,{scrollbarWidth:f.scrollbarWidth(),fixed:f.support.fixedPosition,parent:f("body")})})})(window,document,jQuery);
+
+////////////// Fancybox Lemúrinn //////////////
+$(document).ready(function($) {
+
+    var fb_options = {
+        'openEffect': 'elastic',
+        'closeEffect': "elastic",
+        // 'centerOnScroll': true,
+        'closeClick': true,
+        'autoSize': true,
+        'fitToView': true,
+        'aspectRatio': true,
+        'scrollOutside': false,
+        'helpers': {
+            title: {
+                type: 'inside'
+            }
+        }
+    };
+
+    $('.post > div.featured-image > a').fancybox(fb_options);
+    $('.post > .post-content img').each(function() {
+
+        var p = $(this).parents('a'),
+        t = $(this).attr('title'),
+        h = $(this).attr('src'),
+        fbo = $.extend({},
+        fb_options);
+
+        if (p.length) {
+            t = $(p[0]).attr('title') ? $(p[0]).attr('title') : t;
+            h = $(p[0]).attr('href') ? $(p[0]).attr('href') : h;
+        }
+
+        fbo.href = h,
+        fbo.title = t;
+        // $(p[0]).attr('rel', 'gallery');
+        $(this).fancybox(fbo);
+    });
+});
