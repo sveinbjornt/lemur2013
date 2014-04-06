@@ -26,6 +26,9 @@
                     
                         <!-- Social buttons -->
                         <div class="social text-right">
+                            <a href="http://reddit.com/r/lemurinn" title="Lemúrinn á Reddit">
+                                <i class="icon-reddit"></i>
+                            </a>
                             <a href="https://www.facebook.com/lemurinn" title="Lemúrinn á Feisbúkk">
                                 <i class="icon-facebook"></i>
                             </a>
