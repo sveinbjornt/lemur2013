@@ -1,11 +1,10 @@
 <?php
 /*
-Plugin Name: Smart Youtube PRO
-Plugin URI: http://www.prelovac.com/vladimir/wordpress-plugins/smart-youtube
-Description: Insert YouTube videos in posts, comments and RSS feeds with ease and full customization.
-Author: Vladimir Prelovac
-Version: 4.2.0
-Author URI: http://www.prelovac.com/vladimir/
+Plugin Name: Lemúr Youtube Plugin
+Description: Use placeholders for YouTube video URLs in posts.
+Author: Sveinbjorn Thordarson
+Version: 4.2.2
+Author URI: http://www.sveinbjorn.org
 
 
 To-Do: 
@@ -676,6 +675,10 @@ class SmartYouTube_PRO {
 					$replace_text = apply_filters( 'wiziapp_3rd_party_plugin', $replace_text, 'video', $videos );
 					$the_content = str_replace( $match[1], $replace_text, $the_content );
 				} else if ( ( ($match[2] == 'http://' || $match[2] == 'https://') && $this->options['http'] == 'on' ) || ( $match[2] == '' && $this->options['www'] == 'on' ) || ( $match[3] == 'v' || $match[3] == 'vh' || $match[3] == 'vhd' )) {
+				    
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' );
+				
+				// http://img.youtube.com/vi/$match[6]/hqdefault.jpg
                  $repl = <<<EOF
  <p class="youtube-placeholder"><img src="http://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Vídjó"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]', '$match[7]'));"></a></p>
 EOF;
