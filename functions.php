@@ -69,6 +69,21 @@ remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
 remove_action(‘wp_head’, ‘feed_links’, 1);
 
+// Add RSS feed logo
+
+add_action('rss2_head', 'lemurinn_add_rss_image');
+
+function lemurinn_add_rss_image() {
+    echo "<image>
+    <title>Lemúrinn</title>
+    <url>" . get_bloginfo('template_directory') . "/assets/images/lemur-fb-icon.jpg</url>
+    <link>" . get_bloginfo('url') ."</link>
+    <width>760</width>
+    <height>760</height>
+    <description>Lemúrinn er furðuleg vera, rétt eins og náfrændi hans maðurinn.</description>
+    </image>";
+}
+
 /*** Widgets ***/
 
 if (function_exists('register_sidebar')) {
@@ -129,6 +144,7 @@ function seo_title() {
     } else {
         $newtitle .=  $sep . get_bloginfo('name');
     }
+        
 	return $newtitle;
 }
 add_filter('wp_title', 'seo_title');
