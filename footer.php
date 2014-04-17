@@ -47,40 +47,7 @@
         
         </div>
         
-        <?php wp_footer(); ?>
-        
-        <!--<script type="text/javascript">
-        (function() {
-            function getScript(url,success){
-                var script=document.createElement('script');
-                script.src=url;
-                var head=document.getElementsByTagName('head')[0],
-                    done=false;
-                script.onload=script.onreadystatechange = function(){
-                    if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
-                        done=true;
-                        success();
-                        script.onload = script.onreadystatechange = null;
-                        head.removeChild(script);
-                    }
-                };
-                head.appendChild(script);
-            }  
-              
-            // Daisy-chain loading of Javascript
-            getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js',function(){
-                getScript('http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js',function(){
-                    getScript('<?php echo get_template_directory_uri() ?>/assets/js/lemur.js',function(){
-
-                    });
-                });
-            });
-        })();
-        
-        
-        
-        </script>-->
-        
+        <?php wp_footer(); ?>        
         <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>
         
     </body>

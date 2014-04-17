@@ -91,14 +91,12 @@
                         <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
                     </div>
                     <div class="argangur">
-                        <?php
-                            if (!$is_category) {
+                        <?php if (!$is_category) {
                                 $d1 = new DateTime('2011-10-8');
                                 $d2 = new DateTime();
                                 $diff = $d1->diff($d2);
                                 echo ($diff->y + 1) . '. árgangur';
-                            }
-                        ?>
+                        } ?>
                     </div>
                 </a>
                 
