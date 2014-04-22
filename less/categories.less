@@ -86,6 +86,16 @@ body.page-template-template-svartasafnid-php {
             background-color: @color-primary;
         }
     }
+    
+    .footer {
+        .social {
+    		a {
+        		&:hover {
+        		    color: @svortu-color-secondary + 30;
+        		}
+        	}
+    	}
+    }
 }
 
 // MYNDAALBÚM
@@ -131,7 +141,7 @@ body.lanztidindi, body.category-lanztidindi {
     
     a {
         &:hover {
-            color: @lanztidindi-color-primary + 20;
+            color: @lanztidindi-color-primary + 50;
         }
     }
     
@@ -150,6 +160,16 @@ body.lanztidindi, body.category-lanztidindi {
     
     .header .logo {
         background-image: url('assets/images/header-lanztidindi.jpg');
+    }
+    
+    .footer {
+        .social {
+    		a {
+        		&:hover {
+        		    color: @lanztidindi-color-secondary - 30;
+        		}
+        	}
+    	}
     }
 }
 
@@ -178,6 +198,16 @@ body.arodursmal, body.category-arodursmal {
         &:hover {
             color: @arodursmal-color-primary + 10;
         }
+    }
+    
+    .footer {
+        .social {
+    		a {
+        		&:hover {
+        		    color: @arodursmal-color-primary + 10;
+        		}
+        	}
+    	}
     }
     
     .nav {
