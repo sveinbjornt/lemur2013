@@ -232,6 +232,7 @@
               el.html(lemurimg + iso_map[code]['ice_name'] + ' (' + articleQuantityDescription(code) + ')');
           },
           onRegionClick: function(e, code) {
+              
             var tag = iso_map[code]['tag'];
             var ice_name = iso_map[code]['ice_name'];
             $('#selected-country').text(ice_name + " – sæki greinar...");
