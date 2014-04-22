@@ -24,9 +24,8 @@ Template Name: Timeline
 
 <?php get_header(); ?>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript" src="http://lemurinn.is/js/jquery.flot.min.js"></script>
-<script type="text/javascript"  src="http://lemurinn.is/js/jquery.flot.resize.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/timeline/jquery.flot.min.js"></script>
+<script type="text/javascript"  src="<?php echo get_template_directory_uri() ?>/assets/js/timeline/jquery.flot.resize.min.js"></script>
 
 <script type="text/javascript">
 

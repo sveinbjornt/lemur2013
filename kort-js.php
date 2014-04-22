@@ -1,6 +1,6 @@
 
-<script src="http://lemurinn.is/js/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="http://lemurinn.is/js/jquery-jvectormap-world-mill-en.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/map/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/map/jquery-jvectormap-world-mill-en.js"></script>
 
 <script>
 
