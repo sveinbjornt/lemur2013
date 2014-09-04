@@ -12,14 +12,7 @@ function theme_setup() {
 }
 add_action( 'init', 'theme_setup' );
 
-if ( is_admin() && isset($_GET['activated'] ) && $pagenow == 'themes.php' ) {
-    update_option( 'posts_per_page', 12 );
-    update_option( 'paging_mode', 'default' );
-}
-
-
 /* Remove Jetpack styles */
-
 function remove_jetpack_styles(){
     wp_deregister_style('AtD_style'); // After the Deadline
     wp_deregister_style('jetpack-carousel'); // Carousel
