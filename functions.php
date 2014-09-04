@@ -1,18 +1,10 @@
 <?php
 
-
-add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->term_id}.php") ) return TEMPLATEPATH . "/single-{$cat->term_id}.php"; } return $t;' ));
-
-
 /*** Theme setup ***/
 
-add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
-
 function theme_setup() {
-    update_option('thumbnail_size_w', 320);
-    update_option('thumbnail_size_h', 320);
     add_image_size( 'list', 120, 90, true );
     add_image_size( 'sidebar', 320, 240, true );
     add_image_size( 'safn', 275, 200, true);
@@ -148,11 +140,6 @@ function seo_title() {
 	return $newtitle;
 }
 add_filter('wp_title', 'seo_title');
-
-function comments_link_attributes(){
-    return 'class="comments_popup_link"';
-}
-add_filter('comments_popup_link_attributes', 'comments_link_attributes');
 
 function next_posts_attributes(){
     return 'class="nextpostslink"';
