@@ -127,13 +127,13 @@
             </header>
             
             <div class="content">
-                <!--<?php 
-                    $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                
-                    if ( is_home() and $page == 1) {
-                        get_template_part('bordi'); 
-                    }
-                ?>-->
+                <?php 
+                    // $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    //                 
+                    // if ( is_home() and $page == 1) {
+                    //     get_template_part('bordi'); 
+                    // }
+                ?>
                 <div class="grid gutter collapse720">
                     
                     <div class="col s2of3">
