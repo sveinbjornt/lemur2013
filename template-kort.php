@@ -45,7 +45,7 @@ Template Name: Kort
 
 <!-- START OF CONTENT BELOW MAP -->
 
-<?php get_template_part('kort-js'); ?>
+<?php get_template_part('template-kort-js'); ?>
 
 <h2 id="selected-country"></h2>
 
