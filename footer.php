@@ -47,9 +47,7 @@
         </div>
         
         <?php wp_footer(); ?>        
-        <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>
-        <!--<?php get_template_part('template-modernus-vefmaeling'); ?>-->
-        
+        <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>        
         
     </body>
 
