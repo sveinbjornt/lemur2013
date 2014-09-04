@@ -1,4 +1,8 @@
-
+<?php
+/*
+    Template Name: Módernus vefmæling
+*/
+?>
 <!-- Virk vefmaeling byrjar. Vefur: http://lemurinn.is -->
 
 <script>

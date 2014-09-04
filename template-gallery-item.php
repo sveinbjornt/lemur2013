@@ -1,16 +1,6 @@
 <?php
 /*
-Template Name: Single Gallery Item
-
- * @author		Sveinbjorn
- * @email		sveinbjornt@gmail.com
- * @web			sveinbjorn.org
- 
- * @name		Country Tag JSON
- * @type		PHP page
- * @desc		Wordpress template
-
- * @requires	Wordpress
+    Template Name: Single Gallery Item
  */
 ?>
 <?php
