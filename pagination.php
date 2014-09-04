@@ -1,3 +1,6 @@
+<!-- 
+    Template for pagination
+-->
 <?php if (get_option('paging_mode') == 'default') : ?>
     <div class="pagination grid">
         <div class="col s1of1">

@@ -1,3 +1,6 @@
+<!-- 
+    Template for a single page
+-->
 <?php get_header(); ?>
 
     <?php if ( have_posts() ) : ?>
