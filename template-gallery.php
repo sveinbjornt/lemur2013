@@ -22,7 +22,7 @@
 
 
 $paged = get_query_var('paged');
-query_posts('cat=-637,&posts_per_page=30&paged='.$paged); 
+query_posts('cat=63,&posts_per_page=30&paged='.$paged); 
 
 ?>
 
@@ -31,7 +31,7 @@ query_posts('cat=-637,&posts_per_page=30&paged='.$paged);
     <?php while ( have_posts() ) : the_post(); ?>
                 
         <?php if (has_post_thumbnail()): ?>
-                <a href="/wordpress/single-gallery-item/?id=<?php the_id(); ?>" class="gallery-link fancybox">
+                <a href="/wordpress/single-gallery-item/?gallery_post_id=<?php the_id(); ?>" class="gallery-link fancybox">
                 <?php the_post_thumbnail('sidebar', array(
                     'alt'	=> trim(strip_tags( $post->post_title )),
                     'title'	=> trim(strip_tags( $post->post_title )),
