@@ -12,6 +12,28 @@ function theme_setup() {
 }
 add_action( 'init', 'theme_setup' );
 
+/* Ignore the default image sizes in wordpress */
+function trickspanda_remove_default_image_sizes($sizes) {
+    unset($sizes['thumbnail']);
+    unset($sizes['large']);
+ 
+    return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'trickspanda_remove_default_image_sizes');
+
+function wpmayor_custom_image_sizes($sizes) {
+    $myimgsizes = array(
+        "list" => __( "List" ),
+        "sidebar" => __( "Sidebar" ),
+        "safn" => __( "Safn" ),
+        "medium" => __("Miðstærð"),
+        "myndin" => __( "Featured image" ),
+        "full" => __( "Original size" )
+        );
+    return $myimgsizes;
+}
+add_filter('image_size_names_choose', 'wpmayor_custom_image_sizes');
+
 /* Remove Jetpack styles */
 function remove_jetpack_styles(){
     wp_deregister_style('AtD_style'); // After the Deadline
