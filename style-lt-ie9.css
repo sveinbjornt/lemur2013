@@ -91,3 +91,12 @@ body.nattbord .header > .logo, body.category-nattbord .header > .logo  {
         background-image: url('assets/images/header-nattbord-small.jpg');
     }
 }
+
+// HM BRASILÍU 2014
+body.hm2014 .header > .logo, body.category-hm2014 .header > .logo  {
+    
+    .header .logo {
+        background-image: url('assets/images/header-hm2014-small.jpg');
+    }
+}
+
