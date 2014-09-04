@@ -11,7 +11,13 @@
 <img src="<?php bloginfo('template_url'); ?>/assets/images/404-lemur.jpg" />
 <h1>404</h1>
 <h2>Umbeðin síða fannst ekki.</h2>
-<p> <a href="http://lemurinn.is" style="color: #eee;">&lt;-- Aftur á Lemúrinn</a></p>
+<p> <a href="javascript:
+    if (document.referrer == '') {
+        location.href = 'http://lemurinn.is';
+    } else {
+        history.back()
+    }
+    " style="color: #eee;">&lt;-- Aftur á Lemúrinn</a></p>
 </center>
 
 </body>
