@@ -6,7 +6,6 @@
 	blockquote {
 	    margin-left: @gutter + (@gutter/2);
 	    font-family: @font-family;
-	    font-size: 16px;
 	    margin-top: @gutter/2;
 	}
 		
@@ -15,8 +14,13 @@
 	    font-size: 0.85em;
 	    margin-bottom: @gutter/2;
 	    
+	    .author-box {
+	        font-weight: bold;
+	        color: @color-primary;
+	        opacity: 0.7;
+	    }
+	    
 	    a.author {
-	        opacity: 0.6;
 	    }
 	    
 	    a.author:hover {
@@ -88,8 +92,9 @@
 	    }
 	    
 	    p {
-	        line-height: @font-size + 9px;
+	        line-height: @font-size + 10px;
 	        margin: 0px 0;
+	        font-size: 16px;
 	    }
 	    p.youtube {
 	        margin-bottom: @spacing/2;
@@ -141,8 +146,8 @@
 	    p.wp-caption-text {
 	        
 	        margin-top: 4px;
-	        font-size: 14px;
-	        line-height: 18px;
+	        font-size: 15px;
+	        line-height: 20px;
 	    }
 	}
 	
