@@ -3,6 +3,7 @@
 /*** Theme setup ***/
 
 add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'post-thumbnails' );
 
 function theme_setup() {
     add_image_size( 'list', 120, 90, true );
