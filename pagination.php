@@ -15,7 +15,4 @@
         
         </div>
     </div>
-    <?php if (function_exists('wp_pagenavi')) wp_pagenavi(); ?>
-    <?php else : ?>
-    <div id="pagination"><?php next_posts_link(__('FLEIRI GREINAR')); ?></div>
 <?php endif; ?>
