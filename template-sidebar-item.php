@@ -5,7 +5,7 @@
 ?>
 <?php
     $tag = $_GET['tag'];
-    $num_posts = 10;
+    $num_posts = 15;
 ?>
 
 <?php $my_query = new WP_Query('tag=' . $tag . '&showposts=' . $num_posts . '&orderby=rand'); ?>
