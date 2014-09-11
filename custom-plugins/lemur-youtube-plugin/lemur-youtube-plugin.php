@@ -3,7 +3,7 @@
 Plugin Name: Lemúr Youtube Plugin
 Description: Use placeholders for YouTube video URLs in posts.
 Author: Sveinbjorn Thordarson
-Version: 4.2.2
+Version: 7.7
 Author URI: http://www.sveinbjorn.org
 
 
