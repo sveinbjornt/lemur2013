@@ -669,6 +669,5 @@
 
 
 $(window).load(function() {
-  $(".slider-container").twentytwenty();
-  $(".slider-container > img").css('height', '');
+  jQuery(".slider-container").twentytwenty();
 });
