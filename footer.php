@@ -47,7 +47,25 @@
         </div>
         
         <?php wp_footer(); ?>        
-        <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>        
+        <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>
+        
+        <script type="text/javascript">
+        $(window).load(function() {
+          $(".image-slider").mousemove(
+            function(e) {
+                
+              // get the mouse x (horizontal) position and offset of the div
+              var offset =  $(this).offset();
+              var top_width = (e.pageX - offset.left);
+
+              // set width of bottomimage div
+              $(this).find(".top-image").width(top_width);
+            }
+
+          );
+        })
+        </script>
+                
         
     </body>
 
