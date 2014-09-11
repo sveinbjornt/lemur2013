@@ -11,8 +11,7 @@
             </h2>
             <div class="utvarp-description">
                 <?php if (has_post_thumbnail()): ?>
-                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'sidebar
-                    ' ); ?>
+                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'sidebar' ); ?>
             
                     <a style="background-image: url('<?php echo $image[0]; ?>');" class="play-link" href="<?php
                         global $post;
@@ -22,7 +21,7 @@
                         } else {
                             echo the_permalink();
                         }
-                        ?>" title="<?php the_title(); ?>">
+                        ?>" title="Hlusta á <?php the_title(); ?>">
                         <?php if ($mp3_url and $mp3_url != ''): ?>
                             <img src="http://lemurinn.is/images/utvarp-play-overlay.png" class="play-overlay" alt="Spila þennan þátt">
                         <?php endif; ?>
