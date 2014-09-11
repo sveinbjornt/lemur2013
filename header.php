@@ -68,8 +68,8 @@
                 
                     $headerlink = $base . '/';
                     $is_category = false;
-                    $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan',
-                                    'lanztidindi', 'bio', 'kvikindin', 'arodursmal', 'nattbord', 'mahlzeit', 'hm2014'     );
+                    $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan', 'lanztidindi', 
+                                    'bio', 'kvikindin', 'arodursmal', 'nattbord', 'mahlzeit', 'hm2014'     );
                     
                     foreach ($arr as &$cat) {
                         if ( is_category($cat) || (is_single() and in_category($cat)) ) {
@@ -118,7 +118,7 @@
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>
                         <li><a href="<?php echo $base ?>/arodursmal" title="Áróðursmálaráðuneytið">Áróður</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
-                        <li><a href="<?php echo $base ?>/?random&cachebuster=<?php echo rand(10000000,999999999) ?>" title="Teningunum er kastað. Grein af handahófi."><i class="icon-dice"></i></a></li>
+                        <li><a href="<?php echo $base ?>/?random&amp;cachebuster=<?php echo rand(10000000,999999999) ?>" title="Teningunum er kastað. Grein af handahófi."><i class="icon-dice"></i></a></li>
                         <li><a href="<?php echo $base ?>/leita" title="Leita á Lemúrnum"><i class="icon-search"></i></a></li>
                         
                     </ul>
@@ -136,5 +136,5 @@
                 ?>
                 <div class="grid gutter collapse720">
                     
-                    <div class="col s2of3">
+                    <div class="col s2of3 main">
 
