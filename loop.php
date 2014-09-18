@@ -1,15 +1,25 @@
+<?php
+    $page_num = $paged;
+    if ($pagenum == '') { 
+        $pagenum = 1;
+    }
+    query_posts('cat=forsida&showposts=6&paged=' . $page_num); 
+?>
+
+
 <?php if ( have_posts() ) : ?>
     <div id="loop" class="list clear">
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>            
             
-            <div <?php post_class('post clear'); ?> id="post_<?php the_ID(); ?>">
+                    <div <?php post_class('post clear'); ?> id="post_<?php the_ID(); ?>">
                 
-                <?php get_template_part('post-header'); ?>
+                        <?php get_template_part('post-header'); ?>
             	
-            	<div class="post-content">
-                    <?php echo improved_trim_excerpt('', 60, 'Lesa meira'); ?>
-            	</div>
-            </div>
+                    	<div class="post-content">
+                            <?php echo improved_trim_excerpt('', 60, 'Lesa meira'); ?>
+                    	</div>
+                    </div>
+            
             
         <?php endwhile; ?>
     </div>
