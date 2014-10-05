@@ -26,24 +26,30 @@ query_posts('cat=63,&posts_per_page=30&paged='.$paged);
 
 ?>
 
+<div class="grid gutter collapse720">
+
+
 <?php if ( have_posts() ) : ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
                 
         <?php if (has_post_thumbnail()): ?>
+            <div class="col s1of5">
                 <a href="/wordpress/single-gallery-item/?gallery_post_id=<?php the_id(); ?>" class="gallery-link fancybox">
                 <?php the_post_thumbnail('sidebar', array(
                     'alt'	=> trim(strip_tags( $post->post_title )),
                     'title'	=> trim(strip_tags( $post->post_title )),
                     'class' => 'image',
-                    'style' => 'width: 19.5%; height: auto; margin: 0; padding: 0;'
                 )); ?>
                 </a>
+            </div>
         <?php endif; ?>
         
     <?php endwhile; ?>
 
 <?php endif; ?>
+
+</div>
 
 <script type="text/javascript">
 $(function(){
