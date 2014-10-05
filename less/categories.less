@@ -16,10 +16,90 @@
 @arodursmal-color-primary: #a23820;
 
 // Suðrið
-@sudrid-color-secondary: #849361 -20;
+@sudrid-color-secondary: #849361;
 
 // Babel
 @babel-color-primary: #7b2a16;
+
+// Náttborðið
+@nattbordid-color-primary: #8f00ca;
+
+// Myndaalbúmið
+@myndaalbum-color-primary: #555;
+
+// Kvikindi
+@kvikind-color-primary: #7ca07d;
+
+// Útvarp Lemúr
+@utvarplemur-color-primary: #f1b752;
+
+// Mahlzeit
+@mahlzeit-color-primary: #655246;
+
+
+.greinasafn {
+    .grein {
+        .grein-category {
+            
+            &.generic {
+                background-color: #eee;
+                color: @color-primary;
+            }
+            
+            &.svortu, &.svartabloggid, &.svarta-spolan, &.svarta-ljosmyndin {
+                background-color: @svortu-color-background;
+                color: @svortu-color-secondary + 30;
+            }
+            
+            &.bio {
+                
+            }
+            
+            &.mahlzeit {
+                background-color: @mahlzeit-color-primary;
+            }
+            
+            &.vidjo {
+                background-color: #a00;
+            }
+            
+            &.utvarplemur, &.ledurblakan {
+                background-color: @utvarplemur-color-primary;
+                color: @color-primary;
+            }
+            
+            &.kvikindin, &.kvikindi {
+                background-color: @kvikind-color-primary - 50;
+            }
+            
+            &.myndaalbum {
+                background-color: @myndaalbum-color-primary;
+            }
+            
+            &.lanztidindi {
+                background-color: @lanztidindi-color-secondary;
+                color: @lanztidindi-color-primary;
+            }
+            
+            &.arodursmal {
+                background-color: @arodursmal-color-primary;
+            }
+            
+            &.nattbord {
+                background-color: @nattbordid-color-primary - 50;
+            }
+             
+            &.babel {
+                background-color: @babel-color-primary;
+            }
+            
+            &.sudrid {
+                background-color: @sudrid-color-secondary + 40;
+                color: @color-primary;;
+            }
+        }
+    }
+}
 
 // Panorama style
 body.category-panorama-2, body.panorama-2 {
@@ -138,7 +218,6 @@ body.page-template-template-svartasafnid-php {
 	        }
 	    }
     }
-	    
 }
 
 // MYNDAALBÚM
