@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
     <!--HTML by Sveinbjörn Þórðarson-->
+    <!--Make sure this renders correctly in the steaming turd that is IE -->
     <!--[if lt IE 7]> <html lang="is" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="is" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="is" class="lt-ie9"> <![endif]-->
@@ -44,8 +45,8 @@
     
     <?php
         /* Append category slug to body class if in category or cat item */
+        $cat_strings = array();
         if (!is_home() and is_single()) {
-            $cat_strings = array();
             $cat = get_the_category($post->ID);
             if( $cat ) {
                 foreach ($cat as &$c) {
@@ -112,7 +113,7 @@
                         <!--<li><a href="<?php echo $base ?>/langtiburtistan" title="Langtíburtistan: Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>-->
                         <!--<li><a href="<?php echo $base ?>/sudrid" title="Suðrið: Rómanska Ameríka á Lemúrnum">Suðrið</a></li>
                         <li><a href="<?php echo $base ?>/babel" title="Babelsturninn: Hugmyndasögublogg Lemúrsins">Babel</a></li>-->
-                        <li><a href="<?php echo $base ?>/nattbord" title="Náttborðið: Bókablogg Lemúrsins">Náttborðið</a></li>
+                        <li><a href="<?php echo $base ?>/nattbord" title="Náttborðið: Bókablogg Lemúrsins">Náttborð</a></li>
                         <li><a href="<?php echo $base ?>/lanztidindi" title="Lanztíðindi: Úrklippusafn Lemúrsins">Lanz</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr: Hreyfimyndablogg Lemúrsins">Bíó</a></li>
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>

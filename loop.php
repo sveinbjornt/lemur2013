@@ -1,10 +1,4 @@
-<?php
-    $page_num = $paged;
-    if ($pagenum == '') { 
-        $pagenum = 1;
-    }
-    query_posts('cat=forsida&showposts=6&paged=' . $page_num); 
-?>
+
 
 
 <?php if ( have_posts() ) : ?>
