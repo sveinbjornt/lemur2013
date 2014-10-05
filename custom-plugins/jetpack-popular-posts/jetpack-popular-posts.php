@@ -222,17 +222,21 @@ class JPP_Widget extends WP_Widget {
 			if($displayCat){
 				$category = get_the_category($post->ID); 
 				
-				if($category[0]){
-				    if ($category[0]->slug == 'forsida') {
-				        if (count($category) > 1) {
-				            $cat_name = $category[1]->cat_name;
-				        } else {
-				            $cat_name = "";
+				// Excluded categories
+				$excluded = array("forsida", "vidjo", "panorama", 'panorama-2');
+				$cat_names = array();
+				for ($i = 0; $i < sizeof($category); $i++) {
+				    if ($category[$i]) {
+				        if (!in_array($category[$i]->slug, $excluded)) {
+				            array_push($cat_names, $category[$i]->cat_name);
 				        }
-				    } else {
-					    $cat_name = $category[0]->cat_name;
-					}
+				    }
 				}
+				
+				if(sizeof($cat_names)){
+				    $cat_name = $cat_names[0];
+				}
+
 			}
 			
 			// Génération du lien
