@@ -49,9 +49,7 @@
         <?php wp_footer(); ?>        
         <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>
         
-        <?php //if (is_single() and in_category('slider')): ?>
-            <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.twentytwenty-combined.js"></script>
-        <?php //endif; ?>
+            <!--<script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.twentytwenty-combined.js"></script>-->
     </body>
 
 </html>
