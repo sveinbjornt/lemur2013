@@ -30,10 +30,14 @@
     ?>
     
     <a href="<?php echo $featured_link; ?>" title="<?php echo $ttitle ?>">
-        <?php the_post_thumbnail('myndin', array(
+        <?php 
+            $imgtype = in_category('panorama-2') ? '' : 'myndin';
+            the_post_thumbnail($imgtype, array(
             'alt'	=> $ttitle,
             'title'	=> $ttitle,
             'class' => 'image'
-        )); ?>
+            )); 
+        
+        ?>
     </a>
 <?php }; ?>
