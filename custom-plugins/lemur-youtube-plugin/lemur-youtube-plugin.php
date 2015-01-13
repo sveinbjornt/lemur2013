@@ -94,7 +94,6 @@ class SmartYouTube_PRO {
 		$this->first_post_on_archive = false;
 		
 		$script_path = $this->plugin_url . '/javascripts/jquery.colorbox-min.js';
-		wp_register_script( 'colorbox', $script_path );
 		
 		$this->options = $this->get_options();
 							
@@ -676,7 +675,7 @@ class SmartYouTube_PRO {
 					$the_content = str_replace( $match[1], $replace_text, $the_content );
 				} else if ( ( ($match[2] == 'http://' || $match[2] == 'https://') && $this->options['http'] == 'on' ) || ( $match[2] == '' && $this->options['www'] == 'on' ) || ( $match[3] == 'v' || $match[3] == 'vh' || $match[3] == 'vhd' )) {
 				    
-				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' );
+				// $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' );
 				
 				// http://img.youtube.com/vi/$match[6]/hqdefault.jpg
                  $repl = <<<EOF
