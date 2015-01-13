@@ -3,7 +3,7 @@
     <?php while ( have_posts() ) : the_post(); ?>
         <div class="utvarp-post grid">
             <h2>
-                <div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-width="60" data-show-faces="false" data-action="like" data-colorscheme="light" data-layout="button_count" style="float: right;"></div>
+                <!--<div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-width="60" data-show-faces="false" data-action="like" data-colorscheme="light" data-layout="button_count" style="float: right;"></div>-->
                 
                 <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
                     <?php the_title(); ?>
