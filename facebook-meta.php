@@ -15,6 +15,7 @@
         <meta property="og:site_name" content="Lemúrinn">  
         <meta property="og:type" content="article"> 
         <meta property="fb:app_id" content="186476388086986">
+        <meta property="fb:admins" content="186476388086986">
         <meta property="og:image" content="<?php echo $src ?>">
         <meta property="og:description" content="<?php echo $desc ?>">  
         <meta property="og:url" content="<?php the_permalink() ?>">  
@@ -35,6 +36,8 @@
         <meta property="og:site_name" content="Greinasafn Lemúrsins"> 
         <meta property="og:type" content="website">
         <meta property="fb:app_id" content="186476388086986">
+        <meta property="fb:admins" content="186476388086986">
+        
         <!--<meta property="og:image" content="<?php echo $src ?>">-->
         <meta property="og:description" content="<?php echo $desc; ?>">
         <meta property="og:url" content="<?php echo home_url(add_query_arg(array(),$wp->request)); ?>">  
@@ -46,6 +49,7 @@
         <meta property="og:site_name" content="Lemúrinn"> 
         <meta property="og:type" content="website">
         <meta property="fb:app_id" content="186476388086986">
+        <meta property="fb:admins" content="186476388086986">
         <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon-highres.jpg"> 
         <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð, ofbeldi og fleira.">
         <meta property="og:url" content="<?php echo home_url(add_query_arg(array(),$wp->request)); ?>">  
