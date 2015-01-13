@@ -1,4 +1,12 @@
+<?php
 
+if(is_home() || is_front_page()){
+    global $query_string;
+    parse_str( $query_string, $args );
+    $args['posts_per_page'] = 6;
+    query_posts($args);
+}
+?>
 
 
 <?php if ( have_posts() ) : ?>
