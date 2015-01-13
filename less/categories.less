@@ -12,6 +12,10 @@
 @lanztidindi-color-primary: #342421;
 @lanztidindi-color-secondary: #f1e9da;
 
+// Langtíburtistan
+@langtiburtistan-color-primary: #431a1c;
+@langtiburtistan-color-secondary: #845050;
+
 // Áróðursmálaráðuneytið
 @arodursmal-color-primary: #a23820;
 
@@ -28,7 +32,7 @@
 @myndaalbum-color-primary: #555;
 
 // Kvikindi
-@kvikind-color-primary: #7ca07d;
+@kvikindi-color-primary: #57604e;
 
 // Útvarp Lemúr
 @utvarplemur-color-primary: #f1b752;
@@ -37,6 +41,7 @@
 @mahlzeit-color-primary: #655246;
 
 
+// Style Greinasafn category labels
 .greinasafn {
     .grein {
         .grein-category {
@@ -258,8 +263,36 @@ body.sudrid, body.category-sudrid {
 // LANGTÍBURTISTAN
 body.langtiburtistan, body.category-langtiburtistan {
     
+    a {
+        &:hover {
+            color: @langtiburtistan-color-primary + 50;
+        }
+    }
+    
+    .nav {
+        background: @color-primary;
+        
+        ul li a {
+            color: @color-white;
+            
+            &:hover {
+    	        background: @langtiburtistan-color-secondary - 20;
+    	    }
+    	}
+    }
+    
     .header .logo {
         background-image: url('assets/images/header-langtiburtistan.jpg');
+    }
+    
+    .footer {
+        .social {
+    		a {
+        		&:hover {
+        		    color: @langtiburtistan-color-secondary;
+        		}
+        	}
+    	}
     }
 }
 
