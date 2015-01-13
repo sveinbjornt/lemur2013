@@ -7,7 +7,6 @@
 <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>  
 <!-- the default values -->  
 <meta property="fb:app_id" content="186476388086986" />  
-<meta property="fb:admins" content="1161798800,670556891" />  
   
 <!-- if page is content page -->  
 <?php if (is_single()) { ?>  
