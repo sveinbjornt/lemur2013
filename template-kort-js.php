@@ -83,7 +83,7 @@
         'NL': { ice_name:'Holland', tag:'holland' },
         'PL': { ice_name:'Pólland', tag:'polland' },
         'IE': { ice_name:'Írland', tag:'irland' },
-        'GB': { ice_name:'Bretland', tag:'bretland' },
+        'GB': { ice_name:'Bretland', tag:'bretland,skotland' },
         'DK': { ice_name:'Danmörk', tag:'danmork' },
         'IS': { ice_name:'Ísland', tag:'island' },
         'NO': { ice_name:'Noregur', tag:'noregur' },

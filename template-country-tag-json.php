@@ -67,7 +67,7 @@ $array = array(
 'NL' => 'holland',
 'PL' => 'polland',
 'IE' => 'irland',
-'GB' => 'bretland',
+'GB' => 'bretland,skotland',
 'DK' => 'danmork',
 'IS' => 'island',
 'NO' => 'noregur',
@@ -196,7 +196,6 @@ foreach ($array as $key => $value) {
         
         if ($term->count and $term->count != '0') {
             $count += $term->count;
-            
         }
     }
         
