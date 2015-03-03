@@ -70,7 +70,7 @@
                     $headerlink = $base . '/';
                     $is_category = false;
                     $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan', 'lanztidindi', 
-                                    'bio', 'kvikindin', 'arodursmal', 'nattbord', 'mahlzeit', 'hm2014'     );
+                                    'bio', 'kvikindin', 'arodursmal', 'nattbord', 'mahlzeit', 'hm2014', 'smjorfjall'     );
                     
                     foreach ($arr as &$cat) {
                         if ( is_category($cat) || (is_single() and in_category($cat)) ) {
