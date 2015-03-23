@@ -92,8 +92,9 @@ $(function(){
         if (item) {
             var x = item.datapoint[0],
                 y = item.datapoint[1];
+            var sing_or_plural = (y == 1) ? 'grein' : 'greinar'; 
 
-            $("#tooltip-text").html(yearToDescriptionString(x) + ' (' + y + ' greinar)')
+            $("#tooltip-text").html(yearToDescriptionString(x) + ' (' + y + ' ' + sing_or_plural + ')')
             $("#tooltip").css({top: item.pageY+5, left: item.pageX+5})
                 .fadeIn(200);
         } else {
@@ -147,8 +148,9 @@ $(function(){
     </div>
         
     <div class="col s1of3">
+        <div class="execphpwidget">
         <p>
-            <img src="http://lemurinn.is/images/lemur-timeline.jpg" title="Lemúrinn hefur séð ýmislegt gegnum aldirnar" alt="Lemúrinn hefur séð ýmislegt gegnum aldirnar" style="float: right;" width="80" height="94">
+            <img src="http://lemurinn.is/images/lemur-timeline.jpg" title="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" alt="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" style="float: right;" width="80" height="94">
             <i class="icon-busy"></i>
             <span class="cat-title">Tímalína Lemúrsins</span> sýnir greinar eftir
             öldum og áratugum. Eins og sést er Lemúrinn sannkallaður tímaflakkari. Smelltu á ártal til þess að sækja greinar um það tímabil.
@@ -159,6 +161,7 @@ $(function(){
             <img src="http://lemurinn.is/images/ajax-loader.gif">
             <br>
         </p>
+        </div>
     </div>
 
 </div>
