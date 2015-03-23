@@ -3,7 +3,7 @@
 <div class="grid gutter collapse600 myndaalbum-top">
     <div class="col s1of3">
         
-        <p><a href="/myndaalbum"><span class="cat-title"><i class="icon-camera"></i> Myndaalbúm Lemúrsins</span></a> geymir forvitnilegar ljósmyndir úr sögunnar rás. Flestar myndirnar eru frá opinberum stofnunum eða söfnum víða um heim.</p>
+        <p style="line-height: 25px;"><a href="/myndaalbum"><span class="cat-title"><i class="icon-camera"></i> Myndaalbúm Lemúrsins</span></a> geymir forvitnilegar ljósmyndir úr sögunnar rás. Flestar myndirnar eru frá opinberum stofnunum eða söfnum.</p>
         
     </div>
     <div class="col s2of3">
