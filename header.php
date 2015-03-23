@@ -107,7 +107,7 @@
                         <li><a href="<?php echo $base ?>/timalina" title="Tímalína Lemúrsins: Farðu á flakk um tímann!"><i class="icon-hour-glass"></i></a></li>
                         <li><a href="<?php echo $base ?>/lemurskort" title="Lemúrskortið: Farðu á flakk um heiminn!"><i class="icon-earth"></i></a></li>
                         <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins"><i class="icon-camera"></i></a></li>
-                        <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Safnið</a></li>
+                        <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins er fullt af skemmtilegu efni">Safn</a></li>
                         <!--<li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>-->
                         <li><a href="<?php echo $base ?>/utvarp" title="Útvarp Lemúr: Útvarpsþættir Lemúrsins">Útvarp</a></li>
                         <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar: Allt á sviði hryllings og viðbjóðs">Svörtu</a></li>
