@@ -17,7 +17,7 @@
         <meta property="fb:app_id" content="186476388086986">
         <meta property="og:image" content="<?php echo $src ?>">
         <meta property="og:description" content="<?php echo $desc ?>">  
-        <meta property="og:url" content="<?php the_permalink() ?>">  
+        <meta property="og:url" content="<?php the_permalink() ?>">
         <link rel="image_src" href="<?php echo $src ?>">
  
 <?php } else if (is_archive() or is_page('greinasafn')) { ?>
@@ -53,3 +53,4 @@
         <link rel="image_src" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-fb-icon-highres.jpg">
 
 <?php } ?>
+        <meta property="og:locale" content="is_IS">
