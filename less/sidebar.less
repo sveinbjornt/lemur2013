@@ -323,12 +323,27 @@
             background-color: #906d00;                
             a {
                 color: @color-white - 10;
-
             }
         }
 
         div a.sidebar-box-headline {
             background-color: fade(#906d00,95%);
+            color: @color-white - 10;
+            font-weight: bold;
+        }
+    }
+    
+    div.smjorfjall-box {
+
+        h2.sidebar-box-header {
+            background-color: @smjorfjall-color-primary - 30;                
+            a {
+                color: @color-white - 10;
+            }
+        }
+
+        div a.sidebar-box-headline {
+            background-color: fade(@smjorfjall-color-primary - 30,95%);
             color: @color-white - 10;
             font-weight: bold;
         }

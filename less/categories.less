@@ -40,6 +40,9 @@
 // Mahlzeit
 @mahlzeit-color-primary: #655246;
 
+// Smjörfjall
+@smjorfjall-color-primary: #ffa21c;
+
 
 // Style Greinasafn category labels
 .greinasafn {
@@ -105,7 +108,11 @@
             
             &.sudrid {
                 background-color: @sudrid-color-secondary + 40;
-                color: @color-primary;;
+                color: @color-primary;
+            }
+            
+            &.smjorfjall {
+                background-color: @smjorfjall-color-primary - 30;
             }
         }
     }
@@ -431,6 +438,34 @@ body.smjorfjall, body.category-smjorfjall {
     
     .header .logo {
         background-image: url('assets/images/header-smjorfjall.jpg');
+    }
+    
+    a {
+        &:hover {
+            color: @smjorfjall-color-primary - 30;
+        }
+    }
+    
+    .footer {
+        .social {
+    		a {
+        		&:hover {
+        		    color: @smjorfjall-color-primary;
+        		}
+        	}
+    	}
+    }
+    
+    .nav {
+        
+        ul li a {
+            color: @color-white;
+            
+            &:hover {
+                color: @color-white;
+    	        background: @smjorfjall-color-primary - 20;
+    	    }
+    	}
     }
 }
 
