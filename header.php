@@ -104,10 +104,11 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="<?php echo $base ?>/" title="Fara á forsíðu"><i class="icon-home"></i></a></li>
-                        <li><a href="<?php echo $base ?>/timalina" title="Tímalína Lemúrsins: Farðu á flakk um tímann!"><i class="icon-busy"></i></a></li>
+                        <li><a href="<?php echo $base ?>/timalina" title="Tímalína Lemúrsins: Farðu á flakk um tímann!"><i class="icon-hour-glass"></i></a></li>
                         <li><a href="<?php echo $base ?>/lemurskort" title="Lemúrskortið: Farðu á flakk um heiminn!"><i class="icon-earth"></i></a></li>
+                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins"><i class="icon-camera"></i></a></li>
                         <li><a href="<?php echo $base ?>/greinasafn" title="Greinasafn Lemúrsins">Safnið</a></li>
-                        <li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>
+                        <!--<li><a href="<?php echo $base ?>/myndaalbum" title="Myndaalbúm Lemúrsins">Albúmið</a></li>-->
                         <li><a href="<?php echo $base ?>/utvarp" title="Útvarp Lemúr: Útvarpsþættir Lemúrsins">Útvarp</a></li>
                         <li><a href="<?php echo $base ?>/svortu" title="Svörtu síðurnar: Allt á sviði hryllings og viðbjóðs">Svörtu</a></li>
                         <!--<li><a href="<?php echo $base ?>/langtiburtistan" title="Langtíburtistan: Miðausturlandablogg Lemúrsins">Langtíburtistan</a></li>-->
@@ -117,6 +118,7 @@
                         <li><a href="<?php echo $base ?>/lanztidindi" title="Lanztíðindi: Úrklippusafn Lemúrsins">Lanz</a></li>
                         <li><a href="<?php echo $base ?>/bio" title="Bíó Lemúr: Hreyfimyndablogg Lemúrsins">Bíó</a></li>
                         <li><a href="<?php echo $base ?>/kvikindin" title="Kvikindin: Dýrasíða Lemúrsins">Dýr</a></li>
+                        <li><a href="<?php echo $base ?>/smjorfjall" title="Smjörfjall sögunnar: Gamanmál fortíðarinnar">Smjör</a></li>
                         <li><a href="<?php echo $base ?>/arodursmal" title="Áróðursmálaráðuneytið">Áróður</a></li>
                         <li><a href="<?php echo $base ?>/um" title="Um Lemúrinn">Um</a></li>
                         <li><a href="<?php echo $base ?>/?random&amp;cachebuster=<?php echo rand(10000000,999999999) ?>" title="Teningunum er kastað. Grein af handahófi."><i class="icon-dice"></i></a></li>
@@ -134,6 +136,10 @@
                     // if ( is_home() and $page == 1) {
                     //     get_template_part('bordi'); 
                     // }
+                    
+                    if ( is_category(63) ) {
+                        get_template_part('myndaalbum-header');
+                    }
                 ?>
                 <div class="grid gutter collapse720">
                     
