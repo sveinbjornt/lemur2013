@@ -16,7 +16,9 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-home, .icon-feed, .icon-facebook, .icon-twitter, .icon-search, .icon-dice, 
-.icon-earth, .icon-hour-glass, .icon-reddit, .icon-camera, .icon-music, .icon-mic, .icon-loop {
+.icon-earth, .icon-hour-glass, .icon-reddit, .icon-camera, .icon-music, .icon-mic, 
+.icon-loop, .icon-bullhorn, .icon-books, .icon-library, .icon-bug, .icon-spoon-knife,
+.icon-newspaper, .icon-video-camera {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -29,7 +31,9 @@ you can use the generic selector below, but it's slower:
 
 .nav {
     .icon-home, .icon-feed, .icon-facebook, .icon-twitter, .icon-search, .icon-dice, 
-    .icon-earth, .icon-hour-glass, .icon-reddit, .icon-camera, .icon-music, .icon-mic, .icon-loop {
+    .icon-earth, .icon-hour-glass, .icon-reddit, .icon-camera, .icon-music, .icon-mic, 
+    .icon-loop, .icon-bullhorn, .icon-books, .icon-library, .icon-bug, .icon-spoon-knife,
+    .icon-newspaper, .icon-video-camera {
         font-size: 0.92em;
     }
 }
@@ -37,6 +41,10 @@ you can use the generic selector below, but it's slower:
 
 .icon-home:before {
 	content: "\e902";
+}
+
+.icon-newspaper:before {
+	content: "\e904";
 }
 
 .icon-camera:before {
@@ -47,12 +55,28 @@ you can use the generic selector below, but it's slower:
 	content: "\e911";
 }
 
+.icon-video-camera:before {
+	content: "\e914";
+}
+
 .icon-dice:before {
 	content: "\e915";
 }
 
+.icon-bullhorn:before {
+	content: "\e91a";
+}
+
 .icon-mic:before {
 	content: "\e91e";
+}
+
+.icon-books:before {
+	content: "\e920";
+}
+
+.icon-library:before {
+	content: "\e921";
 }
 
 .icon-hour-glass:before {
@@ -63,12 +87,16 @@ you can use the generic selector below, but it's slower:
 	content: "\e986";
 }
 
-.icon-earth:before {
-	content: "\e9ca";
+.icon-bug:before {
+	content: "\e999";
 }
 
-.icon-loop:before {
-	content: "\ea2e";
+.icon-spoon-knife:before {
+	content: "\e9a3";
+}
+
+.icon-earth:before {
+	content: "\e9ca";
 }
 
 .icon-facebook:before {
@@ -86,5 +114,3 @@ you can use the generic selector below, but it's slower:
 .icon-reddit:before {
 	content: "\eac7";
 }
-
-
