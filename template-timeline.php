@@ -152,7 +152,7 @@ $(function(){
         <p>
             <img src="http://lemurinn.is/images/lemur-timeline.jpg" title="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" alt="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" style="float: right;" width="80" height="94">
             <i class="icon-busy"></i>
-            <span class="cat-title">Tímalína Lemúrsins</span> sýnir greinar eftir
+            <span class="cat-title"><i class="icon-hour-glass"></i> Tímalína Lemúrsins</span> sýnir greinar eftir
             öldum og áratugum. Eins og sést er Lemúrinn sannkallaður tímaflakkari. Smelltu á ártal til þess að sækja greinar um það tímabil.
         </p>
             
