@@ -178,6 +178,7 @@ $array = array(
 'BS' => 'bahamaeyjar',
 'VU' => 'vanuatu',
 'NC' => 'nyja-kaledonia',
+'TF' => 'fronsku-sudlaegu-landsvaedin',
 '_3' => 'somaliland',
 '_2' => 'vestur-sahara',
 '_1' => 'kosovo',
