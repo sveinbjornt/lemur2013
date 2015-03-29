@@ -190,7 +190,6 @@
         'JP': { ice_name:'Japan', tag:'japan' },
         'CN': { ice_name:'Kína', tag:'kina' },
         'IN': { ice_name:'Indland', tag:'indland' },
-        
         'PS': { ice_name:'Palestína', tag:'palestina' },
         'FJ': { ice_name:'Fíjíeyjar', tag:'fijieyjar' },
         'FK': { ice_name:'Falklandseyjar', tag:'falklandseyjar' },
