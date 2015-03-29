@@ -237,11 +237,19 @@
               el.html(lemurimg + iso_map[code]['ice_name'] + ' (' + articleQuantityDescription(code) + ')');
           },
           onRegionClick: function(e, code) {
-              
-            var tag = iso_map[code]['tag'];
             var ice_name = iso_map[code]['ice_name'];
-            $('#selected-country').text(ice_name + " – sæki greinar...");
+            var tag = iso_map[code]['tag'];
             $("#country-article-results").html('');
+            
+            // if there are no articles for area, we don't bother with ajax request
+            if (!countryTagData[code]) {
+                $('#selected-country').text(ice_name + ' – ' + articleQuantityDescription(code));
+                $("#more-articles").hide();
+                return;
+            }
+            
+            $('#selected-country').text(ice_name + " – sæki greinar...");
+            
             $("#more-articles").hide();
             $("#ajax-loader").show();
             $("#country-article-results").load("./query-result-items/?tag=" + tag, function() {
