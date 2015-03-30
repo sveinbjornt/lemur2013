@@ -8,7 +8,7 @@
     <!--[if gt IE 8]><!--><html lang="is" class=""><!--<![endif]-->
 
     <head>
-        <title><?php wp_title ( '|', true, 'right' ); ?></title>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
         
         <!-- META -->
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
@@ -21,7 +21,7 @@
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
         
-        <!-- RSS, favicon, etc. -->
+        <!-- RSS, icons, etc. -->
         <link rel="alternate" type="application/rss+xml" title="RSS-veita Lemúrsins" href="<?php echo get_bloginfo('wpurl'); ?>/feed/">
         <link rel="apple-touch-icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-apple-icon.png">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico">        
@@ -44,7 +44,7 @@
     </head>
     
     <?php
-        /* Append category slug to body class if in category or cat item */
+        /* Append category slug to body class if in category or single item in category */
         $cat_strings = array();
         if (!is_home() and is_single()) {
             $cat = get_the_category($post->ID);
@@ -86,20 +86,26 @@
                     }
                     
                 ?>
+                <div>           
+                    <a href="<?php echo $headerlink ?>" class="logo" title="Aftur á forsíðu">
+                        <div class="facebook-like">
+                            <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
+                        </div>
+                    </a>
                 
-                <a href="<?php echo $headerlink ?>" class="logo" title="Aftur á forsíðu">
-                    <div class="facebook-like">
-                        <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
-                    </div>
-                    <div class="argangur">
-                        <?php if (!$is_category) {
-                                $d1 = new DateTime('2011-10-8');
+                    <?php if (!$is_category): ?>
+                        <div class="argangur">
+                            <a href="<?php echo get_bloginfo('wpurl'); ?>/tag/lemursafmaeli/">
+                            <?php
+                                $d1 = new DateTime('2011-10-8'); // Lemúrinn founded
                                 $d2 = new DateTime();
                                 $diff = $d1->diff($d2);
                                 echo ($diff->y + 1) . '. árgangur';
-                        } ?>
-                    </div>
-                </a>
+                            ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
                 
                 <nav class="nav">
                     <ul>
