@@ -5,13 +5,14 @@
     <!--[if lt IE 7]> <html lang="is" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]> <html lang="is" class="lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]> <html lang="is" class="lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--><html lang="is" class=""><!--<![endif]-->
+    <!--[if gt IE 8]><!--><html lang="is"><!--<![endif]-->
 
     <head>
-        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <title><?php wp_title('|', true, 'right'); ?></title>
         
         <!-- META -->
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
+        <meta http-equiv="Content-Language" content="is">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,7 +45,7 @@
     </head>
     
     <?php
-        /* Append category slug to body class if in category or single item in category */
+        /* Append category slug to body class if in category or viewing single item in category */
         $cat_strings = array();
         if (!is_home() and is_single()) {
             $cat = get_the_category($post->ID);
