@@ -1,4 +1,4 @@
-= LEMÚR 2013 =
+= LEMÚR 2013 WORDPRESS THEME =
 
 * by Sveinbjörn Þórðarson
 

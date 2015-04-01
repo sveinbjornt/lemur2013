@@ -49,7 +49,7 @@
         <?php wp_footer(); ?>        
         <script src="<?php echo get_template_directory_uri() ?>/assets/js/lemur.js" defer></script>
         
-            <!--<script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.twentytwenty-combined.js"></script>-->
+        <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.twentytwenty-combined.js"></script>
     </body>
 
 </html>
