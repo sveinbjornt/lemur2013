@@ -4,4 +4,4 @@
 
 == ABOUT LEMÚR 2013 ==
 
-Responsive site design for Lemúrinn.
+Responsive site design for lemurinn.is
