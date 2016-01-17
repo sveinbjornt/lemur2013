@@ -20,8 +20,10 @@
 
     </div>
 
+    <!--googleoff: all-->
     <?php get_template_part('loop-greinasafn'); ?>
 
     <?php get_template_part('pagination'); ?>
+    <!--googleon: all-->
 
 <?php get_footer(); ?>
