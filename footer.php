@@ -17,7 +17,13 @@
                         <p>
                             <strong>Lemúrinn</strong> er veftímarit um allt, stofnað í október 2011. <a href="<?php echo get_bloginfo('wpurl'); ?>/um" title="Nánar um Lemúrinn">Nánar...</a>
                             <br>
-                            Ábendingar sendist á <a href="mailto:lemurinn@lemurinn.is">lemurinn [hjá] lemurinn.is</a>. &nbsp;&nbsp; <a href="/english/"><img src="/images/uk.gif"></a> <a href="/english/">English</a>
+                            Ábendingar sendist á <a href="mailto:lemurinn@lemurinn.is">lemurinn [hjá] lemurinn.is</a>. &nbsp;&nbsp; 
+                            <a href="/english/" title="English">
+                                <img src="/images/en.png" alt="English" width="18" height="13">
+                            </a>
+                            <a href="/english/" title="English">
+                                English
+                            </a>
                         </p>
                         
                     </div>

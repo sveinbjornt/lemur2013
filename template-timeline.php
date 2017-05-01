@@ -166,7 +166,7 @@ $(function(){
 
 </div>
 
-<!-- START OF CONTENT BELOW MAP -->
+<!-- START OF CONTENT BELOW TIMELINE -->
 
 <h2 id="selected-tag"></h2>
 
@@ -180,7 +180,7 @@ $(function(){
 
 <br>
 
-<!-- END OF CONTENT BELOW MAP -->
+<!-- END OF CONTENT BELOW TIMELINE -->
 
 <div class="grid gutter collapse720">
     

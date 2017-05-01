@@ -68,6 +68,7 @@
                 <?php
                     $base = get_bloginfo('wpurl');
                 
+                    $alt = 'Aftur á forsíðu';
                     $headerlink = $base . '/';
                     $is_category = false;
                     $arr = array(   'myndaalbum', 'svortu', 'sudrid', 'babel', 'langtiburtistan', 'lanztidindi', 
@@ -77,6 +78,9 @@
                         if ( is_category($cat) || (is_single() and in_category($cat)) ) {
                             $headerlink .= $cat;
                             $is_category = true;
+                        }
+                        if ( is_category($cat) ) {
+                            $alt = single_cat_title('', false);
                         }
                     }
                     
@@ -88,7 +92,7 @@
                     
                 ?>
                 <div>           
-                    <a href="<?php echo $headerlink ?>" class="logo" title="Aftur á forsíðu">
+                    <a href="<?php echo $headerlink ?>" class="logo" title="<?php echo $alt ?>">
                         <div class="facebook-like">
                             <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
                         </div>
