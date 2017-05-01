@@ -209,6 +209,20 @@ class JPP_Widget extends WP_Widget {
 			if ( 'publish' != $post->post_status || !empty( $post->post_password ) || empty( $post->ID ) )
 				continue;
 
+            $excl_pcats = array("es");
+            $pcats = get_the_category($post->ID);
+            $skip = 0;
+            for ($i = 0; $i < sizeof($pcats); $i++) {
+			    if ($pcats[$i]) {
+			        if (in_array($pcats[$i]->slug, $excl_pcats)) {
+			            $skip = 1;
+			        }
+			    }
+			}
+			if ($skip) {
+			    continue;
+			}
+
 			// Both get HTML stripped etc on display
 			if ( empty( $post->post_title ) ) {
 				$title_source = $post->post_content;
@@ -220,7 +234,7 @@ class JPP_Widget extends WP_Widget {
 			
 			// Si l'affichage du nom de la catégorie est demandée, alors on va la lire.
 			if($displayCat){
-				$category = get_the_category($post->ID); 
+				$category = get_the_category($post->ID);
 				
 				// Excluded categories
 				$excluded = array("forsida", "vidjo", "panorama", 'panorama-2');
