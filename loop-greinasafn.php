@@ -26,6 +26,22 @@
                     $cat_name = $cat_names[0];
                     $cat_class = $cat_slugs[0];
                 }
+                
+                $title = get_the_title();
+                if (strlen($title) > 87) {
+                    $list = split(':', $title);
+                    if (count($list) <= 1) {
+                         
+                    } else {
+                         $title = $list[1];
+                    }                    
+                }
+                if (strlen($title) > 87) {
+                    $title = substr($title, 0, 86);
+                    $title = $title . '…';
+                }
+                
+                
             
             ?>
             
@@ -39,7 +55,7 @@
                             )); ?>
                     <?php endif; ?>
                     <div class="grein-category <?php echo $cat_class; ?>"><?php echo $cat_name; ?></div>
-                    <h2><?php the_title(); ?></h2> 
+                    <h2><?php echo $title; ?></h2> 
                 </a>
             </div>
         
