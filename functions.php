@@ -80,6 +80,7 @@ remove_action('wp_head', 'rsd_link');
 
 add_action('rss2_head', 'lemurinn_add_rss_image');
 
+
 function lemurinn_add_rss_image() {
     echo "<image>
     <title>Lemúrinn</title>

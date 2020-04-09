@@ -4,7 +4,7 @@
 Template Name: Timeline
 
  * @author        Sveinbjorn
- * @email        sveinbjornt@gmail.com
+ * @email        sveinbjorn@sveinbjorn.org
  * @web            sveinbjorn.org
  
  * @name        Timeline

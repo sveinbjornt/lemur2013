@@ -18,6 +18,7 @@
         <meta property="og:image" content="<?php echo $src ?>">
         <meta property="og:description" content="<?php echo $desc ?>">  
         <meta property="og:url" content="<?php the_permalink() ?>">
+        <meta property="article:published_time" content="<?php the_time('c'); ?>">
         <link rel="image_src" href="<?php echo $src ?>">
  
 <?php } else if (is_archive() or is_page('greinasafn')) { ?>
