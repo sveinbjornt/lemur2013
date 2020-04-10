@@ -22,20 +22,20 @@
                     }
                 }
                 
-                if(sizeof($cat_names)){
+                if (sizeof($cat_names)){
                     $cat_name = $cat_names[0];
                     $cat_class = $cat_slugs[0];
                 }
                 
                 $title = get_the_title();
-                if (strlen($title) > 87) {
-                    $list = split(':', $title);
-                    if (count($list) <= 1) {
+                // if (strlen($title) > 87) {
+                //     $list = split(':', $title);
+                //     if (count($list) <= 1) {
                          
-                    } else {
-                         $title = $list[1];
-                    }                    
-                }
+                //     } else {
+                //          $title = $list[1];
+                //     }                    
+                // }
                 if (strlen($title) > 87) {
                     $title = substr($title, 0, 86);
                     $title = $title . '…';

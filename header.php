@@ -22,10 +22,14 @@
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">                
         
+        <!-- FONTS -->
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
         <!-- RSS, icons, etc. -->
         <link rel="alternate" type="application/rss+xml" title="RSS-veita Lemúrsins" href="<?php echo get_bloginfo('wpurl'); ?>/feed/">
         <link rel="apple-touch-icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/assets/images/lemur-apple-icon.png">
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico">        
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favico.ico">
         
         <!-- WP HEADER -->
         <?php wp_head(); ?>
