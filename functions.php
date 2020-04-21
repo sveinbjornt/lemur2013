@@ -17,7 +17,6 @@ add_action( 'init', 'theme_setup' );
 function trickspanda_remove_default_image_sizes($sizes) {
     unset($sizes['thumbnail']);
     unset($sizes['large']);
- 
     return $sizes;
 }
 add_filter('intermediate_image_sizes_advanced', 'trickspanda_remove_default_image_sizes');
@@ -44,6 +43,7 @@ function remove_jetpack_styles(){
     wp_deregister_style('infinity-twentyten'); // Infinite Scroll - Twentyten Theme
     wp_deregister_style('infinity-twentyeleven'); // Infinite Scroll - Twentyeleven Theme
     wp_deregister_style('infinity-twentytwelve'); // Infinite Scroll - Twentytwelve Theme
+    wp_deregister_style('infinity-twentytwenty'); // Infinite Scroll - Twentytwelve Theme
     wp_deregister_style('noticons'); // Notes
     wp_deregister_style('jetpack-subscriptions');
     wp_deregister_style('jetpack-subscriptions-css');
@@ -57,17 +57,17 @@ function remove_jetpack_styles(){
 add_action('wp_print_styles', 'remove_jetpack_styles');
 
 /* Remove shortlinks and feed links */
-remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
-remove_action( 'wp_head', 'feed_links');
-remove_action( 'wp_head', 'rsd_link');
-remove_action( 'wp_head', 'wlwmanifest_link');
-remove_action( 'wp_head', 'feed_links_extra', 3 );
-remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0);
-remove_action( 'wp_head', 'index_rel_link');
-remove_action( 'wp_head', 'parent_post_rel_link');
-remove_action( 'wp_head', 'start_post_rel_link');
-remove_action( 'wp_head', 'adjacent_posts_rel_link');
-remove_action( 'wp_head', 'wp_generator');
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 );
+remove_action('wp_head', 'feed_links');
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'feed_links_extra', 3 );
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'parent_post_rel_link');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'start_post_rel_link', 10, 0 );
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
@@ -190,36 +190,33 @@ add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
 
 function my_save_extra_profile_fields( $user_id ) {
-
 	if ( !current_user_can( 'edit_user', $user_id ) )
 		return false;
-
 	/* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
 	update_usermeta( $user_id, 'name2', $_POST['name2'] );
 }
 
 function improved_trim_excerpt($text, $length, $more_text) {
-        global $post;
-        if ( '' == $text ) {
-                $text = get_the_content('');
-                $text = apply_filters('the_content', $text);
-                $text = str_replace('\]\]\>', ']]&gt;', $text);
-                $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-                $text = strip_tags($text, '<p> <iframe> <img> <a>');
-                if (!$length) {
-                    $excerpt_length = 60;
-                } else {
-                    $excerpt_length = $length;
-                }
-                $words = explode(' ', $text, $excerpt_length + 1);
-                array_pop($words);
-                $text = implode(' ', $words);
-                $more = '</a>&hellip;&nbsp;<a class="more-link" title="' . $more_text . '" href="'. get_permalink() . '">' .__('[' . $more_text . ']', 'thematic') . '</a>';
-                $text = $text . $more;
-                
+    global $post;
+    if ('' == $text) {
+        $text = get_the_content('');
+        $text = apply_filters('the_content', $text);
+        $text = str_replace('\]\]\>', ']]&gt;', $text);
+        $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+        $text = strip_tags($text, '<p> <iframe> <img> <a>');
+        if (!$length) {
+            $excerpt_length = 60;
+        } else {
+            $excerpt_length = $length;
         }
-        return $text;
+        $words = explode(' ', $text, $excerpt_length + 1);
+        array_pop($words);
+        $text = implode(' ', $words);
+        $more = '</a>&hellip;&nbsp;<a class="more-link" title="' . $more_text . '" href="'. get_permalink() . '">' .__('[' . $more_text . ']', 'thematic') . '</a>';
+        $text = $text . $more;
+    }
+    return $text;
 }
 
 
-add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
+add_filter('jetpack_enable_opengraph', '__return_false', 99);
