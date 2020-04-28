@@ -36,7 +36,7 @@
         
         <!-- SCRIPTS -->
         <link href="http://ajax.googleapis.com" rel="preconnect" crossorigin>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" defer></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js" defer></script>
         
         <!--[if lt IE 9]>

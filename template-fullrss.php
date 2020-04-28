@@ -2,13 +2,13 @@
 /*
     Template Name: Full RSS
 */
+    header('Content-type: application/rss+xml');
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 
 <channel>
     <title>Lemúrinn</title>
-    <atom:link href="http://lemurinn.is/feed/" rel="self" type="application/rss+xml" />
     <link>http://lemurinn.is</link>
     <description>tímarit um allt</description>
     <lastBuildDate>Thu, 15 Dec 2018 20:50:21 +0000</lastBuildDate>
@@ -35,7 +35,6 @@
             <title><?php the_title(); ?></title>
             <link><?php the_permalink(); ?></link>
             <pubDate><?php echo get_the_date('c'); ?></pubDate>
-            <content:encoded><![CDATA[<?php the_content(); ?>]]></content:encoded>
         </item>
     <?php endwhile; ?>
     <!-- end of the loop -->
