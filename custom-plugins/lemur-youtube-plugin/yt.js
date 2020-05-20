@@ -80,7 +80,7 @@ function onUpdatePreviewImage(){
 
     selectedThemeColor=embedColor.value;
     previewImage.src=prevUrl.value+'preview_embed_'+selectedThemeColor+'_sm'+border+'.gif';
-    //previewImage.src='http://www.youtube.com/img/preview_embed_'+selectedThemeColor+'_sm'+border+'.gif';
+    //previewImage.src='https://www.youtube.com/img/preview_embed_'+selectedThemeColor+'_sm'+border+'.gif';
 }
 
 function loaded()

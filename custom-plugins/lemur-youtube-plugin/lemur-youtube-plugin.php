@@ -4,7 +4,7 @@ Plugin Name: Lemúr Youtube Plugin
 Description: Use placeholders for YouTube video URLs in posts.
 Author: Sveinbjorn Thordarson
 Version: 7.7
-Author URI: http://www.sveinbjorn.org
+Author URI: https://www.sveinbjorn.org
 
 
 To-Do: 
@@ -679,7 +679,7 @@ class SmartYouTube_PRO {
 				
 				// http://img.youtube.com/vi/$match[6]/hqdefault.jpg
                  $repl = <<<EOF
- <p class="youtube-placeholder"><img src="http://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Vídjó"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]', '$match[7]'));"></a></p>
+ <p class="youtube-placeholder"><img src="https://img.youtube.com/vi/$match[6]/hqdefault.jpg" alt="Vídjó"><a class="clickable" onClick="jQuery(this).parent().html(yt_link('$match[6]', '$match[7]'));"></a></p>
 EOF;
                  $the_content = str_replace( $match[1], $repl, $the_content);
                     // $the_content = str_replace( $match[1], $this->tag_youtube( $context, $match[6], 'v', $match[7] ), $the_content );
