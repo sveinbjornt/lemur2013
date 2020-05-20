@@ -189,7 +189,7 @@ echo "var countryTagData = {\n";
 
 foreach ($array as $key => $value) {
     
-    $tags = split(',', $value);
+    $tags = explode(',', $value);
     $count = 0;
     
     foreach ($tags as $t) {
