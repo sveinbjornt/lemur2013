@@ -3,7 +3,7 @@
     Template Name: Módernus vefmæling
 */
 ?>
-<!-- Virk vefmaeling byrjar. Vefur: http://lemurinn.is -->
+<!-- Virk vefmaeling byrjar. Vefur: https://lemurinn.is -->
 
 <script>
 	is_teljari_potency = {};

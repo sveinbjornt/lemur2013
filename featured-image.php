@@ -17,7 +17,7 @@
         }
         ?>">
         <?php if ($mp3_url and $mp3_url != ''): ?>
-            <img src="http://lemurinn.is/images/utvarp-play-overlay.png" class="play-overlay" alt="Spila þáttinn">
+            <img src="https://lemurinn.is/images/utvarp-play-overlay.png" class="play-overlay" alt="Spila þáttinn">
         <?php endif; ?>
     </a>
 

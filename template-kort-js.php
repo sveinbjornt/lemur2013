@@ -233,7 +233,7 @@
           },
           onRegionLabelShow: function(e, el, code){
               var c = countryTagData[code] ? countryTagData[code] : 0;
-              var lemurimg = c == 0 ? '' : '<img src="http://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-favicon-32.png" width="16" height="16" style="margin-bottom: -3px; margin-right: 5px; margin-left: 4px">';
+              var lemurimg = c == 0 ? '' : '<img src="https://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-favicon-32.png" width="16" height="16" style="margin-bottom: -3px; margin-right: 5px; margin-left: 4px">';
               el.html(lemurimg + iso_map[code]['ice_name'] + ' (' + articleQuantityDescription(code) + ')');
           },
           onRegionClick: function(e, code) {
@@ -255,7 +255,7 @@
             $("#country-article-results").load("./query-result-items/?tag=" + tag, function() {
                 if ($("#lemurmap-results").data('count') == $("#lemurmap-results").data('max')) {
                     $("#more-articles").show();
-                    $("#more-articles-link").attr('href', 'http://lemurinn.is/tag/' + tag);
+                    $("#more-articles-link").attr('href', 'https://lemurinn.is/tag/' + tag);
                 } else {
                     $("#more-articles").hide();
                 }
@@ -271,7 +271,7 @@
         // Load data for map coloring synchronously, use the
         // data to init the vector map
         $.ajaxSetup({async: false});
-        $.getScript('http://lemurinn.is/country-tag-json/', function(response, status) {
+        $.getScript('https://lemurinn.is/country-tag-json/', function(response, status) {
             initVectorMap(countryTagData);
         });
         $.ajaxSetup({async: true});

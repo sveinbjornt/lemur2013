@@ -29,8 +29,8 @@
              
              foreach ($yt_matches as $match) {
                 if (strlen($match[6]) > 0) {
-                    $img_url = 'http://img.youtube.com/vi/' . $match[6] . '/hqdefault.jpg';
-                    $vid_url = 'http://youtube.com/watch?v=' . $match[6];
+                    $img_url = 'https://img.youtube.com/vi/' . $match[6] . '/hqdefault.jpg';
+                    $vid_url = 'https://youtube.com/watch?v=' . $match[6];
                     
                     #sleep(0.01);
                     $resp = get_headers($img_url);

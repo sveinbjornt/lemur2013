@@ -69,7 +69,7 @@ $(function(){
         return year + '-' + (year + 10);
     }
     
-    var lemurimg = '<img src="http://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-favicon-32.png" width="16" height="16" style="margin-bottom: -3px; margin-right: 5px; margin-left: 4px">';
+    var lemurimg = '<img src="https://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-favicon-32.png" width="16" height="16" style="margin-bottom: -3px; margin-right: 5px; margin-left: 4px">';
     
     // Tooltop for hover
     $("<div id='tooltip'>"  + lemurimg + " <span id='tooltip-text'></span></div>").css({
@@ -117,7 +117,7 @@ $(function(){
             $("#article-results").load("./query-result-items/?tag=" + tag, function() {
                 if ($("#article-results").data('count') == $("#article-results").data('max')) {
                     $("#more-articles").show();
-                    $("#more-articles-link").attr('href', 'http://lemurinn.is/tag/' + tag);
+                    $("#more-articles-link").attr('href', 'https://lemurinn.is/tag/' + tag);
                 } else {
                     $("#more-articles").hide();
                 }
@@ -130,7 +130,7 @@ $(function(){
     // Load data for graph synchronously, use the
     // data to init the flot chart
     $.ajaxSetup({async: false});
-    $.getScript('http://lemurinn.is/timeline-tag-json/', function(response, status) {
+    $.getScript('https://lemurinn.is/timeline-tag-json/', function(response, status) {
         $.plot("#timeline", [ timelineTagCountData ], options);
         window.onresize = function(event) {
             $.plot("#timeline", [ timelineTagCountData ], options);
@@ -151,7 +151,7 @@ $(function(){
     <div class="col s1of3">
         <div class="execphpwidget">
         <p>
-            <img src="http://lemurinn.is/images/lemur-timeline.jpg" title="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" alt="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" style="float: right;" width="80" height="94">
+            <img src="https://lemurinn.is/images/lemur-timeline.jpg" title="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" alt="Lemúrinn hefur séð ýmislegt í gegnum aldirnar" style="float: right;" width="80" height="94">
             <i class="icon-busy"></i>
             <span class="cat-title"><i class="icon-hour-glass"></i> Tímalína Lemúrsins</span> sýnir greinar eftir
             öldum og áratugum. Eins og sést er Lemúrinn sannkallaður tímaflakkari. Smelltu á ártal til þess að sækja greinar um það tímabil.
@@ -159,7 +159,7 @@ $(function(){
             
         <p align="center" id="ajax-loader" style="display:none;">
             <br>
-            <img src="http://lemurinn.is/images/ajax-loader.gif">
+            <img src="https://lemurinn.is/images/ajax-loader.gif">
             <br>
         </p>
         </div>

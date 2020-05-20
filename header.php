@@ -35,8 +35,8 @@
         <?php wp_head(); ?>
         
         <!-- SCRIPTS -->
-        <link href="http://ajax.googleapis.com" rel="preconnect" crossorigin>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <link href="https://ajax.googleapis.com" rel="preconnect" crossorigin>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.fancybox.pack.js" defer></script>
         
         <!--[if lt IE 9]>
@@ -99,7 +99,7 @@
                 <div>           
                     <a href="<?php echo $headerlink ?>" class="logo" title="<?php echo $alt ?>">
                         <div class="facebook-like">
-                            <div class="fb-like" data-href="http://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
+                            <div class="fb-like" data-href="https://facebook.com/lemurinn" data-send="false" data-width="120" data-show-faces="false" data-colorscheme="<?php if ( is_category('svortu') or (in_category('svortu') and is_single())) { echo 'dark'; } else { echo 'light'; } ?>" data-layout="button_count"></div>
                         </div>
                     </a>
                 

@@ -4,7 +4,7 @@
 <?php if ( have_posts() ) : ?>
 
 <div id="cse" style="width: 100%;">Hleð leitarniðurstöður...</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   function parseQueryFromUrl () {
     var queryParamName = "s";

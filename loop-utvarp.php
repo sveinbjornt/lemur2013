@@ -25,7 +25,7 @@
                         }
                         ?>" title="Hlusta á <?php the_title(); ?>">
                         <?php if ($mp3_url and $mp3_url != ''): ?>
-                            <img src="http://lemurinn.is/images/utvarp-play-overlay.png" class="play-overlay" alt="Spila þennan þátt">
+                            <img src="https://lemurinn.is/images/utvarp-play-overlay.png" class="play-overlay" alt="Spila þennan þátt">
                         <?php endif; ?>
                     </a>
     

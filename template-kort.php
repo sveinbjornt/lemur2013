@@ -14,12 +14,12 @@
     <div class="col s1of3">
         <div class="execphpwidget">
         <p><i class="icon-earth"></i> Á <span class="cat-title">Lemúrs&shy;kortinu</span> geta menn flakkað heims&shy;hornanna á milli. 
-            <img src="http://lemurinn.is/images/whacky-lemur-small.jpg" title="Lemúrinn hefur séð ýmislegt um heiminn allan" alt="Lemúrinn hefur séð ýmislegt um heiminn allan" style="float: right;" width="80" height="94">
+            <img src="https://lemurinn.is/images/whacky-lemur-small.jpg" title="Lemúrinn hefur séð ýmislegt um heiminn allan" alt="Lemúrinn hefur séð ýmislegt um heiminn allan" style="float: right;" width="80" height="94">
             Eins og sést hefur Lemúrinn farið um víðan völl í gegnum árin. Smelltu á land til þess að fá upp tengdar greinar.</p>
             
         <p align="center" id="ajax-loader" style="display:none;">
             <br>
-            <img src="http://lemurinn.is/images/ajax-loader.gif">
+            <img src="https://lemurinn.is/images/ajax-loader.gif">
             <br>
         </p>
         </div>

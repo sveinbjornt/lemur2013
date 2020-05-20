@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<img src="http://lemurinn.is/images/utvarp-lemur.jpg" style="margin-bottom: 20px; max-width: 100%;" alt="Útvarp Lemúr">
+<img src="https://lemurinn.is/images/utvarp-lemur.jpg" style="margin-bottom: 20px; max-width: 100%;" alt="Útvarp Lemúr">
 
 <?php $paged = get_query_var('paged');
 query_posts('category_name=utvarplemur,&paged='.$paged); ?>

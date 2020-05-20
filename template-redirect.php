@@ -23,11 +23,11 @@ if (function_exists('have_posts') && have_posts())
 				$link	= trim(strip_tags($contents));
 				
 			// work out
-				if(! preg_match('%^http://%', $link))
+				if(! preg_match('%^https://%', $link))
 				{
 					$host	= $_SERVER['HTTP_HOST'];
 					$dir	= dirname($_SERVER['PHP_SELF']);
-					$link	= "http://$host$dir/$link";
+					$link	= "https://$host$dir/$link";
 				}
 
 		// navigate to the link

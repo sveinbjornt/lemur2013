@@ -9,14 +9,14 @@
 
 <channel>
     <title>Lemúrinn</title>
-    <link>http://lemurinn.is</link>
+    <link>https://lemurinn.is</link>
     <description>tímarit um allt</description>
     <lastBuildDate>Thu, 15 Dec 2018 20:50:21 +0000</lastBuildDate>
     <language>is</language>
     <image>
         <title>Lemúrinn</title>
-        <url>http://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-fb-icon.jpg</url>
-        <link>http://lemurinn.is</link>
+        <url>https://lemurinn.is/wp-content/themes/lemur2013/assets/images/lemur-fb-icon.jpg</url>
+        <link>https://lemurinn.is</link>
         <width>760</width>
         <height>760</height>
         <description>Lemúrinn er furðuleg vera, rétt eins og náfrændi hans maðurinn.</description>

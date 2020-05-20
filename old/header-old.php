@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Lemúrinn" />  
 <meta property="og:description" content="Lemúrinn er veftímarit um allt. Furður, fjarlægir staðir, menning, saga, tónlist, blogg, morð og ofbeldi og fleira." />  
 <meta property="og:type" content="website" />  
-<meta property="og:image" content="http://lemurinn.is/images/FIXME!!!!!!" /> <?php } ?>  
+<meta property="og:image" content="https://lemurinn.is/images/FIXME!!!!!!" /> <?php } ?>  
     
 
         <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
