@@ -1,3 +1,5 @@
+<img src="/assets/images/lemur-fb-icon.jpg" width="300" style="float: right; margin-left: 20px; margin-bottom: 20px;">
+
 # Lemurinn.is WordPress Theme
 
 Responsive site design for [lemurinn.is](https://lemurinn.is).
