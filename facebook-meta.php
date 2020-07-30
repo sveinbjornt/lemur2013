@@ -4,7 +4,7 @@
         $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'myndin' );
         $src = $src[0];
         if ( is_page('utvarp') ) {
-            $desc = 'Útvarp Lemúr geymir útvarpsþætti Lemúrsins. Þættirnir eru á dagskrá Rásar 1 alla þriðjudaga kl. 16:05.';
+            $desc = 'Útvarp Lemúr geymir útvarpsþætti Lemúrsins.';
         } else if ( is_page('lemurskort')  ) {
             $desc = 'Á Lemúrskortinu geta menn flakkað heimshornanna á milli.';
         } else if ( is_page('timalina') ) {
